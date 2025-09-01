@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section Test - Sugix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Additional test styles */
+        .test-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 9999;
+        }
+        
+        .test-controls {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 9999;
+        }
+        
+        .test-controls button {
+            margin: 5px;
+            padding: 5px 10px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .test-controls button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        <strong>Hero Test Page</strong><br>
+        Test responsive design and fade effects
+    </div>
+    
+    <div class="test-controls">
+        <strong>Test Controls:</strong><br>
+        <button onclick="testSlide(1)">Slide 1</button>
+        <button onclick="testSlide(2)">Slide 2</button>
+        <button onclick="testSlide(3)">Slide 3</button>
+        <button onclick="testResponsive()">Toggle Mobile View</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-labelledby="hero-title" itemscope itemtype="https://schema.org/HeroSection">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide active" data-slide="1">
+                <div class="container">
+                    <div class="grid grid-2">
+                        <div class="hero-text">
+                            <h1 id="hero-title" class="hero-title animate fade-in-up" data-scroll-animation="fade-in-up" data-scroll-threshold="0.3">
+                                India's Premier Surveying & GPS RTK Solutions
+                            </h1>
+                            <p class="hero-description animate fade-in-up delay-1s" data-scroll-animation="fade-in-up" data-scroll-threshold="0.4" itemprop="description">
+                                We supply top-quality surveying instruments from trusted global brands. 
+                                From GPS RTK to Total Stations, we provide reliable tools with local 
+                                support, training, and service you can count on. Serving India's surveying and construction industry with precision and reliability.
+                            </p>
+                            <div class="hero-cta animate fade-in-up delay-2s" data-scroll-animation="fade-in-up" data-scroll-threshold="0.5">
+                                <button class="btn hero-btn hover-lift hover-glow" aria-label="Learn more about Sugix services">Learn More</button>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-image animate fade-in-left delay-1s" data-scroll-animation="fade-in-left" data-scroll-threshold="0.3">
+                            <img src="images/hero.jpg" alt="Professional surveyor using advanced surveying equipment at construction site" class="hero-img hover-scale" loading="eager" itemprop="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide" data-slide="2">
+                <div class="container">
+                    <div class="grid grid-2">
+                        <div class="hero-text">
+                            <h1 class="hero-title animate fade-in-up" data-scroll-animation="fade-in-up" data-scroll-threshold="0.3">
+                                Advanced GPS RTK Technology
+                            </h1>
+                            <p class="hero-description animate fade-in-up delay-1s" data-scroll-animation="fade-in-up" data-scroll-threshold="0.4">
+                                Experience centimeter-level accuracy with our cutting-edge GPS RTK systems. 
+                                Perfect for land surveying, construction layout, and precision agriculture. 
+                                Get real-time positioning data with unmatched reliability and performance.
+                            </p>
+                            <div class="hero-cta animate fade-in-up delay-2s" data-scroll-animation="fade-in-up" data-scroll-threshold="0.5">
+                                <button class="btn hero-btn hover-lift hover-glow" aria-label="Explore GPS RTK solutions">Explore GPS RTK</button>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-image animate fade-in-left delay-1s" data-scroll-animation="fade-in-left" data-scroll-threshold="0.3">
+                            <img src="images/gps_system.jpg" alt="Advanced GPS RTK system for precision surveying" class="hero-img hover-scale" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide" data-slide="3">
+                <div class="container">
+                    <div class="grid grid-2">
+                        <div class="hero-text">
+                            <h1 class="hero-title animate fade-in-up" data-scroll-animation="fade-in-up" data-scroll-threshold="0.3">
+                                Professional Total Station Solutions
+                            </h1>
+                            <p class="hero-description animate fade-in-up delay-1s" data-scroll-animation="fade-in-up" data-scroll-threshold="0.4">
+                                High-precision Total Station equipment for construction and land surveying. 
+                                Our instruments deliver exceptional accuracy and reliability for professional 
+                                surveying applications across India.
+                            </p>
+                            <div class="hero-cta animate fade-in-up delay-2s" data-scroll-animation="fade-in-up" data-scroll-threshold="0.5">
+                                <button class="btn hero-btn hover-lift hover-glow" aria-label="Discover Total Station solutions">Discover Total Station</button>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-image animate fade-in-left delay-1s" data-scroll-animation="fade-in-left" data-scroll-threshold="0.3">
+                            <img src="images/total_station.jpg" alt="Professional Total Station equipment for precision surveying" class="hero-img hover-scale" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Navigation -->
+            <div class="hero-slider-nav">
+                <button class="slider-nav-btn prev" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-nav-btn next" aria-label="Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Slider Indicators -->
+            <div class="hero-slider-indicators">
+                <button class="slider-indicator active" data-slide="1" aria-label="Go to slide 1"></button>
+                <button class="slider-indicator" data-slide="2" aria-label="Go to slide 2"></button>
+                <button class="slider-indicator" data-slide="3" aria-label="Go to slide 3"></button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Test functions
+        function testSlide(slideNumber) {
+            if (window.heroSlider) {
+                window.heroSlider.goToSlide(slideNumber);
+            }
+        }
+        
+        function testResponsive() {
+            const viewport = document.querySelector('meta[name="viewport"]');
+            if (viewport.content.includes('width=375')) {
+                viewport.content = 'width=device-width, initial-scale=1.0';
+            } else {
+                viewport.content = 'width=375, initial-scale=1.0';
+            }
+        }
+        
+        // Add some test logging
+        console.log('Hero test page loaded');
+        console.log('Test the responsive design by resizing the browser window');
+        console.log('Use the test controls to switch slides and test mobile view');
+    </script>
+</body>
+</html>
+
+
+
+

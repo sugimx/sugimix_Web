@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .nav { display: flex; gap: 20px; margin-bottom: 40px; }
+        .nav-link { padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+        .nav-link:hover { background: #0056b3; }
+        .test-section { margin: 40px 0; padding: 20px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Navigation Test Page</h1>
+    
+    <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    
+    <div class="test-section">
+        <h2>Test Instructions</h2>
+        <p>Click on the navigation links above. They should redirect you to the respective pages:</p>
+        <ul>
+            <li><strong>Home</strong> → index.html</li>
+            <li><strong>Services</strong> → services.html</li>
+            <li><strong>Products</strong> → products.html</li>
+            <li><strong>About Us</strong> → about.html</li>
+            <li><strong>Contact</strong> → contact.html</li>
+        </ul>
+    </div>
+    
+    <div class="test-section">
+        <h2>Current Page</h2>
+        <p>This is the test navigation page. If you can see this, the navigation is working correctly.</p>
+    </div>
+</body>
+</html>
