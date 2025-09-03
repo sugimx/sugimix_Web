@@ -1,4 +1,4 @@
-# Sugix Website - SEO Optimized Structure
+# Sugimx Website - SEO Optimized Structure
 
 ## Project Structure
 

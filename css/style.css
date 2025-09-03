@@ -4920,6 +4920,43 @@ body.menu-open {
     padding: 1.5rem;
 }
 
+.product-brand-model {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-brand {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #000000;
+    background: #f1f5f9;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-model {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #64748b;
+    background: #f8fafc;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+.product-category {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .product-title {
     font-size: 1.1rem;
     font-weight: 600;
@@ -5726,7 +5763,7 @@ body.menu-open {
     line-height: 1.6;
 }
 
-/* Why Choose Sugix Section */
+/* Why Choose Sugimx Section */
 .why-choose {
     padding: 4rem 0;
 }

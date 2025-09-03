@@ -1,4 +1,4 @@
-// Main JavaScript functionality for Sugix website
+// Main JavaScript functionality for Sugimx website
 
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -362,7 +362,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 from_phone: formData.get('phone'),
                 service_needed: formData.get('service'),
                 message: formData.get('message'),
-                to_name: 'Sugix Team'
+                to_name: 'Sugimx Team'
             };
             console.log('Template params:', templateParams);
 
