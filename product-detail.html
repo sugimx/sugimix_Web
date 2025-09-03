@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title id="page-title">Product Details - Sugimx Surveying Equipment & Instruments</title>
+    <meta name="description" content="Detailed specifications and information about our high-quality surveying equipment. Get comprehensive details about features, specifications, and pricing.">
+    <meta name="keywords" content="surveying equipment details, GPS RTK specifications, Total Station features, surveying instruments information">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://Sugimx.com/product-detail">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Product Detail Page Specific Styles */
+        .product-detail-main {
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .breadcrumb-nav a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb-nav a:hover {
+            color: #1d4ed8;
+        }
+
+        .breadcrumb-nav i {
+            font-size: 0.8rem;
+        }
+
+        .product-detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .product-image-section {
+            position: relative;
+        }
+
+        .product-main-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .product-main-image:hover {
+            transform: scale(1.02);
+        }
+
+        .product-info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .product-brand-model {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-brand {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .product-model {
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .product-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .product-category {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .product-description {
+            color: #64748b;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .product-pricing {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .current-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #059669;
+        }
+
+        .last-sale-price {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            text-decoration: line-through;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn-primary-large {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary-large:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary-large {
+            background: rgba(255, 255, 255, 0.9);
+            color: #3b82f6;
+            padding: 1rem 2rem;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary-large:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .product-details-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .details-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn.active {
+            color: #3b82f6;
+            border-bottom-color: #3b82f6;
+        }
+
+        .tab-btn:hover {
+            color: #3b82f6;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(59, 130, 246, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .feature-icon {
+            color: #3b82f6;
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .feature-text {
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        .specifications-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .specifications-table th,
+        .specifications-table td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .specifications-table th {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            font-weight: 600;
+        }
+
+        .specifications-table tr:hover {
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .specifications-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .related-products {
+            margin-top: 3rem;
+        }
+
+        .related-products h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .related-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .related-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .related-card .price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #059669;
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+
+            .product-title {
+                font-size: 2rem;
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+
+            .details-tabs {
+                flex-wrap: wrap;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" role="banner" itemscope itemtype="https://schema.org/WPHeader">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" itemscope itemtype="https://schema.org/Organization">
+                    <div class="logo-icon" aria-label="Sugimx Logo">
+                        <span class="logo-letter">T</span>
+                        <div class="logo-accent"></div>
+                    </div>
+                    <div class="logo-text-container">
+                        <span class="logo-text" itemprop="name">Sugimx</span>
+                    </div>
+                </div>
+                
+                <nav class="nav" role="navigation" aria-label="Main navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                    <a href="index.html" class="nav-link" itemprop="url">Home</a>
+                    <a href="products.html" class="nav-link active" aria-current="page" itemprop="url">Products</a>
+                    <a href="about.html" class="nav-link" itemprop="url">About Us</a>
+                    <a href="contact.html" class="btn btn-primary" aria-label="Reach out to Sugimx">Reach out</a>
+                </nav>
+                
+                <!-- Mobile Navigation Toggle -->
+                <button class="mobile-nav-toggle" aria-label="Toggle mobile navigation" aria-expanded="false" aria-controls="mobile-nav">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main role="main" class="product-detail-main">
+        <div class="container">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <div class="breadcrumb-nav">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="products.html">Products</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span id="breadcrumb-product">Product Details</span>
+                </div>
+            </nav>
+
+            <!-- Product Detail Container -->
+            <div class="product-detail-container">
+                <div class="product-image-section">
+                    <img id="product-main-image" src="images/gps_system.jpg" alt="Product Image" class="product-main-image">
+                </div>
+                
+                <div class="product-info-section">
+                    <div class="product-brand-model">
+                        <span id="product-brand" class="product-brand">HI TARGET</span>
+                        <span id="product-model" class="product-model">V300</span>
+                    </div>
+                    
+                    <h1 id="product-title" class="product-title">HI TARGET V300</h1>
+                    
+                    <div id="product-category" class="product-category">GNSS RTK Receiver</div>
+                    
+                    <p id="product-description" class="product-description">
+                        The Hi-Target V300 GNSS RTK Receiver is a compact, long-endurance solution with a starlight HD camera and AR measurement technology, delivering immersive live-view stakeout even in low-light.
+                    </p>
+                    
+                    <div class="product-pricing">
+                        <span id="current-price" class="current-price">₹ 2,45,000</span>
+                        <span id="last-sale-price" class="last-sale-price">₹ 2,40,000</span>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <a href="contact.html" class="btn-primary-large">
+                            <i class="fas fa-phone"></i>
+                            Get Quote
+                        </a>
+                        <button class="btn-secondary-large" onclick="addToWishlist()">
+                            <i class="fas fa-heart"></i>
+                            Add to Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details Section -->
+            <div class="product-details-section">
+                <div class="details-tabs">
+                    <button class="tab-btn active" onclick="showTab('features')">Features</button>
+                    <button class="tab-btn" onclick="showTab('specifications')">Specifications</button>
+                    <button class="tab-btn" onclick="showTab('applications')">Applications</button>
+                </div>
+
+                <div id="features-tab" class="tab-content active">
+                    <div class="features-grid" id="features-grid">
+                        <!-- Features will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div id="specifications-tab" class="tab-content">
+                    <table class="specifications-table" id="specifications-table">
+                        <!-- Specifications will be populated by JavaScript -->
+                    </table>
+                </div>
+
+                <div id="applications-tab" class="tab-content">
+                    <div class="features-grid" id="applications-grid">
+                        <!-- Applications will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products">
+                <h3>Related Products</h3>
+                <div class="related-grid" id="related-products-grid">
+                    <!-- Related products will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" itemscope itemtype="https://schema.org/Organization">
+                    <h3 itemprop="name">Sugimx</h3>
+                    <p itemprop="description">Empowering businesses with innovative surveying solutions and cutting-edge technology. Your trusted partner for precision measurement equipment in India.</p>
+                    <div class="social-links" aria-label="Social media links">
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook" itemprop="sameAs">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter" itemprop="sameAs">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn" itemprop="sameAs">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Follow us on Instagram" itemprop="sameAs">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#equipment-supply">Equipment Supply</a></li>
+                        <li><a href="services.html#technical-support">Technical Support</a></li>
+                        <li><a href="services.html#training">Training & Installation</a></li>
+                        <li><a href="services.html#maintenance">Maintenance & Repair</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <address class="contact-info" itemscope itemtype="https://schema.org/PostalAddress">
+                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="streetAddress">123 Business Street</span>, <span itemprop="addressLocality">Mumbai</span>, <span itemprop="addressRegion">Maharashtra</span> <span itemprop="postalCode">400001</span></p>
+                        <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+15551234567" itemprop="telephone">+1 (555) 123-4567</a></p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:Sugimx.info@gmail.com" itemprop="email">Sugimx.info@gmail.com</a></p>
+                        <p><i class="fas fa-clock" aria-hidden="true"></i> Mon-Fri: 9:00 AM - 6:00 PM IST</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Sugimx. All rights reserved. | <span itemprop="name">Sugimx Surveying Instruments</span></p>
+                    <nav class="footer-bottom-links" aria-label="Legal links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="sitemap.xml">Sitemap</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Product data (same as in products.html)
+        const productData = [
+            {
+                "brand": "HI TARGET",
+                "model": "V300",
+                "product_name": "HI TARGET V300",
+                "category": "GNSS RTK Receiver",
+                "description": "The Hi-Target V300 GNSS RTK Receiver is a compact, long-endurance solution with a starlight HD camera and AR measurement technology, delivering immersive live-view stakeout even in low-light. Its next-gen IMU with auto initialization ensures fast, tilt-compensated accuracy, while the 1408-channel full-constellation engine (supporting BeiDou-3 and advanced RTK decoding) provides centimeter-level precision. Seamless 360° AR stakeout between rover and controller boosts efficiency, and the rugged iHand55 with Hi-Survey software offers intelligent, user-friendly operation for all surveying and engineering needs.",
+                "features": [
+                    "Compact, long-endurance GNSS RTK receiver",
+                    "Starlight HD camera with AR measurement technology",
+                    "Immersive live-view stakeout in low-light environments",
+                    "Next-gen IMU with auto initialization",
+                    "Fast tilt-compensated accuracy",
+                    "1408-channel full-constellation engine",
+                    "Supports BeiDou-3 and advanced RTK decoding",
+                    "Centimeter-level positioning precision",
+                    "360° AR stakeout between rover and controller",
+                    "Rugged iHand55 controller with Hi-Survey software",
+                    "User-friendly interface for surveying and engineering applications"
+                ],
+                "specifications": {
+                    "IMU": "Next-gen IMU with auto initialization",
+                    "Tilt Compensation": "Yes, fast and automatic",
+                    "Camera": "Starlight HD camera",
+                    "AR Measurement": "Supported, 360° live-view AR stakeout",
+                    "Channels": 1408,
+                    "Satellite Support": "Full-constellation, including BeiDou-3",
+                    "RTK Decoding": "Advanced, for centimeter-level precision",
+                    "Controller": "iHand55",
+                    "Software": "Hi-Survey",
+                    "Application": [
+                        "Surveying",
+                        "Engineering"
+                    ]
+                },
+                "price": "₹ 2,45,000",
+                "lastSale": "₹ 2,40,000",
+                "image": "images/gps_system.jpg",
+                "likes": 89,
+                "alt": "HI TARGET V300 GNSS RTK Receiver"
+            },
+            {
+                "brand": "HI TARGET",
+                "model": "V200",
+                "product_name": "HI TARGET V200",
+                "category": "GNSS RTK Receiver",
+                "description": "The Hi-Target V200 GNSS RTK Receiver is a compact, long-endurance solution with a starlight HD camera and AR measurement technology, delivering immersive live-view stakeout even in low-light. Its next-gen IMU with auto initialization ensures fast, tilt-compensated accuracy, while the 1408-channel full-constellation engine (supporting BeiDou-3 and advanced RTK decoding) provides centimeter-level precision. Seamless 360° AR stakeout between rover and controller boosts efficiency, and the rugged iHand55 with Hi-Survey software offers intelligent, user-friendly operation for all surveying and engineering needs.",
+                "features": [
+                    "Compact, long-endurance GNSS RTK receiver",
+                    "Starlight HD camera with AR measurement technology",
+                    "Immersive live-view stakeout in low-light environments",
+                    "Next-gen IMU with auto initialization",
+                    "Fast tilt-compensated accuracy",
+                    "1408-channel full-constellation engine",
+                    "Supports BeiDou-3 and advanced RTK decoding",
+                    "Centimeter-level positioning precision",
+                    "360° AR stakeout between rover and controller",
+                    "Rugged iHand55 controller with Hi-Survey software",
+                    "User-friendly interface for surveying and engineering applications"
+                ],
+                "specifications": {
+                    "IMU": "Next-gen IMU with auto initialization",
+                    "Tilt Compensation": "Yes, fast and automatic",
+                    "Camera": "Starlight HD camera",
+                    "AR Measurement": "Supported, 360° live-view AR stakeout",
+                    "Channels": 1408,
+                    "Satellite Support": "Full-constellation, including BeiDou-3",
+                    "RTK Decoding": "Advanced, for centimeter-level precision",
+                    "Controller": "iHand55",
+                    "Software": "Hi-Survey",
+                    "Application": [
+                        "Surveying",
+                        "Engineering"
+                    ]
+                },
+                "price": "₹ 2,45,000",
+                "lastSale": "₹ 2,40,000",
+                "image": "images/gps_system.jpg",
+                "likes": 89,
+                "alt": "HI TARGET V200 GNSS RTK Receiver"
+            },
+            {
+                "brand": "LEICA",
+                "model": "TS16",
+                "product_name": "LEICA TS16 Robotic Total Station",
+                "category": "Total Station",
+                "description": "The Leica TS16 is a high-performance robotic total station designed for demanding surveying applications. It features advanced tracking technology, high-speed measurements, and exceptional accuracy for professional surveying projects.",
+                "features": [
+                    "High-performance robotic total station",
+                    "Advanced tracking technology",
+                    "High-speed measurements",
+                    "Exceptional accuracy",
+                    "Professional surveying applications",
+                    "Robotic operation",
+                    "Long-range measurement capability",
+                    "Integrated camera system",
+                    "Wireless connectivity",
+                    "Rugged construction"
+                ],
+                "specifications": {
+                    "Accuracy": "0.5\" angular, 1mm + 1.5ppm distance",
+                    "Range": "Up to 1000m with prism",
+                    "Tracking": "Advanced ATR technology",
+                    "Camera": "Integrated camera for visual guidance",
+                    "Connectivity": "Bluetooth, WiFi, USB",
+                    "Battery": "Long-lasting lithium-ion",
+                    "Protection": "IP65 dust and water protection",
+                    "Temperature": "-20°C to +50°C operating range"
+                },
+                "price": "₹ 3,85,000",
+                "lastSale": "₹ 3,80,000",
+                "image": "images/total_station.jpg",
+                "likes": 156,
+                "alt": "LEICA TS16 Robotic Total Station"
+            },
+            {
+                "brand": "TRIMBLE",
+                "model": "R10",
+                "product_name": "TRIMBLE R10 GNSS Receiver",
+                "category": "GNSS RTK Receiver",
+                "description": "The Trimble R10 GNSS receiver delivers centimeter-level accuracy with advanced RTK technology. It features a rugged design, long battery life, and seamless integration with Trimble's surveying ecosystem.",
+                "features": [
+                    "Centimeter-level RTK accuracy",
+                    "Rugged, weather-resistant design",
+                    "Long battery life",
+                    "Advanced GNSS technology",
+                    "Seamless Trimble ecosystem integration",
+                    "High-performance antenna",
+                    "Multi-frequency support",
+                    "Real-time positioning",
+                    "Bluetooth connectivity",
+                    "Compact and lightweight"
+                ],
+                "specifications": {
+                    "Accuracy": "RTK: 8mm + 1ppm horizontal, 15mm + 1ppm vertical",
+                    "Channels": "440+ channels",
+                    "Frequencies": "GPS L1/L2/L5, GLONASS L1/L2, Galileo E1/E5a/E5b",
+                    "Battery": "Up to 8 hours continuous operation",
+                    "Protection": "IP67 dust and water protection",
+                    "Weight": "1.1 kg with battery",
+                    "Connectivity": "Bluetooth, WiFi, USB"
+                },
+                "price": "₹ 1,95,000",
+                "lastSale": "₹ 1,90,000",
+                "image": "images/gps_system.jpg",
+                "likes": 67,
+                "alt": "TRIMBLE R10 GNSS Receiver"
+            }
+        ];
+
+        // Function to get product from URL parameter
+        function getProductFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productName = urlParams.get('product');
+            return productData.find(p => p.product_name === productName) || productData[0];
+        }
+
+        // Function to populate product details
+        function populateProductDetails() {
+            const product = getProductFromURL();
+            
+            // Update page title
+            document.getElementById('page-title').textContent = `${product.product_name} - Sugimx Surveying Equipment`;
+            document.getElementById('breadcrumb-product').textContent = product.product_name;
+            
+            // Update product information
+            document.getElementById('product-brand').textContent = product.brand;
+            document.getElementById('product-model').textContent = product.model;
+            document.getElementById('product-title').textContent = product.product_name;
+            document.getElementById('product-category').textContent = product.category;
+            document.getElementById('product-description').textContent = product.description;
+            document.getElementById('current-price').textContent = product.price;
+            document.getElementById('last-sale-price').textContent = product.lastSale;
+            document.getElementById('product-main-image').src = product.image;
+            document.getElementById('product-main-image').alt = product.alt;
+            
+            // Populate features
+            const featuresGrid = document.getElementById('features-grid');
+            featuresGrid.innerHTML = '';
+            product.features.forEach(feature => {
+                const featureItem = document.createElement('div');
+                featureItem.className = 'feature-item';
+                featureItem.innerHTML = `
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <span class="feature-text">${feature}</span>
+                `;
+                featuresGrid.appendChild(featureItem);
+            });
+            
+            // Populate specifications
+            const specificationsTable = document.getElementById('specifications-table');
+            specificationsTable.innerHTML = '';
+            Object.entries(product.specifications).forEach(([key, value]) => {
+                if (key !== 'Application') {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td><strong>${key}</strong></td>
+                        <td>${Array.isArray(value) ? value.join(', ') : value}</td>
+                    `;
+                    specificationsTable.appendChild(row);
+                }
+            });
+            
+            // Populate applications
+            const applicationsGrid = document.getElementById('applications-grid');
+            applicationsGrid.innerHTML = '';
+            if (product.specifications.Application) {
+                product.specifications.Application.forEach(application => {
+                    const appItem = document.createElement('div');
+                    appItem.className = 'feature-item';
+                    appItem.innerHTML = `
+                        <i class="fas fa-cogs feature-icon"></i>
+                        <span class="feature-text">${application}</span>
+                    `;
+                    applicationsGrid.appendChild(appItem);
+                });
+            }
+            
+            // Populate related products
+            populateRelatedProducts(product);
+        }
+
+        // Function to populate related products
+        function populateRelatedProducts(currentProduct) {
+            const relatedGrid = document.getElementById('related-products-grid');
+            relatedGrid.innerHTML = '';
+            
+            // Get products from same category, excluding current product
+            const relatedProducts = productData
+                .filter(p => p.category === currentProduct.category && p.product_name !== currentProduct.product_name)
+                .slice(0, 3);
+            
+            relatedProducts.forEach(product => {
+                const relatedCard = document.createElement('div');
+                relatedCard.className = 'related-card';
+                relatedCard.onclick = () => window.location.href = `product-detail.html?product=${encodeURIComponent(product.product_name)}`;
+                relatedCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.alt}">
+                    <h4>${product.product_name}</h4>
+                    <div class="price">${product.price}</div>
+                `;
+                relatedGrid.appendChild(relatedCard);
+            });
+        }
+
+        // Function to show tab content
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(`${tabName}-tab`).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        // Function to add to wishlist
+        function addToWishlist() {
+            const product = getProductFromURL();
+            alert(`Added "${product.product_name}" to your wishlist!`);
+        }
+
+        // Initialize page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            populateProductDetails();
+        });
+    </script>
+</body>
+</html>

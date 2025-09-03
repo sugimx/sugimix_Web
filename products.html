@@ -559,17 +559,17 @@
                 productCard.setAttribute('data-scroll-delay', (index * 0.1).toString());
 
                 productCard.innerHTML = `
-                    <div class="product-image-container">
+                    <div class="product-image-container" onclick="goToProductDetail('${product.product_name}')" style="cursor: pointer;">
                         <img src="${product.image}" alt="${product.alt}" class="product-image hover-scale">
                         <div class="product-overlay">
                             <div class="product-actions">
-                                <button class="action-btn hover-scale hover-glow" title="Quick View" onclick="showProductDetails('${product.product_name}')">
+                                <button class="action-btn hover-scale hover-glow" title="Quick View" onclick="event.stopPropagation(); goToProductDetail('${product.product_name}')">
                                     <i class="fas fa-eye"></i>
                                 </button>
-                                <button class="action-btn hover-scale hover-glow" title="Add to Wishlist">
+                                <button class="action-btn hover-scale hover-glow" title="Add to Wishlist" onclick="event.stopPropagation(); addToWishlist('${product.product_name}')">
                                     <i class="fas fa-heart"></i>
                                 </button>
-                                <button class="action-btn hover-scale hover-glow" title="Compare">
+                                <button class="action-btn hover-scale hover-glow" title="Compare" onclick="event.stopPropagation(); compareProduct('${product.product_name}')">
                                     <i class="fas fa-star"></i>
                                 </button>
                             </div>
@@ -584,7 +584,7 @@
                             <span class="product-brand">${product.brand}</span>
                             <span class="product-model">${product.model}</span>
                         </div>
-                        <h3 class="product-title">${product.product_name}</h3>
+                        <h3 class="product-title" onclick="goToProductDetail('${product.product_name}')" style="cursor: pointer;">${product.product_name}</h3>
                         <div class="product-category">${product.category}</div>
                         <div class="product-price">${product.price}</div>
                        
@@ -624,12 +624,19 @@
             });
         }
 
-        // Function to show product details (placeholder)
-        function showProductDetails(productName) {
-            const product = productData.find(p => p.product_name === productName);
-            if (product) {
-                alert(`Product Details: ${product.product_name}\n\nDescription: ${product.description}\n\nFeatures: ${product.features.slice(0, 3).join(', ')}...`);
-            }
+        // Function to navigate to product detail page
+        function goToProductDetail(productName) {
+            window.location.href = `product-detail.html?product=${encodeURIComponent(productName)}`;
+        }
+
+        // Function to add to wishlist
+        function addToWishlist(productName) {
+            alert(`Added "${productName}" to your wishlist!`);
+        }
+
+        // Function to compare product
+        function compareProduct(productName) {
+            alert(`Added "${productName}" to comparison list!`);
         }
 
         // Function to get quote (placeholder)
