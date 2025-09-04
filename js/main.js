@@ -165,12 +165,21 @@ class ComponentLoader {
         const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
         const nav = document.querySelector('.nav');
         
+        console.log('Initializing mobile navigation...', { mobileNavToggle, nav });
+        
         if (mobileNavToggle && nav) {
             // Remove existing event listeners to prevent duplicates
             const newToggle = mobileNavToggle.cloneNode(true);
             mobileNavToggle.parentNode.replaceChild(newToggle, mobileNavToggle);
             
-            newToggle.addEventListener('click', function() {
+            console.log('Mobile navigation toggle button found and replaced');
+            
+            const toggleMobileNav = function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                console.log('Mobile navigation toggle clicked');
+                
                 const isExpanded = this.getAttribute('aria-expanded') === 'true';
                 
                 // Toggle navigation
@@ -182,7 +191,17 @@ class ComponentLoader {
                 
                 // Prevent body scroll when menu is open
                 document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
-            });
+                
+                console.log('Mobile navigation toggled:', {
+                    navActive: nav.classList.contains('active'),
+                    toggleActive: this.classList.contains('active'),
+                    ariaExpanded: this.getAttribute('aria-expanded')
+                });
+            };
+            
+            // Add both click and touchstart events for better mobile support
+            newToggle.addEventListener('click', toggleMobileNav);
+            newToggle.addEventListener('touchstart', toggleMobileNav);
             
             // Close mobile menu when clicking on a link
             const mobileNavLinks = nav.querySelectorAll('.nav-link');
@@ -315,6 +334,18 @@ document.addEventListener('DOMContentLoaded', function() {
         componentLoader.loadComponentsSync();
         initializeMainFunctionality();
     });
+    
+    // Additional fallback: Initialize mobile navigation after a short delay
+    setTimeout(() => {
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const nav = document.querySelector('.nav');
+        
+        if (mobileNavToggle && nav && !mobileNavToggle.hasAttribute('data-initialized')) {
+            console.log('Fallback mobile navigation initialization');
+            componentLoader.initializeNavigation();
+            mobileNavToggle.setAttribute('data-initialized', 'true');
+        }
+    }, 1000);
 });
 
 function initializeMainFunctionality() {
