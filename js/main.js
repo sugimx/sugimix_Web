@@ -1,6 +1,323 @@
 // Main JavaScript functionality for Sug website
 
+// Component Loading System
+class ComponentLoader {
+    constructor() {
+        this.loadedComponents = new Set();
+        this.components = {
+            header: `<!-- Header Component -->
+<header class="header" role="banner" itemscope itemtype="https://schema.org/WPHeader">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo" itemscope itemtype="https://schema.org/Organization">
+                <img src="images/SUG.png" alt="Sug Logo" class="logo-image" itemprop="logo" style="height: 50px; width: auto;">
+            </div>
+            
+            <nav class="nav" role="navigation" aria-label="Main navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                <a href="index.html" class="nav-link" itemprop="url">Home</a>
+                <a href="products.html" class="nav-link" itemprop="url">Products</a>
+                <a href="about.html" class="nav-link" itemprop="url">About Us</a>
+                <a href="contact.html" class="btn btn-primary" aria-label="Reach out to Sug">Reach out</a>
+            </nav>
+            
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle" aria-label="Toggle mobile navigation" aria-expanded="false" aria-controls="mobile-nav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </div>
+</header>`,
+            footer: `<!-- Footer Component -->
+<footer id="footer" class="footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section" itemscope itemtype="https://schema.org/Organization">
+                <h3 itemprop="name">Sug</h3>
+                <p itemprop="description">Empowering businesses with innovative surveying solutions and cutting-edge technology. Your trusted partner for precision measurement equipment in India.</p>
+                <div class="social-links" aria-label="Social media links">
+                    <a href="#" class="social-link" aria-label="Follow us on Facebook" itemprop="sameAs">
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Follow us on Twitter" itemprop="sameAs">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Follow us on LinkedIn" itemprop="sameAs">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Follow us on Instagram" itemprop="sameAs">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <nav aria-label="Footer navigation">
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <address class="contact-info" itemscope itemtype="https://schema.org/PostalAddress">
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="streetAddress">123 Business Street</span>, <span itemprop="addressLocality">Mumbai</span>, <span itemprop="addressRegion">Maharashtra</span> <span itemprop="postalCode">400001</span></p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+15551234567" itemprop="telephone">+1 (555) 123-4567</a></p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:Sug.info@gmail.com" itemprop="email">Sug.info@gmail.com</a></p>
+                    <p><i class="fas fa-clock" aria-hidden="true"></i> Mon-Fri: 9:00 AM - 6:00 PM IST</p>
+                </address>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2024 Sug. All rights reserved. | <span itemprop="name">Sug Surveying Instruments</span></p>
+                <nav class="footer-bottom-links" aria-label="Legal links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>`
+        };
+    }
+
+    async loadComponent(componentName, targetElement) {
+        if (this.loadedComponents.has(componentName)) {
+            return;
+        }
+
+        const target = document.querySelector(targetElement);
+        if (!target) {
+            console.warn(`Target element ${targetElement} not found for ${componentName}`);
+            return;
+        }
+
+        try {
+            // Try to load from external file first
+            const paths = [
+                `components/${componentName}.html`,
+                `./components/${componentName}.html`,
+                `${window.location.pathname.split('/').slice(0, -1).join('/')}/components/${componentName}.html`
+            ];
+            
+            let html = null;
+            
+            for (const path of paths) {
+                try {
+                    console.log(`Trying to load ${componentName} from: ${path}`);
+                    const response = await fetch(path);
+                    if (response.ok) {
+                        html = await response.text();
+                        console.log(`Successfully fetched ${componentName} from: ${path}`);
+                        break;
+                    }
+                } catch (e) {
+                    console.log(`Failed to load from ${path}:`, e.message);
+                    continue;
+                }
+            }
+            
+            // If external loading failed, use embedded component
+            if (!html && this.components[componentName]) {
+                console.log(`Using embedded ${componentName} component`);
+                html = this.components[componentName];
+            }
+            
+            if (!html) {
+                throw new Error(`No ${componentName} component available`);
+            }
+            
+            target.innerHTML = html;
+            this.loadedComponents.add(componentName);
+            console.log(`Successfully loaded ${componentName} component into ${targetElement}`);
+            
+            // Add a visual indicator that component loaded
+            target.style.border = '2px solid green';
+            target.style.padding = '5px';
+            setTimeout(() => {
+                target.style.border = '';
+                target.style.padding = '';
+            }, 2000);
+            
+            // Re-initialize navigation functionality after loading
+            this.initializeNavigation();
+            this.setActiveNavigation();
+            
+        } catch (error) {
+            console.error(`Error loading ${componentName}:`, error);
+            // Show error message in placeholder
+            target.innerHTML = `<div style="color: red; padding: 10px; border: 1px solid red; margin: 10px 0;">
+                Error loading ${componentName} component: ${error.message}
+            </div>`;
+        }
+    }
+
+    initializeNavigation() {
+        // Re-initialize mobile navigation after component load
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const nav = document.querySelector('.nav');
+        
+        if (mobileNavToggle && nav) {
+            // Remove existing event listeners to prevent duplicates
+            const newToggle = mobileNavToggle.cloneNode(true);
+            mobileNavToggle.parentNode.replaceChild(newToggle, mobileNavToggle);
+            
+            newToggle.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                
+                // Toggle navigation
+                nav.classList.toggle('active');
+                this.classList.toggle('active');
+                
+                // Update ARIA attributes
+                this.setAttribute('aria-expanded', !isExpanded);
+                
+                // Prevent body scroll when menu is open
+                document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileNavLinks = nav.querySelectorAll('.nav-link');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Close mobile menu
+                    nav.classList.remove('active');
+                    newToggle.classList.remove('active');
+                    newToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!nav.contains(e.target) && !newToggle.contains(e.target)) {
+                    nav.classList.remove('active');
+                    newToggle.classList.remove('active');
+                    newToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Close mobile menu on window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    nav.classList.remove('active');
+                    newToggle.classList.remove('active');
+                    newToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+    }
+
+    setActiveNavigation() {
+        // Set active navigation based on current page
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                link.classList.add('active');
+                link.setAttribute('aria-current', 'page');
+            } else {
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
+            }
+        });
+    }
+
+    async loadAllComponents() {
+        console.log('Starting to load components...');
+        
+        // Load header if header placeholder exists
+        const headerPlaceholder = document.querySelector('#header-placeholder');
+        if (headerPlaceholder) {
+            console.log('Header placeholder found, loading header component...');
+            await this.loadComponent('header', '#header-placeholder');
+        } else {
+            console.log('Header placeholder not found');
+        }
+        
+        // Load footer if footer placeholder exists
+        const footerPlaceholder = document.querySelector('#footer-placeholder');
+        if (footerPlaceholder) {
+            console.log('Footer placeholder found, loading footer component...');
+            await this.loadComponent('footer', '#footer-placeholder');
+        } else {
+            console.log('Footer placeholder not found');
+        }
+        
+        console.log('Component loading completed');
+    }
+
+    loadComponentsSync() {
+        console.log('Loading components synchronously...');
+        
+        // Load header if header placeholder exists
+        const headerPlaceholder = document.querySelector('#header-placeholder');
+        if (headerPlaceholder && this.components.header) {
+            console.log('Loading header component synchronously...');
+            headerPlaceholder.innerHTML = this.components.header;
+            this.loadedComponents.add('header');
+            
+            // Add visual indicator
+            headerPlaceholder.style.border = '2px solid green';
+            headerPlaceholder.style.padding = '5px';
+            setTimeout(() => {
+                headerPlaceholder.style.border = '';
+                headerPlaceholder.style.padding = '';
+            }, 2000);
+            
+            this.initializeNavigation();
+            this.setActiveNavigation();
+        }
+        
+        // Load footer if footer placeholder exists
+        const footerPlaceholder = document.querySelector('#footer-placeholder');
+        if (footerPlaceholder && this.components.footer) {
+            console.log('Loading footer component synchronously...');
+            footerPlaceholder.innerHTML = this.components.footer;
+            this.loadedComponents.add('footer');
+            
+            // Add visual indicator
+            footerPlaceholder.style.border = '2px solid green';
+            footerPlaceholder.style.padding = '5px';
+            setTimeout(() => {
+                footerPlaceholder.style.border = '';
+                footerPlaceholder.style.padding = '';
+            }, 2000);
+        }
+        
+        console.log('Synchronous component loading completed');
+    }
+}
+
+// Initialize component loader
+const componentLoader = new ComponentLoader();
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Load components first
+    componentLoader.loadAllComponents().then(() => {
+        // Initialize other functionality after components are loaded
+        initializeMainFunctionality();
+    }).catch((error) => {
+        console.error('Error loading components:', error);
+        // Fallback: try to load components synchronously
+        componentLoader.loadComponentsSync();
+        initializeMainFunctionality();
+    });
+});
+
+function initializeMainFunctionality() {
     const navLinks = document.querySelectorAll('.nav-link');
     // Remove sections array since we're not doing single-page navigation anymore
 
@@ -109,63 +426,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Mobile navigation toggle functionality
-    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-    const nav = document.querySelector('.nav');
-    
-    if (mobileNavToggle && nav) {
-        mobileNavToggle.addEventListener('click', function() {
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            
-            // Toggle navigation
-            nav.classList.toggle('active');
-            this.classList.toggle('active');
-            
-            // Update ARIA attributes
-            this.setAttribute('aria-expanded', !isExpanded);
-            
-            // Prevent body scroll when menu is open
-            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
-        });
-        
-        // Close mobile menu when clicking on a link (only for mobile navigation)
-        const mobileNavLinks = nav.querySelectorAll('.nav-link');
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                // Close mobile menu
-                nav.classList.remove('active');
-                mobileNavToggle.classList.remove('active');
-                mobileNavToggle.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-                
-                // Allow normal navigation for external links
-                const href = this.getAttribute('href');
-                if (href && !href.startsWith('#')) {
-                    // This will allow the default navigation behavior
-                }
-            });
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!nav.contains(e.target) && !mobileNavToggle.contains(e.target)) {
-                nav.classList.remove('active');
-                mobileNavToggle.classList.remove('active');
-                mobileNavToggle.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-            }
-        });
-        
-        // Close mobile menu on window resize
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                nav.classList.remove('active');
-                mobileNavToggle.classList.remove('active');
-                mobileNavToggle.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-            }
-        });
-    }
+    // Mobile navigation functionality is now handled by ComponentLoader
 
     // Hero Slider functionality
     const heroSlider = {
@@ -585,7 +846,7 @@ document.addEventListener('DOMContentLoaded', function() {
         styleSheet.textContent = scrollToTopStyles;
         document.head.appendChild(styleSheet);
     }
-});
+}
 
 // Performance optimization: Lazy load images
 function lazyLoadImages() {
