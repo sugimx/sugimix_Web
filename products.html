@@ -112,339 +112,12 @@
     <!-- Footer Component Placeholder -->
     <div id="footer-placeholder"></div>
 
+    <!-- Import product data -->
+    <script src="js/productData.js"></script>
     <script src="js/main.js"></script>
     
-    <!-- Product Data and Dynamic Population Script -->
+    <!-- Product Listing Functionality Script -->
     <script>
-        // Dummy product data
-        const productData = [
-            {
-                "brand": "HI TARGET",
-                "model": "V300",
-                "product_name": "HI TARGET V300",
-                "category": "GNSS RTK Receiver",
-                "description": "The Hi-Target V300 GNSS RTK Receiver is a compact, long-endurance solution with a starlight HD camera and AR measurement technology, delivering immersive live-view stakeout even in low-light. Its next-gen IMU with auto initialization ensures fast, tilt-compensated accuracy, while the 1408-channel full-constellation engine (supporting BeiDou-3 and advanced RTK decoding) provides centimeter-level precision. Seamless 360° AR stakeout between rover and controller boosts efficiency, and the rugged iHand55 with Hi-Survey software offers intelligent, user-friendly operation for all surveying and engineering needs.",
-                "features": [
-                    "Compact, long-endurance GNSS RTK receiver",
-                    "Starlight HD camera with AR measurement technology",
-                    "Immersive live-view stakeout in low-light environments",
-                    "Next-gen IMU with auto initialization",
-                    "Fast tilt-compensated accuracy",
-                    "1408-channel full-constellation engine",
-                    "Supports BeiDou-3 and advanced RTK decoding",
-                    "Centimeter-level positioning precision",
-                    "360° AR stakeout between rover and controller",
-                    "Rugged iHand55 controller with Hi-Survey software",
-                    "User-friendly interface for surveying and engineering applications"
-                ],
-                "specifications": {
-                    "IMU": "Next-gen IMU with auto initialization",
-                    "Tilt Compensation": "Yes, fast and automatic",
-                    "Camera": "Starlight HD camera",
-                    "AR Measurement": "Supported, 360° live-view AR stakeout",
-                    "Channels": 1408,
-                    "Satellite Support": "Full-constellation, including BeiDou-3",
-                    "RTK Decoding": "Advanced, for centimeter-level precision",
-                    "Controller": "iHand55",
-                    "Software": "Hi-Survey",
-                    "Application": [
-                        "Surveying",
-                        "Engineering"
-                    ]
-                },
-                "price": "₹ 2,45,000",
-                "lastSale": "₹ 2,40,000",
-                "image": "images/gps_system.jpg",
-                "likes": 89,
-                "alt": "HI TARGET V300 GNSS RTK Receiver"
-            },
-            {
-                "brand": "HI TARGET",
-                "model": "V200",
-                "product_name": "HI TARGET V200",
-                "category": "GNSS RTK Receiver",
-                "description": "The Hi-Target V200 GNSS RTK Receiver is a compact, long-endurance solution with a starlight HD camera and AR measurement technology, delivering immersive live-view stakeout even in low-light. Its next-gen IMU with auto initialization ensures fast, tilt-compensated accuracy, while the 1408-channel full-constellation engine (supporting BeiDou-3 and advanced RTK decoding) provides centimeter-level precision. Seamless 360° AR stakeout between rover and controller boosts efficiency, and the rugged iHand55 with Hi-Survey software offers intelligent, user-friendly operation for all surveying and engineering needs.",
-                "features": [
-                    "Compact, long-endurance GNSS RTK receiver",
-                    "Starlight HD camera with AR measurement technology",
-                    "Immersive live-view stakeout in low-light environments",
-                    "Next-gen IMU with auto initialization",
-                    "Fast tilt-compensated accuracy",
-                    "1408-channel full-constellation engine",
-                    "Supports BeiDou-3 and advanced RTK decoding",
-                    "Centimeter-level positioning precision",
-                    "360° AR stakeout between rover and controller",
-                    "Rugged iHand55 controller with Hi-Survey software",
-                    "User-friendly interface for surveying and engineering applications"
-                ],
-                "specifications": {
-                    "IMU": "Next-gen IMU with auto initialization",
-                    "Tilt Compensation": "Yes, fast and automatic",
-                    "Camera": "Starlight HD camera",
-                    "AR Measurement": "Supported, 360° live-view AR stakeout",
-                    "Channels": 1408,
-                    "Satellite Support": "Full-constellation, including BeiDou-3",
-                    "RTK Decoding": "Advanced, for centimeter-level precision",
-                    "Controller": "iHand55",
-                    "Software": "Hi-Survey",
-                    "Application": [
-                        "Surveying",
-                        "Engineering"
-                    ]
-                },
-                "price": "₹ 2,45,000",
-                "lastSale": "₹ 2,40,000",
-                "image": "images/gps_system.jpg",
-                "likes": 89,
-                "alt": "HI TARGET V300 GNSS RTK Receiver"
-            },
-            {
-                "brand": "HI TARGET",
-                "model": "H32",
-                "product_name": "HI TARGET H32",
-                "category": "GNSS RTK Receiver",
-                "description": "The Hi-Target H32 GNSS RTK Receiver is a compact, long-endurance solution with a starlight HD camera and AR measurement technology, delivering immersive live-view stakeout even in low-light. Its next-gen IMU with auto initialization ensures fast, tilt-compensated accuracy, while the 1408-channel full-constellation engine (supporting BeiDou-3 and advanced RTK decoding) provides centimeter-level precision. Seamless 360° AR stakeout between rover and controller boosts efficiency, and the rugged iHand55 with Hi-Survey software offers intelligent, user-friendly operation for all surveying and engineering needs.",
-                "features": [
-                    "Compact, long-endurance GNSS RTK receiver",
-                    "Starlight HD camera with AR measurement technology",
-                    "Immersive live-view stakeout in low-light environments",
-                    "Next-gen IMU with auto initialization",
-                    "Fast tilt-compensated accuracy",
-                    "1408-channel full-constellation engine",
-                    "Supports BeiDou-3 and advanced RTK decoding",
-                    "Centimeter-level positioning precision",
-                    "360° AR stakeout between rover and controller",
-                    "Rugged iHand55 controller with Hi-Survey software",
-                    "User-friendly interface for surveying and engineering applications"
-                ],
-                "specifications": {
-                    "IMU": "Next-gen IMU with auto initialization",
-                    "Tilt Compensation": "Yes, fast and automatic",
-                    "Camera": "Starlight HD camera",
-                    "AR Measurement": "Supported, 360° live-view AR stakeout",
-                    "Channels": 1408,
-                    "Satellite Support": "Full-constellation, including BeiDou-3",
-                    "RTK Decoding": "Advanced, for centimeter-level precision",
-                    "Controller": "iHand55",
-                    "Software": "Hi-Survey",
-                    "Application": [
-                        "Surveying",
-                        "Engineering"
-                    ]
-                },
-                "price": "₹ 2,45,000",
-                "lastSale": "₹ 2,40,000",
-                "image": "images/gps_system.jpg",
-                "likes": 89,
-                "alt": "HI TARGET V300 GNSS RTK Receiver"
-            },
-            {
-                "brand": "HI TARGET",
-                "model": "A10",
-                "product_name": "HI TARGET A10",
-                "category": "GNSS RTK Receiver",
-                "description": "The Hi-Target A10 GNSS RTK Receiver is a compact, long-endurance solution with a starlight HD camera and AR measurement technology, delivering immersive live-view stakeout even in low-light. Its next-gen IMU with auto initialization ensures fast, tilt-compensated accuracy, while the 1408-channel full-constellation engine (supporting BeiDou-3 and advanced RTK decoding) provides centimeter-level precision. Seamless 360° AR stakeout between rover and controller boosts efficiency, and the rugged iHand55 with Hi-Survey software offers intelligent, user-friendly operation for all surveying and engineering needs.",
-                "features": [
-                    "Compact, long-endurance GNSS RTK receiver",
-                    "Starlight HD camera with AR measurement technology",
-                    "Immersive live-view stakeout in low-light environments",
-                    "Next-gen IMU with auto initialization",
-                    "Fast tilt-compensated accuracy",
-                    "1408-channel full-constellation engine",
-                    "Supports BeiDou-3 and advanced RTK decoding",
-                    "Centimeter-level positioning precision",
-                    "360° AR stakeout between rover and controller",
-                    "Rugged iHand55 controller with Hi-Survey software",
-                    "User-friendly interface for surveying and engineering applications"
-                ],
-                "specifications": {
-                    "IMU": "Next-gen IMU with auto initialization",
-                    "Tilt Compensation": "Yes, fast and automatic",
-                    "Camera": "Starlight HD camera",
-                    "AR Measurement": "Supported, 360° live-view AR stakeout",
-                    "Channels": 1408,
-                    "Satellite Support": "Full-constellation, including BeiDou-3",
-                    "RTK Decoding": "Advanced, for centimeter-level precision",
-                    "Controller": "iHand55",
-                    "Software": "Hi-Survey",
-                    "Application": [
-                        "Surveying",
-                        "Engineering"
-                    ]
-                },
-                "price": "₹ 2,45,000",
-                "lastSale": "₹ 2,40,000",
-                "image": "images/gps_system.jpg",
-                "likes": 89,
-                "alt": "HI TARGET V300 GNSS RTK Receiver"
-            },
-            {
-                "brand": "LEICA",
-                "model": "TS16",
-                "product_name": "LEICA TS16 Robotic Total Station",
-                "category": "Total Station",
-                "description": "The Leica TS16 is a high-performance robotic total station designed for demanding surveying applications. It features advanced tracking technology, high-speed measurements, and exceptional accuracy for professional surveying projects.",
-                "features": [
-                    "High-performance robotic total station",
-                    "Advanced tracking technology",
-                    "High-speed measurements",
-                    "Exceptional accuracy",
-                    "Professional surveying applications",
-                    "Robotic operation",
-                    "Long-range measurement capability",
-                    "Integrated camera system",
-                    "Wireless connectivity",
-                    "Rugged construction"
-                ],
-                "specifications": {
-                    "Accuracy": "0.5\" angular, 1mm + 1.5ppm distance",
-                    "Range": "Up to 1000m with prism",
-                    "Tracking": "Advanced ATR technology",
-                    "Camera": "Integrated camera for visual guidance",
-                    "Connectivity": "Bluetooth, WiFi, USB",
-                    "Battery": "Long-lasting lithium-ion",
-                    "Protection": "IP65 dust and water protection",
-                    "Temperature": "-20°C to +50°C operating range"
-                },
-                "price": "₹ 3,85,000",
-                "lastSale": "₹ 3,80,000",
-                "image": "images/total_station.jpg",
-                "likes": 156,
-                "alt": "LEICA TS16 Robotic Total Station"
-            },
-            {
-                "brand": "TRIMBLE",
-                "model": "R10",
-                "product_name": "TRIMBLE R10 GNSS Receiver",
-                "category": "GNSS RTK Receiver",
-                "description": "The Trimble R10 GNSS receiver delivers centimeter-level accuracy with advanced RTK technology. It features a rugged design, long battery life, and seamless integration with Trimble's surveying ecosystem.",
-                "features": [
-                    "Centimeter-level RTK accuracy",
-                    "Rugged, weather-resistant design",
-                    "Long battery life",
-                    "Advanced GNSS technology",
-                    "Seamless Trimble ecosystem integration",
-                    "High-performance antenna",
-                    "Multi-frequency support",
-                    "Real-time positioning",
-                    "Bluetooth connectivity",
-                    "Compact and lightweight"
-                ],
-                "specifications": {
-                    "Accuracy": "RTK: 8mm + 1ppm horizontal, 15mm + 1ppm vertical",
-                    "Channels": "440+ channels",
-                    "Frequencies": "GPS L1/L2/L5, GLONASS L1/L2, Galileo E1/E5a/E5b",
-                    "Battery": "Up to 8 hours continuous operation",
-                    "Protection": "IP67 dust and water protection",
-                    "Weight": "1.1 kg with battery",
-                    "Connectivity": "Bluetooth, WiFi, USB"
-                },
-                "price": "₹ 1,95,000",
-                "lastSale": "₹ 1,90,000",
-                "image": "images/gps_system.jpg",
-                "likes": 67,
-                "alt": "TRIMBLE R10 GNSS Receiver"
-            },
-            {
-                "brand": "SOKKIA",
-                "model": "CX-105",
-                "product_name": "SOKKIA CX-105 Total Station",
-                "category": "Total Station",
-                "description": "The Sokkia CX-105 is a reliable manual total station offering excellent accuracy and durability for various surveying applications. It features a clear display and intuitive operation.",
-                "features": [
-                    "Reliable manual total station",
-                    "Excellent accuracy",
-                    "Durable construction",
-                    "Clear LCD display",
-                    "Intuitive operation",
-                    "Long-range measurement",
-                    "Built-in compensator",
-                    "Data storage capability",
-                    "Multiple measurement modes",
-                    "Easy calibration"
-                ],
-                "specifications": {
-                    "Accuracy": "2\" angular, 2mm + 2ppm distance",
-                    "Range": "Up to 3000m with prism",
-                    "Display": "Large LCD with backlight",
-                    "Compensator": "Dual-axis automatic",
-                    "Memory": "10,000 points internal storage",
-                    "Battery": "Rechargeable lithium-ion",
-                    "Protection": "IP54 dust and water protection"
-                },
-                "price": "₹ 2,15,000",
-                "lastSale": "₹ 2,10,000",
-                "image": "images/total_station.jpg",
-                "likes": 124,
-                "alt": "SOKKIA CX-105 Total Station"
-            },
-            {
-                "brand": "TOPCON",
-                "model": "HiPer VR",
-                "product_name": "TOPCON HiPer VR GNSS Rover",
-                "category": "GNSS RTK Receiver",
-                "description": "The Topcon HiPer VR is a versatile GNSS rover unit designed for mobile surveying applications. It offers high accuracy, fast initialization, and reliable performance in challenging environments.",
-                "features": [
-                    "Versatile GNSS rover unit",
-                    "High accuracy positioning",
-                    "Fast initialization",
-                    "Reliable performance",
-                    "Mobile surveying optimized",
-                    "Multi-constellation support",
-                    "Advanced signal processing",
-                    "Compact design",
-                    "Easy field operation",
-                    "Comprehensive data logging"
-                ],
-                "specifications": {
-                    "Accuracy": "RTK: 10mm + 1ppm horizontal",
-                    "Initialization": "Typical 10-30 seconds",
-                    "Channels": "555 channels",
-                    "Frequencies": "GPS, GLONASS, Galileo, BeiDou",
-                    "Battery": "Up to 10 hours operation",
-                    "Weight": "0.9 kg",
-                    "Protection": "IP67 environmental protection"
-                },
-                "price": "₹ 1,75,000",
-                "lastSale": "₹ 1,70,000",
-                "image": "images/gps_system.jpg",
-                "likes": 98,
-                "alt": "TOPCON HiPer VR GNSS Rover"
-            },
-            {
-                "brand": "SECO",
-                "model": "Titanium",
-                "product_name": "SECO Titanium Surveying Tripod",
-                "category": "Accessories",
-                "description": "The SECO Titanium surveying tripod is a professional-grade support system designed for stability and durability. It features lightweight titanium construction and precision adjustment capabilities.",
-                "features": [
-                    "Professional-grade surveying tripod",
-                    "Lightweight titanium construction",
-                    "Stability and durability",
-                    "Precision adjustment",
-                    "Quick setup mechanism",
-                    "Height adjustment range",
-                    "Bubble level indicators",
-                    "Carrying case included",
-                    "Weather-resistant finish",
-                    "Compatible with most instruments"
-                ],
-                "specifications": {
-                    "Material": "Titanium alloy",
-                    "Height Range": "0.8m - 1.8m",
-                    "Weight": "3.2 kg",
-                    "Load Capacity": "Up to 15 kg",
-                    "Leg Sections": "3 sections per leg",
-                    "Foot Type": "Rubber feet with spikes",
-                    "Head": "5/8\" thread standard"
-                },
-                "price": "₹ 25,000",
-                "lastSale": "₹ 24,000",
-                "image": "images/total_station.jpg",
-                "likes": 45,
-                "alt": "SECO Titanium Surveying Tripod"
-            }
-        ];
 
 
         // Function to update category counts
@@ -629,7 +302,20 @@
 
                 productCard.innerHTML = `
                     <div class="product-image-container" onclick="goToProductDetail('${product.product_name}')" style="cursor: pointer;">
-                        <img src="${product.image}" alt="${product.alt}" class="product-image hover-scale">
+                        <div class="product-image-slider" data-product-id="${index}">
+                            ${product.images.map((img, imgIndex) => `
+                                <img src="${img}" alt="${product.alt}" class="product-image hover-scale ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">
+                            `).join('')}
+                        </div>
+                        <div class="image-navigation">
+                            ${product.images.length > 1 ? `
+                                <div class="image-dots">
+                                    ${product.images.map((_, dotIndex) => `
+                                        <span class="dot ${dotIndex === 0 ? 'active' : ''}" data-index="${dotIndex}"></span>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                        </div>
                         <div class="product-overlay">
                             <div class="product-actions">
                                 <button class="action-btn hover-scale hover-glow" title="Quick View" onclick="event.stopPropagation(); goToProductDetail('${product.product_name}')">
@@ -664,6 +350,11 @@
 
             // Update category counts
             updateCategoryCounts();
+            
+            // Initialize image sliders for the new cards
+            setTimeout(() => {
+                initializeImageSliders();
+            }, 100);
         }
 
         // Initialize pagination event listeners
@@ -681,12 +372,83 @@
             }
         }
 
+        // Function to initialize image sliders
+        function initializeImageSliders() {
+            const imageSliders = document.querySelectorAll('.product-image-slider');
+            
+            imageSliders.forEach(slider => {
+                const images = slider.querySelectorAll('.product-image');
+                const dots = slider.parentElement.querySelectorAll('.dot');
+                
+                // Add click event to dots
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        showImage(slider, index);
+                    });
+                });
+                
+                // Add hover events for image switching
+                slider.addEventListener('mouseenter', () => {
+                    if (images.length > 1) {
+                        startImageRotation(slider);
+                    }
+                });
+                
+                slider.addEventListener('mouseleave', () => {
+                    stopImageRotation(slider);
+                });
+            });
+        }
+        
+        // Function to show specific image
+        function showImage(slider, index) {
+            const images = slider.querySelectorAll('.product-image');
+            const dots = slider.parentElement.querySelectorAll('.dot');
+            
+            // Hide all images
+            images.forEach(img => img.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Show selected image and dot
+            if (images[index]) {
+                images[index].classList.add('active');
+            }
+            if (dots[index]) {
+                dots[index].classList.add('active');
+            }
+        }
+        
+        // Function to start image rotation on hover
+        function startImageRotation(slider) {
+            const images = slider.querySelectorAll('.product-image');
+            if (images.length <= 1) return;
+            
+            let currentIndex = 0;
+            const interval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(slider, currentIndex);
+            }, 2000);
+            
+            slider.setAttribute('data-rotation-interval', interval);
+        }
+        
+        // Function to stop image rotation
+        function stopImageRotation(slider) {
+            const interval = slider.getAttribute('data-rotation-interval');
+            if (interval) {
+                clearInterval(parseInt(interval));
+                slider.removeAttribute('data-rotation-interval');
+            }
+        }
+
         // Initialize product cards when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
             calculateTotalPages();
             populateProductCards();
             updatePaginationUI();
             initializePagination();
+            initializeImageSliders();
         });
     </script>
 </body>

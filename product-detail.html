@@ -73,18 +73,101 @@
             position: relative;
         }
 
-        .product-main-image {
+        .product-image-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .main-image-container {
+            position: relative;
             width: 100%;
             height: 400px;
-            object-fit: cover;
             border-radius: 16px;
+            overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
             border: 2px solid #e0e0e0;
         }
 
-        .product-main-image:hover {
+        .product-main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .main-image-container:hover .product-main-image {
             transform: scale(1.02);
+        }
+
+        .image-navigation-arrows {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .main-image-container:hover .image-navigation-arrows {
+            opacity: 1;
+        }
+
+        .nav-arrow {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            color: #000;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-arrow:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .nav-arrow:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .thumbnail-container {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            flex-shrink: 0;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.05);
+            border-color: #000;
+        }
+
+        .thumbnail.active {
+            border-color: #000;
+            transform: scale(1.05);
         }
 
         .product-info-section {
@@ -391,35 +474,8 @@
     </style>
 </head>
 <body>
-    <header class="header" role="banner" itemscope itemtype="https://schema.org/WPHeader">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo" itemscope itemtype="https://schema.org/Organization">
-                    <div class="logo-icon" aria-label="Sug Logo">
-                        <span class="logo-letter">T</span>
-                        <div class="logo-accent"></div>
-                    </div>
-                    <div class="logo-text-container">
-                        <span class="logo-text" itemprop="name">Sug</span>
-                    </div>
-                </div>
-                
-                <nav class="nav" role="navigation" aria-label="Main navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-                    <a href="index.html" class="nav-link" itemprop="url">Home</a>
-                    <a href="products.html" class="nav-link active" aria-current="page" itemprop="url">Products</a>
-                    <a href="about.html" class="nav-link" itemprop="url">About Us</a>
-                    <a href="contact.html" class="btn btn-primary" aria-label="Reach out to Sug">Reach out</a>
-                </nav>
-                
-                <!-- Mobile Navigation Toggle -->
-                <button class="mobile-nav-toggle" aria-label="Toggle mobile navigation" aria-expanded="false" aria-controls="mobile-nav">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <!-- Header Component Placeholder -->
+    <div id="header-placeholder"></div>
 
     <main role="main" class="product-detail-main">
         <div class="container">
@@ -437,7 +493,22 @@
             <!-- Product Detail Container -->
             <div class="product-detail-container">
                 <div class="product-image-section">
-                    <img id="product-main-image" src="images/gps_system.jpg" alt="Product Image" class="product-main-image">
+                    <div class="product-image-gallery">
+                        <div class="main-image-container">
+                            <img id="product-main-image" src="images/gps_system.jpg" alt="Product Image" class="product-main-image">
+                            <div class="image-navigation-arrows">
+                                <button class="nav-arrow prev-arrow" onclick="changeImage(-1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="nav-arrow next-arrow" onclick="changeImage(1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="thumbnail-container" id="thumbnail-container">
+                            <!-- Thumbnails will be populated by JavaScript -->
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="product-info-section">
@@ -505,217 +576,13 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer id="footer" class="footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section" itemscope itemtype="https://schema.org/Organization">
-                    <h3 itemprop="name">Sug</h3>
-                    <p itemprop="description">Empowering businesses with innovative surveying solutions and cutting-edge technology. Your trusted partner for precision measurement equipment in India.</p>
-                    <div class="social-links" aria-label="Social media links">
-                        <a href="#" class="social-link" aria-label="Follow us on Facebook" itemprop="sameAs">
-                            <i class="fab fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Follow us on Twitter" itemprop="sameAs">
-                            <i class="fab fa-twitter" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn" itemprop="sameAs">
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Follow us on Instagram" itemprop="sameAs">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <nav aria-label="Footer navigation">
-                        <ul class="footer-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="products.html">Products</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Contact Information</h4>
-                    <address class="contact-info" itemscope itemtype="https://schema.org/PostalAddress">
-                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="streetAddress">123 Business Street</span>, <span itemprop="addressLocality">Mumbai</span>, <span itemprop="addressRegion">Maharashtra</span> <span itemprop="postalCode">400001</span></p>
-                        <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+15551234567" itemprop="telephone">+1 (555) 123-4567</a></p>
-                        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:Sug.info@gmail.com" itemprop="email">Sug.info@gmail.com</a></p>
-                        <p><i class="fas fa-clock" aria-hidden="true"></i> Mon-Fri: 9:00 AM - 6:00 PM IST</p>
-                    </address>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2024 Sug. All rights reserved. | <span itemprop="name">Sug Surveying Instruments</span></p>
-                    <nav class="footer-bottom-links" aria-label="Legal links">
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                        <a href="terms-of-service.html">Terms of Service</a>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Component Placeholder -->
+    <div id="footer-placeholder"></div>
 
+    <script src="js/productData.js"></script>
     <script src="js/main.js"></script>
     
     <script>
-        // Product data (same as in products.html)
-        const productData = [
-            {
-                "brand": "HI TARGET",
-                "model": "V300",
-                "product_name": "HI TARGET V300",
-                "category": "GNSS RTK Receiver",
-                "description": "The Hi-Target V300 GNSS RTK Receiver is a compact, long-endurance solution with a starlight HD camera and AR measurement technology, delivering immersive live-view stakeout even in low-light. Its next-gen IMU with auto initialization ensures fast, tilt-compensated accuracy, while the 1408-channel full-constellation engine (supporting BeiDou-3 and advanced RTK decoding) provides centimeter-level precision. Seamless 360° AR stakeout between rover and controller boosts efficiency, and the rugged iHand55 with Hi-Survey software offers intelligent, user-friendly operation for all surveying and engineering needs.",
-                "features": [
-                    "Compact, long-endurance GNSS RTK receiver",
-                    "Starlight HD camera with AR measurement technology",
-                    "Immersive live-view stakeout in low-light environments",
-                    "Next-gen IMU with auto initialization",
-                    "Fast tilt-compensated accuracy",
-                    "1408-channel full-constellation engine",
-                    "Supports BeiDou-3 and advanced RTK decoding",
-                    "Centimeter-level positioning precision",
-                    "360° AR stakeout between rover and controller",
-                    "Rugged iHand55 controller with Hi-Survey software",
-                    "User-friendly interface for surveying and engineering applications"
-                ],
-                "specifications": {
-                    "IMU": "Next-gen IMU with auto initialization",
-                    "Tilt Compensation": "Yes, fast and automatic",
-                    "Camera": "Starlight HD camera",
-                    "AR Measurement": "Supported, 360° live-view AR stakeout",
-                    "Channels": 1408,
-                    "Satellite Support": "Full-constellation, including BeiDou-3",
-                    "RTK Decoding": "Advanced, for centimeter-level precision",
-                    "Controller": "iHand55",
-                    "Software": "Hi-Survey",
-                    "Application": [
-                        "Surveying",
-                        "Engineering"
-                    ]
-                },
-                "price": "₹ 2,45,000",
-                "lastSale": "₹ 2,40,000",
-                "image": "images/gps_system.jpg",
-                "likes": 89,
-                "alt": "HI TARGET V300 GNSS RTK Receiver"
-            },
-            {
-                "brand": "HI TARGET",
-                "model": "V200",
-                "product_name": "HI TARGET V200",
-                "category": "GNSS RTK Receiver",
-                "description": "The Hi-Target V200 GNSS RTK Receiver is a compact, long-endurance solution with a starlight HD camera and AR measurement technology, delivering immersive live-view stakeout even in low-light. Its next-gen IMU with auto initialization ensures fast, tilt-compensated accuracy, while the 1408-channel full-constellation engine (supporting BeiDou-3 and advanced RTK decoding) provides centimeter-level precision. Seamless 360° AR stakeout between rover and controller boosts efficiency, and the rugged iHand55 with Hi-Survey software offers intelligent, user-friendly operation for all surveying and engineering needs.",
-                "features": [
-                    "Compact, long-endurance GNSS RTK receiver",
-                    "Starlight HD camera with AR measurement technology",
-                    "Immersive live-view stakeout in low-light environments",
-                    "Next-gen IMU with auto initialization",
-                    "Fast tilt-compensated accuracy",
-                    "1408-channel full-constellation engine",
-                    "Supports BeiDou-3 and advanced RTK decoding",
-                    "Centimeter-level positioning precision",
-                    "360° AR stakeout between rover and controller",
-                    "Rugged iHand55 controller with Hi-Survey software",
-                    "User-friendly interface for surveying and engineering applications"
-                ],
-                "specifications": {
-                    "IMU": "Next-gen IMU with auto initialization",
-                    "Tilt Compensation": "Yes, fast and automatic",
-                    "Camera": "Starlight HD camera",
-                    "AR Measurement": "Supported, 360° live-view AR stakeout",
-                    "Channels": 1408,
-                    "Satellite Support": "Full-constellation, including BeiDou-3",
-                    "RTK Decoding": "Advanced, for centimeter-level precision",
-                    "Controller": "iHand55",
-                    "Software": "Hi-Survey",
-                    "Application": [
-                        "Surveying",
-                        "Engineering"
-                    ]
-                },
-                "price": "₹ 2,45,000",
-                "lastSale": "₹ 2,40,000",
-                "image": "images/gps_system.jpg",
-                "likes": 89,
-                "alt": "HI TARGET V200 GNSS RTK Receiver"
-            },
-            {
-                "brand": "LEICA",
-                "model": "TS16",
-                "product_name": "LEICA TS16 Robotic Total Station",
-                "category": "Total Station",
-                "description": "The Leica TS16 is a high-performance robotic total station designed for demanding surveying applications. It features advanced tracking technology, high-speed measurements, and exceptional accuracy for professional surveying projects.",
-                "features": [
-                    "High-performance robotic total station",
-                    "Advanced tracking technology",
-                    "High-speed measurements",
-                    "Exceptional accuracy",
-                    "Professional surveying applications",
-                    "Robotic operation",
-                    "Long-range measurement capability",
-                    "Integrated camera system",
-                    "Wireless connectivity",
-                    "Rugged construction"
-                ],
-                "specifications": {
-                    "Accuracy": "0.5\" angular, 1mm + 1.5ppm distance",
-                    "Range": "Up to 1000m with prism",
-                    "Tracking": "Advanced ATR technology",
-                    "Camera": "Integrated camera for visual guidance",
-                    "Connectivity": "Bluetooth, WiFi, USB",
-                    "Battery": "Long-lasting lithium-ion",
-                    "Protection": "IP65 dust and water protection",
-                    "Temperature": "-20°C to +50°C operating range"
-                },
-                "price": "₹ 3,85,000",
-                "lastSale": "₹ 3,80,000",
-                "image": "images/total_station.jpg",
-                "likes": 156,
-                "alt": "LEICA TS16 Robotic Total Station"
-            },
-            {
-                "brand": "TRIMBLE",
-                "model": "R10",
-                "product_name": "TRIMBLE R10 GNSS Receiver",
-                "category": "GNSS RTK Receiver",
-                "description": "The Trimble R10 GNSS receiver delivers centimeter-level accuracy with advanced RTK technology. It features a rugged design, long battery life, and seamless integration with Trimble's surveying ecosystem.",
-                "features": [
-                    "Centimeter-level RTK accuracy",
-                    "Rugged, weather-resistant design",
-                    "Long battery life",
-                    "Advanced GNSS technology",
-                    "Seamless Trimble ecosystem integration",
-                    "High-performance antenna",
-                    "Multi-frequency support",
-                    "Real-time positioning",
-                    "Bluetooth connectivity",
-                    "Compact and lightweight"
-                ],
-                "specifications": {
-                    "Accuracy": "RTK: 8mm + 1ppm horizontal, 15mm + 1ppm vertical",
-                    "Channels": "440+ channels",
-                    "Frequencies": "GPS L1/L2/L5, GLONASS L1/L2, Galileo E1/E5a/E5b",
-                    "Battery": "Up to 8 hours continuous operation",
-                    "Protection": "IP67 dust and water protection",
-                    "Weight": "1.1 kg with battery",
-                    "Connectivity": "Bluetooth, WiFi, USB"
-                },
-                "price": "₹ 1,95,000",
-                "lastSale": "₹ 1,90,000",
-                "image": "images/gps_system.jpg",
-                "likes": 67,
-                "alt": "TRIMBLE R10 GNSS Receiver"
-            }
-        ];
 
         // Function to get product from URL parameter
         function getProductFromURL() {
@@ -739,9 +606,14 @@
             document.getElementById('product-category').textContent = product.category;
             document.getElementById('product-description').textContent = product.description;
             document.getElementById('current-price').textContent = product.price;
-            document.getElementById('last-sale-price').textContent = product.lastSale;
-            document.getElementById('product-main-image').src = product.image;
-            document.getElementById('product-main-image').alt = product.alt;
+            if (product.lastSale) {
+                document.getElementById('last-sale-price').textContent = product.lastSale;
+                document.getElementById('last-sale-price').style.display = 'block';
+            } else {
+                document.getElementById('last-sale-price').style.display = 'none';
+            }
+            // Set up image gallery
+            setupImageGallery(product);
             
             // Populate features
             const featuresGrid = document.getElementById('features-grid');
@@ -750,6 +622,7 @@
                 const featureItem = document.createElement('div');
                 featureItem.className = 'feature-item';
                 featureItem.innerHTML = `
+                    <i class="fas fa-star feature-icon"></i>
                     <span class="feature-text">${feature}</span>
                 `;
                 featuresGrid.appendChild(featureItem);
@@ -758,30 +631,111 @@
             // Populate specifications
             const specificationsTable = document.getElementById('specifications-table');
             specificationsTable.innerHTML = '';
-            Object.entries(product.specifications).forEach(([key, value]) => {
-                if (key !== 'Application') {
+            
+            // Add table header
+            const headerRow = document.createElement('tr');
+            headerRow.innerHTML = `
+                <th>Specification</th>
+                <th>Details</th>
+            `;
+            specificationsTable.appendChild(headerRow);
+            
+            // Function to render nested specifications
+            function renderSpecifications(specs, parentKey = '') {
+                Object.entries(specs).forEach(([key, value]) => {
+                    if (key === 'Application') return; // Skip applications as they're handled separately
+                    
                     const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td><strong>${key}</strong></td>
-                        <td>${Array.isArray(value) ? value.join(', ') : value}</td>
-                    `;
-                    specificationsTable.appendChild(row);
-                }
-            });
+                    const fullKey = parentKey ? `${parentKey} - ${key}` : key;
+                    
+                    if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+                        // For nested objects, render them recursively
+                        renderSpecifications(value, fullKey);
+                    } else {
+                        // For simple values or arrays
+                        let displayValue = value;
+                        if (Array.isArray(value)) {
+                            displayValue = value.join(', ');
+                        } else if (typeof value === 'object' && value !== null) {
+                            displayValue = JSON.stringify(value, null, 2);
+                        }
+                        
+                        row.innerHTML = `
+                            <td><strong>${fullKey}</strong></td>
+                            <td>${displayValue}</td>
+                        `;
+                        specificationsTable.appendChild(row);
+                    }
+                });
+            }
+            
+            renderSpecifications(product.specifications);
             
             // Populate applications
             const applicationsGrid = document.getElementById('applications-grid');
             applicationsGrid.innerHTML = '';
+            
+            // Get applications from different possible locations in the data
+            let applications = [];
             if (product.specifications.Application) {
-                product.specifications.Application.forEach(application => {
-                    const appItem = document.createElement('div');
-                    appItem.className = 'feature-item';
-                    appItem.innerHTML = `
-                        <span class="feature-text">${application}</span>
-                    `;
-                    applicationsGrid.appendChild(appItem);
-                });
+                applications = product.specifications.Application;
+            } else if (product.specifications['Functional Application']) {
+                applications = product.specifications['Functional Application'];
+            } else if (product.specifications['Function Application']) {
+                applications = product.specifications['Function Application'];
             }
+            
+            // If no specific applications found, create some based on category
+            if (applications.length === 0) {
+                switch (product.category) {
+                    case 'RTK Receiver':
+                    case 'GNSS RTK Receiver':
+                        applications = [
+                            'Land Surveying',
+                            'Construction Layout',
+                            'GIS Data Collection',
+                            'Precision Agriculture',
+                            'Infrastructure Development',
+                            'Mining Operations'
+                        ];
+                        break;
+                    case 'Total Station':
+                        applications = [
+                            'Construction Surveying',
+                            'Engineering Projects',
+                            'Building Layout',
+                            'Topographic Surveys',
+                            'As-Built Documentation',
+                            'Quality Control'
+                        ];
+                        break;
+                    case 'Accessories':
+                        applications = [
+                            'Equipment Support',
+                            'Field Operations',
+                            'Professional Surveying',
+                            'Construction Projects'
+                        ];
+                        break;
+                    default:
+                        applications = [
+                            'Professional Surveying',
+                            'Engineering Applications',
+                            'Construction Projects',
+                            'Field Operations'
+                        ];
+                }
+            }
+            
+            applications.forEach(application => {
+                const appItem = document.createElement('div');
+                appItem.className = 'feature-item';
+                appItem.innerHTML = `
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <span class="feature-text">${application}</span>
+                `;
+                applicationsGrid.appendChild(appItem);
+            });
             
             // Populate related products
             populateRelatedProducts(product);
@@ -802,12 +756,93 @@
                 relatedCard.className = 'related-card';
                 relatedCard.onclick = () => window.location.href = `product-detail.html?product=${encodeURIComponent(product.product_name)}`;
                 relatedCard.innerHTML = `
-                    <img src="${product.image}" alt="${product.alt}">
+                    <img src="${product.images ? product.images[0] : 'images/gps_system.jpg'}" alt="${product.alt}">
                     <h4>${product.product_name}</h4>
                     <div class="price">${product.price}</div>
                 `;
                 relatedGrid.appendChild(relatedCard);
             });
+        }
+
+        // Global variables for image gallery
+        let currentProduct = null;
+        let currentImageIndex = 0;
+
+        // Function to setup image gallery
+        function setupImageGallery(product) {
+            currentProduct = product;
+            currentImageIndex = 0;
+            
+            const mainImage = document.getElementById('product-main-image');
+            const thumbnailContainer = document.getElementById('thumbnail-container');
+            
+            // Set main image
+            if (product.images && product.images.length > 0) {
+                mainImage.src = product.images[0];
+                mainImage.alt = product.alt;
+                
+                // Create thumbnails
+                thumbnailContainer.innerHTML = '';
+                product.images.forEach((image, index) => {
+                    const thumbnail = document.createElement('img');
+                    thumbnail.src = image;
+                    thumbnail.alt = product.alt;
+                    thumbnail.className = `thumbnail ${index === 0 ? 'active' : ''}`;
+                    thumbnail.onclick = () => showImage(index);
+                    thumbnailContainer.appendChild(thumbnail);
+                });
+                
+                // Update navigation arrows
+                updateNavigationArrows();
+            } else {
+                // Fallback if no images
+                mainImage.src = 'images/gps_system.jpg';
+                mainImage.alt = product.alt;
+                thumbnailContainer.innerHTML = '';
+            }
+        }
+
+        // Function to show specific image
+        function showImage(index) {
+            if (!currentProduct || !currentProduct.images) return;
+            
+            currentImageIndex = index;
+            const mainImage = document.getElementById('product-main-image');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            
+            // Update main image
+            mainImage.src = currentProduct.images[index];
+            
+            // Update thumbnail active state
+            thumbnails.forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === index);
+            });
+            
+            // Update navigation arrows
+            updateNavigationArrows();
+        }
+
+        // Function to change image with arrows
+        function changeImage(direction) {
+            if (!currentProduct || !currentProduct.images) return;
+            
+            const newIndex = currentImageIndex + direction;
+            if (newIndex >= 0 && newIndex < currentProduct.images.length) {
+                showImage(newIndex);
+            }
+        }
+
+        // Function to update navigation arrows state
+        function updateNavigationArrows() {
+            const prevArrow = document.querySelector('.prev-arrow');
+            const nextArrow = document.querySelector('.next-arrow');
+            
+            if (prevArrow) {
+                prevArrow.disabled = currentImageIndex === 0;
+            }
+            if (nextArrow) {
+                nextArrow.disabled = currentImageIndex === (currentProduct.images.length - 1);
+            }
         }
 
         // Function to show tab content

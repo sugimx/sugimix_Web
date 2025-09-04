@@ -1523,3 +1523,395 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize results count
     updateResultsCount();
 });
+
+// Product Image Slider/Carousel Functionality
+class ProductImageSlider {
+    constructor() {
+        this.sliders = new Map();
+        this.init();
+    }
+
+    init() {
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => this.initializeSliders());
+        } else {
+            this.initializeSliders();
+        }
+    }
+
+    initializeSliders() {
+        // Find all product cards with multiple images
+        const productCards = document.querySelectorAll('.product-card');
+        
+        productCards.forEach((card, index) => {
+            const productImage = card.querySelector('.product-image img');
+            if (productImage) {
+                this.createSlider(card, productImage, index);
+            }
+        });
+    }
+
+    createSlider(card, mainImage, index) {
+        // Get product data from the image src or data attributes
+        const imageSrc = mainImage.src;
+        const productId = this.extractProductId(imageSrc);
+        
+        // Find the product data
+        const product = this.findProductData(productId);
+        
+        if (product && product.images && product.images.length > 1) {
+            // Create slider container
+            const sliderContainer = this.createSliderHTML(product.images, index);
+            
+            // Replace the main image with slider
+            const imageContainer = mainImage.closest('.product-image');
+            if (imageContainer) {
+                imageContainer.innerHTML = sliderContainer;
+                
+                // Initialize slider functionality
+                this.initializeSliderEvents(card, index, product.images.length);
+            }
+        }
+    }
+
+    createSliderHTML(images, index) {
+        const sliderId = `product-slider-${index}`;
+        
+        return `
+            <div class="product-image-slider" id="${sliderId}">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        ${images.map((img, imgIndex) => `
+                            <div class="slider-slide ${imgIndex === 0 ? 'active' : ''}" data-slide="${imgIndex}">
+                                <img src="${img}" alt="Product Image ${imgIndex + 1}" loading="lazy">
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    ${images.length > 1 ? `
+                        <div class="slider-controls">
+                            <button class="slider-btn prev" aria-label="Previous image">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="slider-btn next" aria-label="Next image">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="slider-indicators">
+                            ${images.map((_, imgIndex) => `
+                                <button class="slider-indicator ${imgIndex === 0 ? 'active' : ''}" 
+                                        data-slide="${imgIndex}" 
+                                        aria-label="Go to image ${imgIndex + 1}">
+                                </button>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            </div>
+        `;
+    }
+
+    initializeSliderEvents(card, index, totalSlides) {
+        const slider = card.querySelector('.product-image-slider');
+        if (!slider || totalSlides <= 1) return;
+
+        const sliderId = `product-slider-${index}`;
+        const sliderData = {
+            currentSlide: 0,
+            totalSlides: totalSlides,
+            autoPlayInterval: null,
+            autoPlayDelay: 4000
+        };
+
+        this.sliders.set(sliderId, sliderData);
+
+        // Navigation buttons
+        const prevBtn = slider.querySelector('.slider-btn.prev');
+        const nextBtn = slider.querySelector('.slider-btn.next');
+        const indicators = slider.querySelectorAll('.slider-indicator');
+
+        // Previous button
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                this.prevSlide(sliderId);
+            });
+        }
+
+        // Next button
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                this.nextSlide(sliderId);
+            });
+        }
+
+        // Indicators
+        indicators.forEach((indicator, slideIndex) => {
+            indicator.addEventListener('click', () => {
+                this.goToSlide(sliderId, slideIndex);
+            });
+        });
+
+        // Touch/swipe support
+        this.addTouchSupport(slider, sliderId);
+
+        // Auto-play (optional)
+        this.startAutoPlay(sliderId);
+
+        // Pause on hover
+        slider.addEventListener('mouseenter', () => {
+            this.pauseAutoPlay(sliderId);
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            this.startAutoPlay(sliderId);
+        });
+    }
+
+    goToSlide(sliderId, slideIndex) {
+        const sliderData = this.sliders.get(sliderId);
+        if (!sliderData) return;
+
+        const slider = document.getElementById(sliderId);
+        if (!slider) return;
+
+        // Update current slide
+        sliderData.currentSlide = slideIndex;
+
+        // Update slides
+        const slides = slider.querySelectorAll('.slider-slide');
+        slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === slideIndex);
+        });
+
+        // Update indicators
+        const indicators = slider.querySelectorAll('.slider-indicator');
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === slideIndex);
+        });
+    }
+
+    nextSlide(sliderId) {
+        const sliderData = this.sliders.get(sliderId);
+        if (!sliderData) return;
+
+        const nextIndex = (sliderData.currentSlide + 1) % sliderData.totalSlides;
+        this.goToSlide(sliderId, nextIndex);
+    }
+
+    prevSlide(sliderId) {
+        const sliderData = this.sliders.get(sliderId);
+        if (!sliderData) return;
+
+        const prevIndex = sliderData.currentSlide === 0 
+            ? sliderData.totalSlides - 1 
+            : sliderData.currentSlide - 1;
+        this.goToSlide(sliderId, prevIndex);
+    }
+
+    addTouchSupport(slider, sliderId) {
+        let startX = 0;
+        let startY = 0;
+        let endX = 0;
+        let endY = 0;
+
+        slider.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        });
+
+        slider.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            endY = e.changedTouches[0].clientY;
+            
+            const diffX = startX - endX;
+            const diffY = startY - endY;
+            
+            // Only trigger if horizontal swipe is more significant than vertical
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    this.nextSlide(sliderId);
+                } else {
+                    this.prevSlide(sliderId);
+                }
+            }
+        });
+    }
+
+    startAutoPlay(sliderId) {
+        const sliderData = this.sliders.get(sliderId);
+        if (!sliderData || sliderData.totalSlides <= 1) return;
+
+        this.pauseAutoPlay(sliderId);
+        sliderData.autoPlayInterval = setInterval(() => {
+            this.nextSlide(sliderId);
+        }, sliderData.autoPlayDelay);
+    }
+
+    pauseAutoPlay(sliderId) {
+        const sliderData = this.sliders.get(sliderId);
+        if (sliderData && sliderData.autoPlayInterval) {
+            clearInterval(sliderData.autoPlayInterval);
+            sliderData.autoPlayInterval = null;
+        }
+    }
+
+    extractProductId(imageSrc) {
+        // Extract product identifier from image path
+        const pathParts = imageSrc.split('/');
+        const fileName = pathParts[pathParts.length - 1];
+        return fileName.replace(/\.[^/.]+$/, ""); // Remove file extension
+    }
+
+    findProductData(productId) {
+        // This would typically search through your product data
+        // For now, we'll use a simple approach
+        if (typeof productData !== 'undefined') {
+            return productData.find(product => 
+                product.images && product.images.some(img => 
+                    img.includes(productId)
+                )
+            );
+        }
+        return null;
+    }
+}
+
+// Initialize the product image slider
+const productImageSlider = new ProductImageSlider();
+
+// Add CSS styles for the image slider
+const sliderStyles = `
+    .product-image-slider {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .slider-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider-track {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        transition: transform 0.3s ease;
+    }
+
+    .slider-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .slider-slide.active {
+        opacity: 1;
+    }
+
+    .slider-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .slider-controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        pointer-events: none;
+    }
+
+    .slider-btn {
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        pointer-events: auto;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .slider-btn:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: scale(1.1);
+    }
+
+    .slider-btn i {
+        font-size: 14px;
+        color: #333;
+    }
+
+    .slider-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+    }
+
+    .slider-indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .slider-indicator.active {
+        background: rgba(255, 255, 255, 1);
+        transform: scale(1.2);
+    }
+
+    .slider-indicator:hover {
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Hide controls on mobile for cleaner look */
+    @media (max-width: 768px) {
+        .slider-controls {
+            display: none;
+        }
+        
+        .slider-indicators {
+            bottom: 5px;
+        }
+        
+        .slider-indicator {
+            width: 6px;
+            height: 6px;
+        }
+    }
+`;
+
+// Inject styles
+if (!document.querySelector('#product-slider-styles')) {
+    const styleSheet = document.createElement('style');
+    styleSheet.id = 'product-slider-styles';
+    styleSheet.textContent = sliderStyles;
+    document.head.appendChild(styleSheet);
+}
