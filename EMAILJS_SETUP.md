@@ -1,4 +1,4 @@
-# EmailJS Setup Guide for Sugimx Contact Form
+# EmailJS Setup Guide for Sug Contact Form
 
 This guide will help you set up EmailJS to enable your contact form to send emails through Gmail.
 
@@ -26,7 +26,7 @@ EmailJS is a service that allows you to send emails directly from your website u
    - Click "Connect Account"
    - Sign in with your Gmail account
    - Grant necessary permissions
-   - Give your service a name (e.g., "Sugimx Gmail")
+   - Give your service a name (e.g., "Sug Gmail")
    - Note down the **Service ID** (you'll need this later)
 
 ### 3. Create Email Template
@@ -36,7 +36,7 @@ EmailJS is a service that allows you to send emails directly from your website u
    - Click "Create New Template"
 
 2. **Design Your Template**
-   - Give it a name (e.g., "Sugimx Contact Form")
+   - Give it a name (e.g., "Sug Contact Form")
    - Set the subject: `New Contact Form Submission from {{from_name}}`
    - Design the email body using the template variables:
 
@@ -51,7 +51,7 @@ EmailJS is a service that allows you to send emails directly from your website u
 <p>{{message}}</p>
 
 <hr>
-<p><em>This email was sent from the Sugimx website contact form.</em>
+<p><em>This email was sent from the Sug website contact form.</em>
 ```
 
 3. **Save and Note Template ID**

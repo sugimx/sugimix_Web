@@ -637,6 +637,7 @@ body {
     
     .logo-text {
         font-size: 1.6rem;
+        font-weight: 900;
     }
     
     .logo-tagline {
@@ -765,6 +766,7 @@ body {
     
     .logo-text {
         font-size: 1.4rem;
+        font-weight: 900;
     }
     
     .logo-tagline {
@@ -5763,7 +5765,7 @@ body.menu-open {
     line-height: 1.6;
 }
 
-/* Why Choose Sugimx Section */
+/* Why Choose Sug Section */
 .why-choose {
     padding: 4rem 0;
 }
