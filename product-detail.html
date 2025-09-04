@@ -20,17 +20,18 @@
         /* Product Detail Page Specific Styles */
         .product-detail-main {
             padding: 2rem 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
             min-height: 100vh;
         }
 
         .breadcrumb {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 12px;
             padding: 1rem 2rem;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid #e0e0e0;
         }
 
         .breadcrumb-nav {
@@ -38,17 +39,17 @@
             align-items: center;
             gap: 0.5rem;
             font-size: 0.9rem;
-            color: #64748b;
+            color: #333333;
         }
 
         .breadcrumb-nav a {
-            color: #3b82f6;
+            color: #000000;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .breadcrumb-nav a:hover {
-            color: #1d4ed8;
+            color: #666666;
         }
 
         .breadcrumb-nav i {
@@ -59,12 +60,13 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
             margin-bottom: 3rem;
+            border: 1px solid #e0e0e0;
         }
 
         .product-image-section {
@@ -76,8 +78,9 @@
             height: 400px;
             object-fit: cover;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
+            border: 2px solid #e0e0e0;
         }
 
         .product-main-image:hover {
@@ -98,7 +101,7 @@
         }
 
         .product-brand {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: #000000;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 8px;
@@ -107,7 +110,7 @@
         }
 
         .product-model {
-            color: #64748b;
+            color: #666666;
             font-size: 0.9rem;
             font-weight: 500;
         }
@@ -115,13 +118,13 @@
         .product-title {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #1e293b;
+            color: #000000;
             margin: 0;
             line-height: 1.2;
         }
 
         .product-category {
-            background: linear-gradient(135deg, #10b981, #059669);
+            background: #333333;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 8px;
@@ -131,7 +134,7 @@
         }
 
         .product-description {
-            color: #64748b;
+            color: #333333;
             line-height: 1.6;
             font-size: 1.1rem;
         }
@@ -146,12 +149,12 @@
         .current-price {
             font-size: 2rem;
             font-weight: 700;
-            color: #059669;
+            color: #000000;
         }
 
         .last-sale-price {
             font-size: 1.2rem;
-            color: #94a3b8;
+            color: #999999;
             text-decoration: line-through;
         }
 
@@ -162,7 +165,7 @@
         }
 
         .btn-primary-large {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: #000000;
             color: white;
             padding: 1rem 2rem;
             border: none;
@@ -179,14 +182,15 @@
 
         .btn-primary-large:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: #333333;
         }
 
         .btn-secondary-large {
             background: rgba(255, 255, 255, 0.9);
-            color: #3b82f6;
+            color: #000000;
             padding: 1rem 2rem;
-            border: 2px solid #3b82f6;
+            border: 2px solid #000000;
             border-radius: 12px;
             font-size: 1.1rem;
             font-weight: 600;
@@ -199,24 +203,25 @@
         }
 
         .btn-secondary-large:hover {
-            background: #3b82f6;
+            background: #000000;
             color: white;
             transform: translateY(-2px);
         }
 
         .product-details-section {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            border: 1px solid #e0e0e0;
         }
 
         .details-tabs {
             display: flex;
             gap: 1rem;
             margin-bottom: 2rem;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 2px solid #e0e0e0;
         }
 
         .tab-btn {
@@ -225,19 +230,19 @@
             padding: 1rem 2rem;
             font-size: 1.1rem;
             font-weight: 600;
-            color: #64748b;
+            color: #666666;
             cursor: pointer;
             transition: all 0.3s ease;
             border-bottom: 3px solid transparent;
         }
 
         .tab-btn.active {
-            color: #3b82f6;
-            border-bottom-color: #3b82f6;
+            color: #000000;
+            border-bottom-color: #000000;
         }
 
         .tab-btn:hover {
-            color: #3b82f6;
+            color: #000000;
         }
 
         .tab-content {
@@ -259,19 +264,19 @@
             align-items: flex-start;
             gap: 1rem;
             padding: 1.5rem;
-            background: rgba(59, 130, 246, 0.05);
+            background: rgba(0, 0, 0, 0.05);
             border-radius: 12px;
-            border-left: 4px solid #3b82f6;
+            border-left: 4px solid #000000;
         }
 
         .feature-icon {
-            color: #3b82f6;
+            color: #000000;
             font-size: 1.2rem;
             margin-top: 0.2rem;
         }
 
         .feature-text {
-            color: #374151;
+            color: #333333;
             line-height: 1.5;
         }
 
@@ -281,24 +286,25 @@
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid #e0e0e0;
         }
 
         .specifications-table th,
         .specifications-table td {
             padding: 1rem 1.5rem;
             text-align: left;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .specifications-table th {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: #000000;
             color: white;
             font-weight: 600;
         }
 
         .specifications-table tr:hover {
-            background: rgba(59, 130, 246, 0.05);
+            background: rgba(0, 0, 0, 0.05);
         }
 
         .specifications-table tr:last-child td {
@@ -312,7 +318,7 @@
         .related-products h3 {
             font-size: 2rem;
             font-weight: 700;
-            color: #1e293b;
+            color: #000000;
             margin-bottom: 2rem;
             text-align: center;
         }
@@ -324,17 +330,18 @@
         }
 
         .related-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             border-radius: 16px;
             padding: 1.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
             cursor: pointer;
+            border: 1px solid #e0e0e0;
         }
 
         .related-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .related-card img {
@@ -348,14 +355,14 @@
         .related-card h4 {
             font-size: 1.2rem;
             font-weight: 600;
-            color: #1e293b;
+            color: #000000;
             margin-bottom: 0.5rem;
         }
 
         .related-card .price {
             font-size: 1.1rem;
             font-weight: 700;
-            color: #059669;
+            color: #000000;
         }
 
         @media (max-width: 768px) {
@@ -457,10 +464,6 @@
                             <i class="fas fa-phone"></i>
                             Get Quote
                         </a>
-                        <button class="btn-secondary-large" onclick="addToWishlist()">
-                            <i class="fas fa-heart"></i>
-                            Add to Wishlist
-                        </button>
                     </div>
                 </div>
             </div>
@@ -747,7 +750,6 @@
                 const featureItem = document.createElement('div');
                 featureItem.className = 'feature-item';
                 featureItem.innerHTML = `
-                    <i class="fas fa-check-circle feature-icon"></i>
                     <span class="feature-text">${feature}</span>
                 `;
                 featuresGrid.appendChild(featureItem);
@@ -775,7 +777,6 @@
                     const appItem = document.createElement('div');
                     appItem.className = 'feature-item';
                     appItem.innerHTML = `
-                        <i class="fas fa-cogs feature-icon"></i>
                         <span class="feature-text">${application}</span>
                     `;
                     applicationsGrid.appendChild(appItem);
@@ -828,11 +829,6 @@
             event.target.classList.add('active');
         }
 
-        // Function to add to wishlist
-        function addToWishlist() {
-            const product = getProductFromURL();
-            alert(`Added "${product.product_name}" to your wishlist!`);
-        }
 
         // Initialize page when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {

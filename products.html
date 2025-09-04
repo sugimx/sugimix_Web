@@ -555,10 +555,6 @@
             window.location.href = `product-detail.html?product=${encodeURIComponent(productName)}`;
         }
 
-        // Function to add to wishlist
-        function addToWishlist(productName) {
-            alert(`Added "${productName}" to your wishlist!`);
-        }
 
         // Function to compare product
         function compareProduct(productName) {
@@ -723,16 +719,6 @@
                                 <button class="action-btn hover-scale hover-glow" title="Quick View" onclick="event.stopPropagation(); goToProductDetail('${product.product_name}')">
                                     <i class="fas fa-eye"></i>
                                 </button>
-                                <button class="action-btn hover-scale hover-glow" title="Add to Wishlist" onclick="event.stopPropagation(); addToWishlist('${product.product_name}')">
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                                <button class="action-btn hover-scale hover-glow" title="Compare" onclick="event.stopPropagation(); compareProduct('${product.product_name}')">
-                                    <i class="fas fa-star"></i>
-                                </button>
-                            </div>
-                            <div class="product-likes">
-                                <i class="fas fa-heart"></i>
-                                <span>${product.likes}</span>
                             </div>
                         </div>
                     </div>
