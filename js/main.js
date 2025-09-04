@@ -284,6 +284,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize hero slider
     heroSlider.init();
 
+    // Handle hero section button clicks
+    const heroButtons = document.querySelectorAll('.hero-cta a[href="products.html"]');
+    heroButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            console.log('Hero button clicked, navigating to products page');
+            // Ensure navigation works by using window.location
+            e.preventDefault();
+            window.location.href = 'products.html';
+        });
+    });
+
     // Smooth scroll for all internal links (only those starting with #)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

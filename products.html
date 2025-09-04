@@ -166,22 +166,11 @@
                     <nav aria-label="Footer navigation">
                         <ul class="footer-links">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="services.html">Services</a></li>
                             <li><a href="products.html">Products</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Our Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html#equipment-supply">Equipment Supply</a></li>
-                        <li><a href="services.html#technical-support">Technical Support</a></li>
-                        <li><a href="services.html#training">Training & Installation</a></li>
-                        <li><a href="services.html#maintenance">Maintenance & Repair</a></li>
-                    </ul>
                 </div>
                 
                 <div class="footer-section">
@@ -541,6 +530,172 @@
             }
         ];
 
+
+        // Function to update category counts
+        function updateCategoryCounts() {
+            const categoryCounts = {};
+            productData.forEach(product => {
+                categoryCounts[product.category] = (categoryCounts[product.category] || 0) + 1;
+            });
+
+            // Update category links with counts
+            const categoryLinks = document.querySelectorAll('.category-link-horizontal');
+            categoryLinks.forEach(link => {
+                const categoryText = link.textContent.split(' (')[0];
+                if (categoryText === 'All Categories') {
+                    link.innerHTML = `All Categories <span class="category-count">(${productData.length})</span>`;
+                } else if (categoryCounts[categoryText]) {
+                    link.innerHTML = `${categoryText} <span class="category-count">(${categoryCounts[categoryText]})</span>`;
+                }
+            });
+        }
+
+        // Function to navigate to product detail page
+        function goToProductDetail(productName) {
+            window.location.href = `product-detail.html?product=${encodeURIComponent(productName)}`;
+        }
+
+        // Function to add to wishlist
+        function addToWishlist(productName) {
+            alert(`Added "${productName}" to your wishlist!`);
+        }
+
+        // Function to compare product
+        function compareProduct(productName) {
+            alert(`Added "${productName}" to comparison list!`);
+        }
+
+        // Function to get quote (placeholder)
+        function getQuote(productName) {
+            alert(`Quote requested for: ${productName}\n\nOur team will contact you shortly with pricing details.`);
+        }
+
+        // Pagination variables
+        let currentPage = 1;
+        const productsPerPage = 6; // Show 6 products per page
+        let totalPages = 1;
+
+        // Function to calculate total pages
+        function calculateTotalPages() {
+            totalPages = Math.ceil(productData.length / productsPerPage);
+        }
+
+        // Function to get products for current page
+        function getProductsForCurrentPage() {
+            const startIndex = (currentPage - 1) * productsPerPage;
+            const endIndex = startIndex + productsPerPage;
+            return productData.slice(startIndex, endIndex);
+        }
+
+        // Function to update pagination UI
+        function updatePaginationUI() {
+            const prevBtn = document.querySelector('.pagination-btn.prev');
+            const nextBtn = document.querySelector('.pagination-btn.next');
+            const pageNumbers = document.querySelector('.page-numbers');
+            
+            // Update prev/next button states
+            if (prevBtn) {
+                prevBtn.disabled = currentPage === 1;
+                prevBtn.style.opacity = currentPage === 1 ? '0.5' : '1';
+                prevBtn.style.cursor = currentPage === 1 ? 'not-allowed' : 'pointer';
+            }
+            
+            if (nextBtn) {
+                nextBtn.disabled = currentPage === totalPages;
+                nextBtn.style.opacity = currentPage === totalPages ? '0.5' : '1';
+                nextBtn.style.cursor = currentPage === totalPages ? 'not-allowed' : 'pointer';
+            }
+
+            // Update page numbers
+            if (pageNumbers) {
+                pageNumbers.innerHTML = '';
+                
+                // Always show first page
+                if (totalPages > 0) {
+                    const firstPageBtn = createPageButton(1);
+                    if (currentPage === 1) firstPageBtn.classList.add('active');
+                    pageNumbers.appendChild(firstPageBtn);
+                }
+                
+                // Show pages around current page
+                const startPage = Math.max(2, currentPage - 1);
+                const endPage = Math.min(totalPages - 1, currentPage + 1);
+                
+                // Add ellipsis if needed
+                if (startPage > 2) {
+                    const ellipsis = document.createElement('span');
+                    ellipsis.className = 'page-dots';
+                    ellipsis.textContent = '...';
+                    pageNumbers.appendChild(ellipsis);
+                }
+                
+                // Add middle pages
+                for (let i = startPage; i <= endPage; i++) {
+                    if (i !== 1 && i !== totalPages) {
+                        const pageBtn = createPageButton(i);
+                        if (currentPage === i) pageBtn.classList.add('active');
+                        pageNumbers.appendChild(pageBtn);
+                    }
+                }
+                
+                // Add ellipsis if needed
+                if (endPage < totalPages - 1) {
+                    const ellipsis = document.createElement('span');
+                    ellipsis.className = 'page-dots';
+                    ellipsis.textContent = '...';
+                    pageNumbers.appendChild(ellipsis);
+                }
+                
+                // Always show last page (if more than 1 page)
+                if (totalPages > 1) {
+                    const lastPageBtn = createPageButton(totalPages);
+                    if (currentPage === totalPages) lastPageBtn.classList.add('active');
+                    pageNumbers.appendChild(lastPageBtn);
+                }
+            }
+        }
+
+        // Function to create page button
+        function createPageButton(pageNumber) {
+            const button = document.createElement('button');
+            button.className = 'page-btn hover-scale hover-glow';
+            button.textContent = pageNumber;
+            button.addEventListener('click', () => goToPage(pageNumber));
+            return button;
+        }
+
+        // Function to go to specific page
+        function goToPage(page) {
+            if (page >= 1 && page <= totalPages && page !== currentPage) {
+                currentPage = page;
+                populateProductCards();
+                updatePaginationUI();
+                scrollToTop();
+            }
+        }
+
+        // Function to go to previous page
+        function goToPreviousPage() {
+            if (currentPage > 1) {
+                goToPage(currentPage - 1);
+            }
+        }
+
+        // Function to go to next page
+        function goToNextPage() {
+            if (currentPage < totalPages) {
+                goToPage(currentPage + 1);
+            }
+        }
+
+        // Function to scroll to top of products
+        function scrollToTop() {
+            const productSection = document.querySelector('.product-listing-section');
+            if (productSection) {
+                productSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
         // Function to populate product cards dynamically
         function populateProductCards() {
             const productGrid = document.getElementById('product-grid');
@@ -549,8 +704,11 @@
             // Clear existing content
             productGrid.innerHTML = '';
 
+            // Get products for current page
+            const currentPageProducts = getProductsForCurrentPage();
+
             // Create product cards from data
-            productData.forEach((product, index) => {
+            currentPageProducts.forEach((product, index) => {
                 const productCard = document.createElement('div');
                 productCard.className = `product-card stagger-item hover-lift`;
                 productCard.setAttribute('data-scroll-animation', 'scale-in');
@@ -597,55 +755,36 @@
             // Update results count
             const resultsCount = document.querySelector('.results-count');
             if (resultsCount) {
-                resultsCount.textContent = `Show ${productData.length} Results`;
+                const startIndex = (currentPage - 1) * productsPerPage + 1;
+                const endIndex = Math.min(currentPage * productsPerPage, productData.length);
+                resultsCount.textContent = `Showing ${startIndex}-${endIndex} of ${productData.length} Results`;
             }
 
             // Update category counts
             updateCategoryCounts();
         }
 
-        // Function to update category counts
-        function updateCategoryCounts() {
-            const categoryCounts = {};
-            productData.forEach(product => {
-                categoryCounts[product.category] = (categoryCounts[product.category] || 0) + 1;
-            });
+        // Initialize pagination event listeners
+        function initializePagination() {
+            // Previous button
+            const prevBtn = document.querySelector('.pagination-btn.prev');
+            if (prevBtn) {
+                prevBtn.addEventListener('click', goToPreviousPage);
+            }
 
-            // Update category links with counts
-            const categoryLinks = document.querySelectorAll('.category-link-horizontal');
-            categoryLinks.forEach(link => {
-                const categoryText = link.textContent.split(' (')[0];
-                if (categoryText === 'All Categories') {
-                    link.innerHTML = `All Categories <span class="category-count">(${productData.length})</span>`;
-                } else if (categoryCounts[categoryText]) {
-                    link.innerHTML = `${categoryText} <span class="category-count">(${categoryCounts[categoryText]})</span>`;
-                }
-            });
-        }
-
-        // Function to navigate to product detail page
-        function goToProductDetail(productName) {
-            window.location.href = `product-detail.html?product=${encodeURIComponent(productName)}`;
-        }
-
-        // Function to add to wishlist
-        function addToWishlist(productName) {
-            alert(`Added "${productName}" to your wishlist!`);
-        }
-
-        // Function to compare product
-        function compareProduct(productName) {
-            alert(`Added "${productName}" to comparison list!`);
-        }
-
-        // Function to get quote (placeholder)
-        function getQuote(productName) {
-            alert(`Quote requested for: ${productName}\n\nOur team will contact you shortly with pricing details.`);
+            // Next button
+            const nextBtn = document.querySelector('.pagination-btn.next');
+            if (nextBtn) {
+                nextBtn.addEventListener('click', goToNextPage);
+            }
         }
 
         // Initialize product cards when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
+            calculateTotalPages();
             populateProductCards();
+            updatePaginationUI();
+            initializePagination();
         });
     </script>
 </body>
