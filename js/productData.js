@@ -1535,13 +1535,123 @@ const productData = [
             "System": "Intelligent system for easy operation",
             "Efficiency": "Built-in star chain to continue improving efficiency"
         },
-        "price": "₹ 1,85,000",
+        "price": "₹ 8,21,622 + GST",
         "images": [
             "images/product_images/GNSS/STONEX/S3+ GNSS RTK/stonex s3+ image.jpg",
             "images/product_images/GNSS/STONEX/S3+ GNSS RTK/stonex s3+ img.jpg",
             "images/product_images/GNSS/STONEX/S3+ GNSS RTK/stonex s3+ imgs.jpg"
         ],
         "alt": "STONEX S3+ High-Performance GNSS RTK Receiver"
+    },
+    {
+        "brand": "STONEX",
+        "model": "S3II/S700",
+        "product_name": "STONEX S3II/S700 - Advanced GNSS RTK Receiver",
+        "category": "RTK Receiver",
+        "description": "The Stonex S3II and S700A are compact, high-performance GNSS receivers designed for professional surveying and mapping. Equipped with 700-channel multi-constellation boards supporting GPS, GLONASS, Galileo, BeiDou, QZSS, and IRNSS, they deliver centimeter-level accuracy via RTK technology. An internal antenna integrates GNSS, Bluetooth, and Wi-Fi for stable signal reception, while a Linux OS with WEB UI ensures user-friendly operation. With IP67-rated rugged design, a high-capacity battery, 4G modem, and Type-C connectivity, these receivers offer durable, all-day field performance. Compatible with Cube A and other surveying software, they support multiple data formats including shapefiles, DXF, CSV, and KML for seamless workflow integration.",
+        "features": [
+            "Compact, high-performance GNSS receivers for professional surveying",
+            "700-channel multi-constellation boards for comprehensive satellite tracking",
+            "Multi-constellation support (GPS, GLONASS, Galileo, BeiDou, QZSS, IRNSS)",
+            "Centimeter-level accuracy via RTK technology",
+            "Internal antenna integrating GNSS, Bluetooth, and Wi-Fi",
+            "Linux OS with WEB UI for user-friendly operation",
+            "IP67-rated rugged design for field durability",
+            "High-capacity battery for all-day field performance",
+            "4G modem and Type-C connectivity",
+            "Compatible with Cube A and other surveying software",
+            "Support for multiple data formats (shapefiles, DXF, CSV, KML)",
+            "Seamless workflow integration capabilities",
+            "Stable signal reception in challenging environments",
+            "Professional surveying and mapping applications"
+        ],
+        "specifications": {
+            "Model": "S3II/S700",
+            "GNSS Features": {
+                "Channels": "700",
+                "Multi-Constellation": "GPS, GLONASS, Galileo, BeiDou, QZSS, IRNSS",
+                "Technology": "RTK technology for centimeter-level accuracy"
+            },
+            "Connectivity": {
+                "Internal Antenna": "GNSS, Bluetooth, and Wi-Fi integration",
+                "Operating System": "Linux OS with WEB UI",
+                "4G Modem": "Built-in 4G connectivity",
+                "Type-C": "Type-C connectivity support"
+            },
+            "Design": {
+                "Protection": "IP67-rated rugged design",
+                "Battery": "High-capacity battery for all-day performance",
+                "Compatibility": "Cube A and other surveying software"
+            },
+            "Data Formats": [
+                "Shapefiles",
+                "DXF",
+                "CSV",
+                "KML"
+            ]
+        },
+        "price": "₹ 5,70,672 + GST",
+        "images": [
+            "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700.jpg",
+            "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700 images.jpg",
+            "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700 img.png"
+        ],
+        "alt": "STONEX S3II/S700 Advanced GNSS RTK Receiver"
+    },
+    {
+        "brand": "STONEX",
+        "model": "S1/T1",
+        "product_name": "STONEX S1/T1 - Compact GNSS RTK Receiver",
+        "category": "RTK Receiver",
+        "description": "The Stonex S1/T1 is a professional GNSS RTK survey receiver offering 800–1408 channels, multi-constellation support (GPS, BDS, Galileo, GLONASS), and advanced inertial navigation for tilt measurement. Equipped with Wi-Fi, cellular, Bluetooth, and radio connectivity, it ensures precise real-time positioning in challenging environments. Its rugged IP68 design and wide operating temperature range make it ideal for topographic surveys, road and power line construction, site leveling, and GIS data collection. Compatible with professional software like SurPAD 4.0, the S1/T1 delivers reliable performance for all surveying tasks.",
+        "features": [
+            "Professional GNSS RTK survey receiver with 800–1408 channels",
+            "Multi-constellation support (GPS, BDS, Galileo, GLONASS)",
+            "Advanced inertial navigation for tilt measurement",
+            "Wi-Fi, cellular, Bluetooth, and radio connectivity",
+            "Precise real-time positioning in challenging environments",
+            "Rugged IP68 design for durability",
+            "Wide operating temperature range",
+            "Ideal for topographic surveys and construction",
+            "Road and power line construction applications",
+            "Site leveling and GIS data collection",
+            "Compatible with professional software like SurPAD 4.0",
+            "Reliable performance for all surveying tasks",
+            "Compact and lightweight design",
+            "Smart, reliable, and easy to use"
+        ],
+        "specifications": {
+            "Model": "S1/T1",
+            "GNSS Features": {
+                "Channels": "800–1408",
+                "Satellite Systems": "GPS, BDS, Galileo, GLONASS",
+                "Positioning": "Real-time positioning in challenging environments"
+            },
+            "Connectivity": {
+                "Wi-Fi": "Built-in Wi-Fi connectivity",
+                "Cellular": "Cellular connectivity support",
+                "Bluetooth": "Bluetooth connectivity",
+                "Radio": "Radio connectivity"
+            },
+            "Navigation": {
+                "Inertial Navigation": "Advanced inertial navigation for tilt measurement"
+            },
+            "Environmental": {
+                "Protection": "IP68 design",
+                "Operating Temperature": "Wide operating temperature range"
+            },
+            "Applications": {
+                "Surveying": "Topographic surveys, road and power line construction",
+                "Data Collection": "Site leveling, GIS data collection",
+                "Software": "Compatible with professional software like SurPAD 4.0"
+            }
+        },
+        "price": "₹ 2,15,000",
+        "images": [
+            "images/product_images/GNSS/STONEX/S1T1 GNSS RTK/stonex s1t1.jpg",
+            "images/product_images/GNSS/STONEX/S1T1 GNSS RTK/stonex s1t1img.jpg"
+        ],
+        "alt": "STONEX S1/T1 Compact GNSS RTK Receiver"
     },
     {
         "brand": "FOIF",
@@ -1937,6 +2047,7 @@ const productData = [
                 "Humidity": "Anti-condensation 100%"
             }
         },
+        "price": "₹ 7,67,847 + GST",
         "images": [
             "images/product_images/GNSS/FOIF/A60 PRO GNSS RTK/FOIF A60 PRO.jpg"
         ],
@@ -2041,6 +2152,64 @@ const productData = [
             "images/product_images/GNSS/FOIF/A70 AR GNSS RTK/FOIF A70 AR TOPVIEW.jpg"
         ],
         "alt": "FOIF A70 AR Advanced GNSS RTK Receiver with AR Technology"
+    },
+    {
+        "brand": "FOIF",
+        "model": "N90",
+        "product_name": "FOIF N90 - Next-Gen GNSS RTK Receiver",
+        "category": "RTK Receiver",
+        "description": "The FOIF N90/F90 GNSS RTK Receiver is a high-accuracy, dual-frequency solution for professional surveying and mapping. Powered by a NovAtel OEM729 engine with 555 channels, it supports GPS, GLONASS, Galileo, BeiDou, SBAS, and optional L-Band for precise positioning. Its IMU with tilt compensation ensures accurate results even when the pole is tilted, while Wi-Fi with WebUI control and bundled Surpad field software simplify fieldwork. Built with an IP67-rated body and dual hot-swappable batteries providing up to 12 hours of use, the N90/F90 is compact, durable, and ideal for surveying, construction, GIS, and road design.",
+        "features": [
+            "Next-Gen GNSS RTK Receiver with powerful performance",
+            "NovAtel OEM729 engine with 555 channels",
+            "Multi-constellation support (GPS, GLONASS, Galileo, BeiDou, SBAS)",
+            "Optional L-Band for enhanced positioning accuracy",
+            "IMU with tilt compensation for accurate results when pole is tilted",
+            "Wi-Fi connectivity with WebUI control",
+            "Bundled Surpad field software for simplified fieldwork",
+            "IP67-rated body for durability in harsh environments",
+            "Dual hot-swappable batteries for up to 12 hours of use",
+            "Compact and lightweight design for field portability",
+            "Ideal for surveying, construction, GIS, and road design",
+            "Faster initialization and enhanced stability",
+            "Seamless connectivity for modern surveying needs",
+            "Precise and reliable performance in the field"
+        ],
+        "specifications": {
+            "Model": "N90",
+            "GNSS Engine": "NovAtel OEM729",
+            "Channels": "555",
+            "Satellite Systems": {
+                "GPS": "L1, L2, L5",
+                "GLONASS": "L1, L2",
+                "GALILEO": "E1, E5a, E5b",
+                "BEIDOU": "B1, B2, B3",
+                "SBAS": "L1, L5",
+                "L-Band": "Optional"
+            },
+            "IMU": "Built-in IMU with tilt compensation",
+            "Connectivity": {
+                "Wi-Fi": "Built-in Wi-Fi with WebUI control",
+                "Software": "Bundled Surpad field software"
+            },
+            "Power Supply": {
+                "Battery": "Dual hot-swappable batteries",
+                "Operating Time": "Up to 12 hours of use"
+            },
+            "Environmental": {
+                "Protection": "IP67-rated body",
+                "Design": "Compact and durable"
+            },
+            "Applications": "Surveying, construction, GIS, road design"
+        },
+        "price": "₹ 5,70,315 + GST",
+        "images": [
+            "images/product_images/GNSS/FOIF/N90 GNSS RTK/FOIF N90.jpg",
+            "images/product_images/GNSS/FOIF/N90 GNSS RTK/FOIF N90 SIDE.jpg",
+            "images/product_images/GNSS/FOIF/N90 GNSS RTK/FOIF N90 IMAGE.jpg",
+            "images/product_images/GNSS/FOIF/N90 GNSS RTK/FOIF N90 IMG.jpg"
+        ],
+        "alt": "FOIF N90 Next-Gen GNSS RTK Receiver"
     },
     {
         "brand": "Ruide",
@@ -2238,6 +2407,7 @@ const productData = [
                 "Charging Time": "Approx. 4 hours"
             }
         },
+        "price": "₹ 2,77,000 + GST",
         "images": [
             "images/product_images/total station/FOIF/RTS 102 R10/FOIF RTS 102R10.jpg",
             "images/product_images/total station/FOIF/RTS 102 R10/FOIF RTS 102R10 IMG.jpg",
@@ -2902,6 +3072,7 @@ const productData = [
                 "Waterproof and Dustproof": "IP54"
             }
         },
+        "price": "₹ 2,44,767 + GST",
         "images": [
             "images/product_images/total station/STONEX/R3/stonex r3.jpg",
             "images/product_images/total station/STONEX/R3/Stonex r3 image.jpg",
@@ -2909,6 +3080,429 @@ const productData = [
             "images/product_images/total station/STONEX/R3/stonex r3 img.jpg"
         ],
         "alt": "Stonex R3 Total Station Precision Meets Performance"
+    },
+    {
+        "brand": "STONEX",
+        "model": "S3II S700",
+        "product_name": "STONEX S3II S700 - Advanced GNSS RTK Receiver",
+        "category": "RTK Receiver",
+        "description": "The Stonex S3II and S700A are compact, high-performance GNSS receivers designed for professional surveying and mapping. Equipped with 700-channel multi-constellation boards supporting GPS, GLONASS, Galileo, BeiDou, QZSS, and IRNSS, they deliver centimeter-level accuracy via RTK technology. An internal antenna integrates GNSS, Bluetooth, and Wi-Fi for stable signal reception, while a Linux OS with WEB UI ensures user-friendly operation. With IP67-rated rugged design, a high-capacity battery, 4G modem, and Type-C connectivity, these receivers offer durable, all-day field performance. Compatible with Cube A and other surveying software, they support multiple data formats including shapefiles, DXF, CSV, and KML for seamless workflow integration.",
+        "features": [
+            "Compact, high-performance GNSS receivers for professional surveying",
+            "700-channel multi-constellation boards for comprehensive satellite tracking",
+            "Multi-constellation support (GPS, GLONASS, Galileo, BeiDou, QZSS, IRNSS)",
+            "Centimeter-level accuracy via RTK technology",
+            "Internal antenna integrating GNSS, Bluetooth, and Wi-Fi",
+            "Stable signal reception in challenging environments",
+            "Linux OS with WEB UI for user-friendly operation",
+            "IP67-rated rugged design for field durability",
+            "High-capacity battery for all-day field performance",
+            "4G modem for connectivity",
+            "Type-C connectivity for data transfer",
+            "Compatible with Cube A and other surveying software",
+            "Support for multiple data formats (shapefiles, DXF, CSV, KML)",
+            "Seamless workflow integration",
+            "Professional surveying and mapping applications",
+            "Accurate, portable, and reliable performance"
+        ],
+        "specifications": {
+            "Model": "S3II S700",
+            "GNSS Features": {
+                "Channels": "700",
+                "Satellite Systems": {
+                    "GPS": "L1, L2, L5",
+                    "GLONASS": "L1, L2",
+                    "Galileo": "E1, E5a, E5b",
+                    "BeiDou": "B1, B2, B3",
+                    "QZSS": "L1, L2, L5",
+                    "IRNSS": "L5"
+                }
+            },
+            "Connectivity": {
+                "Internal Antenna": "GNSS, Bluetooth, and Wi-Fi integration",
+                "Operating System": "Linux OS with WEB UI",
+                "4G Modem": "Built-in 4G connectivity",
+                "Type-C": "Data transfer and charging"
+            },
+            "Environmental": {
+                "Protection": "IP67-rated rugged design",
+                "Battery": "High-capacity battery for all-day performance"
+            },
+            "Software Compatibility": {
+                "Surveying Software": "Cube A and other surveying software",
+                "Data Formats": "Shapefiles, DXF, CSV, KML support"
+            }
+        },
+        "price": "₹ 5,70,672 + GST",
+        "images": [
+            "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700.jpg",
+            "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700 images.jpg",
+            "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700 img.png"
+        ],
+        "alt": "STONEX S3II S700 Advanced GNSS RTK Receiver"
+    },
+    {
+        "brand": "Ruide",
+        "model": "RQS",
+        "product_name": "Ruide RQS - Smart Precision, Simplified",
+        "category": "Total Station",
+        "description": "The RUIDE RQS is a high-performance electronic total station designed for modern land surveying and topography. With 2\" angle accuracy, dual-axis compensation, and a measuring range of up to 5000m with prism and 600m without, it ensures reliable precision in all conditions. Running on a Linux-based OS with Android app support, it offers smooth operation, efficient workflows, and easy data transfer via USB 2.0. Equipped with internal memory, an ATMO sensor for automatic atmospheric correction, and a long-lasting Li-ion battery providing up to 16 hours of use, the RUIDE RQS is a dependable choice for surveyors.",
+        "features": [
+            "High-performance electronic total station for modern land surveying",
+            "2\" angle accuracy for precise measurements",
+            "Dual-axis compensation for reliable leveling",
+            "Measuring range up to 5000m with prism and 600m without prism",
+            "Linux-based OS with Android app support",
+            "Smooth operation and efficient workflows",
+            "Easy data transfer via USB 2.0",
+            "Internal memory for data storage",
+            "ATMO sensor for automatic atmospheric correction",
+            "Long-lasting Li-ion battery providing up to 16 hours of use",
+            "Compact design engineered for modern surveying needs",
+            "Combines speed, precision, and ease of use",
+            "Reliable accuracy in all field conditions",
+            "Advanced functionality in compact design",
+            "Dependable choice for professional surveyors"
+        ],
+        "specifications": {
+            "Model": "RQS",
+            "Angle Measurement": {
+                "Accuracy": "2\""
+            },
+            "Distance Measurement": {
+                "With Prism": "Up to 5000m",
+                "Without Prism (Reflectorless)": "Up to 600m"
+            },
+            "Compensator": {
+                "Type": "Dual-axis compensation"
+            },
+            "Operating System": {
+                "OS": "Linux-based with Android app support"
+            },
+            "Sensors": {
+                "Atmospheric Correction": "ATMO sensor for automatic atmospheric correction"
+            },
+            "Communication": {
+                "Data Transfer": "USB 2.0"
+            },
+            "Memory": {
+                "Internal Storage": "Internal memory for data storage"
+            },
+            "Power Supply": {
+                "Battery Type": "Li-ion battery",
+                "Battery Life": "Up to 16 hours of continuous use"
+            },
+            "Design": {
+                "Form Factor": "Compact design",
+                "Application": "Modern surveying and construction needs"
+            }
+        },
+        "price": "₹ 3,21,843 + GST",
+        "images": [
+            "images/product_images/total station/Ruide/RQS/RUIDE RQS IMAGE.jpg",
+            "images/product_images/total station/Ruide/RQS/RUIDE RQS FRONT.jpg",
+            "images/product_images/total station/Ruide/RQS/RUIDE RQS ALL.jpg",
+            "images/product_images/total station/Ruide/RQS/RUIDE RQS SIDE.jpg"
+        ],
+        "alt": "Ruide RQS Smart Precision Simplified Total Station"
+    },
+    {
+        "brand": "Ruide",
+        "model": "RCS",
+        "product_name": "Ruide RCS - Compact Power, Maximum Precision",
+        "category": "Total Station",
+        "description": "The RUIDE RCS is a reliable manual total station built for precision and durability in surveying tasks. With 2-second angular accuracy, non-prism measurement up to 1000m, and a dual-axis compensation system, it delivers dependable results in the field. Features like UltraPlumb for automatic height measurement, integrated guide lights, and automatic temperature and atmospheric correction further enhance accuracy and efficiency. Its user-friendly 640x320 color touch LCD with dual display, Bluetooth and USB connectivity, and rapid-fire button ensure smooth operation and fast data handling. Designed with a rugged IP65 protection rating and stable ball shaft rotation, the RCS is a trusted solution for professional land surveying in tough environments.",
+        "features": [
+            "Reliable manual total station for precision and durability",
+            "2-second angular accuracy for dependable results",
+            "Non-prism measurement up to 1000m",
+            "Dual-axis compensation system for enhanced accuracy",
+            "UltraPlumb for automatic height measurement",
+            "Integrated guide lights for improved targeting",
+            "Automatic temperature and atmospheric correction",
+            "User-friendly 640x320 color touch LCD with dual display",
+            "Bluetooth and USB connectivity for data transfer",
+            "Rapid-fire button for efficient operation",
+            "Rugged IP65 protection rating for tough environments",
+            "Stable ball shaft rotation for consistent performance",
+            "Professional land surveying solution",
+            "Compact and lightweight design",
+            "Easy to use and maintain"
+        ],
+        "specifications": {
+            "Model": "RCS",
+            "Angle Accuracy": "2 seconds",
+            "Distance Measurement": {
+                "Non-prism": "Up to 1000m",
+                "Prism": "Up to 5000m"
+            },
+            "Compensation": "Dual-axis compensation system",
+            "Display": {
+                "Type": "640x320 color touch LCD",
+                "Features": "Dual display capability"
+            },
+            "Connectivity": {
+                "Bluetooth": "Yes",
+                "USB": "Yes"
+            },
+            "Protection": "IP65 rating",
+            "Special Features": {
+                "UltraPlumb": "Automatic height measurement",
+                "Guide Lights": "Integrated for improved targeting",
+                "Atmospheric Correction": "Automatic temperature and pressure correction"
+            },
+            "Operation": {
+                "Rapid-fire Button": "For efficient data collection",
+                "Ball Shaft Rotation": "Stable and consistent"
+            }
+        },
+        "price": "₹ 4,27,270 + GST",
+        "images": [
+            "images/product_images/total station/Ruide/RCS/RUIDE RCS FRONT.jpg",
+            "images/product_images/total station/Ruide/RCS/RUIDE RCS IMAGE.jpg",
+            "images/product_images/total station/Ruide/RCS/RUIDE RCS IMAGES.jpg",
+            "images/product_images/total station/Ruide/RCS/RUIDE RCS IMG.jpg"
+        ],
+        "alt": "Ruide RCS Compact Power Maximum Precision Total Station"
+    },
+    {
+        "brand": "Ruide",
+        "model": "RIS",
+        "product_name": "Ruide RIS - Innovation Meets Simplicity",
+        "category": "Total Station",
+        "description": "The Ruide RIS is a high-precision total station designed for land surveying, offering 30x magnification and 2-second angle accuracy. It ensures reliable long-range measurement of up to 1000m without a prism and 5km with a prism, making it versatile for different projects. A 3.7-inch color touch screen with an alphanumeric keyboard provides simple and user-friendly operation. Advanced features like Q-MEAS fast trigger, Atmosence for auto temperature and pressure correction, and Ultra Plumb for automatic height measurement enhance efficiency. Data transfer is made easy with USB, SD card, Bluetooth, and an integrated 0.8MP camera. Built with an IP65-rated rugged design and powered by a 3900mAh battery, the RIS is durable and reliable for all-day field use.",
+        "features": [
+            "High-precision total station for land surveying",
+            "30x magnification telescope for clear viewing",
+            "2-second angle accuracy for precise measurements",
+            "1000m reflectorless range without prism",
+            "5km range with prism for long-distance measurements",
+            "3.7-inch color touch screen for easy operation",
+            "Alphanumeric keyboard for data entry",
+            "Q-MEAS fast trigger for quick measurements",
+            "Atmosence auto temperature and pressure correction",
+            "Ultra Plumb for automatic height measurement",
+            "Multiple data transfer options: USB, SD card, Bluetooth",
+            "Integrated 0.8MP camera for documentation",
+            "IP65-rated rugged design for field durability",
+            "3900mAh battery for all-day field use",
+            "Compact and efficient design",
+            "User-friendly operation interface",
+            "Versatile for different project scales",
+            "Seamless performance for surveying and construction"
+        ],
+        "specifications": {
+            "Model": "RIS",
+            "Telescope": {
+                "Magnification": "30x",
+                "Image": "Erect"
+            },
+            "Angle Measurement": {
+                "Accuracy": "2 seconds",
+                "Method": "Absolute encoding"
+            },
+            "Distance Measurement": {
+                "Reflectorless Range": "1000m",
+                "Prism Range": "5000m",
+                "Accuracy": "±(2mm + 2ppm) with prism, ±(3mm + 2ppm) reflectorless"
+            },
+            "Display": {
+                "Type": "3.7-inch color touch screen",
+                "Keyboard": "Alphanumeric keyboard"
+            },
+            "Advanced Features": {
+                "Q-MEAS": "Fast trigger measurement",
+                "Atmosence": "Auto temperature and pressure correction",
+                "Ultra Plumb": "Automatic height measurement"
+            },
+            "Data Transfer": {
+                "USB": "Supported",
+                "SD Card": "Supported",
+                "Bluetooth": "Supported"
+            },
+            "Camera": {
+                "Resolution": "0.8MP",
+                "Function": "Documentation and imaging"
+            },
+            "Power": {
+                "Battery": "3900mAh",
+                "Operating Time": "All-day field use"
+            },
+            "Environmental": {
+                "Protection": "IP65-rated",
+                "Design": "Rugged for field conditions"
+            }
+        },
+        "price": "₹ 5,35,000 + GST",
+        "images": [
+            "images/product_images/total station/Ruide/RIS/RUIDE RIS IMAGE.jpg",
+            "images/product_images/total station/Ruide/RIS/RUIDE RIS FRONT.jpg",
+            "images/product_images/total station/Ruide/RIS/RUIDE RIS SIDE.jpg",
+            "images/product_images/total station/Ruide/RIS/RUIDE RIS IMG.jpg"
+        ],
+        "alt": "Ruide RIS Innovation Meets Simplicity Total Station"
+    },
+    {
+        "brand": "HI TARGET",
+        "model": "ZTS 420R",
+        "product_name": "HI TARGET ZTS 420R - Performance Meets Reliability",
+        "category": "Total Station",
+        "description": "The Hi-Target ZTS-420R is a dual-axis reflectorless total station built for precision and efficiency, featuring a dual-axis compensator for error elimination and an absolute encoding system for stable, immediate angle measurement. With 2mm + 2ppm prism accuracy and 3mm + 2ppm reflectorless accuracy up to 600m, it ensures high reliability in diverse surveying tasks. Its real-time operating system allows instant readiness without initialization delays, while built-in temperature and air pressure sensors provide precise PPM compensation. Data transfer is flexible through Bluetooth, USB, RS232, and SD card support. Rugged and versatile, the ZTS-420R is ideal for surveying, engineering, and construction projects.",
+        "features": [
+            "Dual-axis reflectorless total station for precision and efficiency",
+            "Dual-axis compensator for error elimination",
+            "Absolute encoding system for stable, immediate angle measurement",
+            "2mm + 2ppm prism accuracy for high precision",
+            "3mm + 2ppm reflectorless accuracy up to 600m",
+            "Real-time operating system for instant readiness",
+            "Built-in temperature and air pressure sensors",
+            "Precise PPM compensation for accurate measurements",
+            "Flexible data transfer: Bluetooth, USB, RS232, SD card support",
+            "Rugged and versatile design for field conditions",
+            "Ideal for surveying, engineering, and construction projects",
+            "Compact design with advanced features",
+            "User-friendly operation for efficient workflow",
+            "High reliability in diverse surveying tasks"
+        ],
+        "specifications": {
+            "Model": "ZTS 420R",
+            "Type": "Dual-axis reflectorless total station",
+            "Angle Measurement": {
+                "System": "Absolute encoding system",
+                "Performance": "Stable, immediate angle measurement"
+            },
+            "Distance Measurement": {
+                "Prism Accuracy": "2mm + 2ppm",
+                "Reflectorless Accuracy": "3mm + 2ppm",
+                "Reflectorless Range": "Up to 600m"
+            },
+            "Compensation": {
+                "Type": "Dual-axis compensator",
+                "Function": "Error elimination"
+            },
+            "Operating System": "Real-time operating system",
+            "Initialization": "Instant readiness without delays",
+            "Environmental Sensors": {
+                "Temperature Sensor": "Built-in",
+                "Air Pressure Sensor": "Built-in",
+                "Compensation": "Precise PPM compensation"
+            },
+            "Data Transfer": {
+                "Bluetooth": "Supported",
+                "USB": "Supported",
+                "RS232": "Supported",
+                "SD Card": "Supported"
+            },
+            "Applications": [
+                "Surveying",
+                "Engineering",
+                "Construction projects"
+            ]
+        },
+        "price": "₹ 2,81,513 + GST",
+        "images": [
+            "images/product_images/total station/HI TARGET/ZTS 420R/HI TARGET ZTS 420R.jpg",
+            "images/product_images/total station/HI TARGET/ZTS 420R/HI TARGET ZTS 420R IMAGE.jpg",
+            "images/product_images/total station/HI TARGET/ZTS 420R/HI TARGET ZTS 420R IMG.png",
+            "images/product_images/total station/HI TARGET/ZTS 420R/HI TARGET ZTS 420R.png"
+        ],
+        "alt": "HI TARGET ZTS 420R Performance Meets Reliability Total Station"
+    },
+    {
+        "brand": "STONEX",
+        "model": "R2C",
+        "product_name": "STONEX R2C - Compact Precision, Redefined",
+        "category": "Total Station",
+        "description": "The Stonex R2C (2020) is designed for comfort and precision, featuring endless friction drives that allow smooth, continuous horizontal and vertical rotations without the need for knobs or clamps. This ensures easier handling and greater flexibility during fieldwork. The side trigger key provides secure and accurate measurements, delivering the same reliability as a traditional clamp lock system. Rugged and user-friendly, the R2C is built to enhance efficiency while maintaining high standards of performance in surveying tasks.",
+        "features": [
+            "Compact precision total station with endless friction drives",
+            "Smooth, continuous horizontal and vertical rotations",
+            "No knobs or clamps required for operation",
+            "Side trigger key for secure and accurate measurements",
+            "Reliable performance comparable to traditional clamp lock systems",
+            "Rugged and user-friendly design",
+            "Enhanced efficiency for surveying tasks",
+            "Lightweight and compact design",
+            "Fast, reliable and easy to use",
+            "Built for comfort and precision",
+            "Suitable for various surveying applications",
+            "Durable construction for field conditions"
+        ],
+        "specifications": {
+            "Model": "R2C",
+            "Type": "Total Station",
+            "Drive System": "Endless friction drives",
+            "Rotation": "Smooth, continuous horizontal and vertical rotations",
+            "Control": "Side trigger key operation",
+            "Design": "Compact and lightweight",
+            "Operation": "No knobs or clamps required",
+            "Performance": "High precision measurements",
+            "Reliability": "Comparable to traditional clamp lock systems",
+            "Durability": "Rugged construction for field use",
+            "User Interface": "User-friendly operation",
+            "Applications": "Surveying, construction, engineering"
+        },
+        "price": "₹ 2,94,956 + GST",
+        "images": [
+            "images/product_images/total station/STONEX/R2C/Stonex R2C.jpg",
+            "images/product_images/total station/STONEX/R2C/Stonex R2C Image.jpg",
+            "images/product_images/total station/STONEX/R2C/Stonex R2C Images.jpg",
+            "images/product_images/total station/STONEX/R2C/Stonex R2C Img.jpg"
+        ],
+        "alt": "STONEX R2C Compact Precision Total Station"
+    },
+    {
+        "brand": "STONEX",
+        "model": "R2",
+        "product_name": "STONEX R2 - Precision with Reliability",
+        "category": "Total Station",
+        "description": "The Stonex R2 is a dual-axis total station designed for precision surveying, featuring a high-performance optical structure, laser pointing, and automatic biaxial compensation for accurate leveling. It offers real-time meteorological corrections with built-in sensors, ensuring reliable results in varying conditions. The Windows-based interface and support for SD cards and USB make data management seamless and efficient. With an IP66-rated rugged design, the R2 withstands dust, water, and tough field environments. A long-lasting lithium battery supports extended use, while the alphanumeric keyboard and high-resolution LCD enhance usability. Ideal for construction, mapping, infrastructure, and land surveying, the Stonex R2 ensures durability, precision, and efficiency.",
+        "features": [
+            "Dual-axis total station for precision surveying",
+            "High-performance optical structure with laser pointing",
+            "Automatic biaxial compensation for accurate leveling",
+            "Real-time meteorological corrections with built-in sensors",
+            "Windows-based interface for seamless operation",
+            "SD card and USB support for efficient data management",
+            "IP66-rated rugged design for tough field environments",
+            "Dust and water resistant construction",
+            "Long-lasting lithium battery for extended use",
+            "Alphanumeric keyboard for easy data entry",
+            "High-resolution LCD display for clear visibility",
+            "Ideal for construction, mapping, infrastructure, and land surveying",
+            "Durable, precise, and efficient performance",
+            "Reliable results in varying environmental conditions"
+        ],
+        "specifications": {
+            "Model": "R2",
+            "Type": "Dual-axis Total Station",
+            "Optical System": "High-performance optical structure",
+            "Pointing System": "Laser pointing capability",
+            "Compensation": "Automatic biaxial compensation",
+            "Meteorological Correction": "Real-time with built-in sensors",
+            "Operating System": "Windows-based interface",
+            "Data Storage": "SD card and USB support",
+            "Environmental Protection": "IP66-rated rugged design",
+            "Power Supply": "Long-lasting lithium battery",
+            "User Interface": {
+                "Keyboard": "Alphanumeric keyboard",
+                "Display": "High-resolution LCD"
+            },
+            "Applications": [
+                "Construction surveying",
+                "Mapping",
+                "Infrastructure projects",
+                "Land surveying"
+            ]
+        },
+        "price": "₹ 3,17,362 + GST",
+        "images": [
+            "images/product_images/total station/STONEX/R2/Stonex R2.jpg",
+            "images/product_images/total station/STONEX/R2/Stonex R2 Image.jpg",
+            "images/product_images/total station/STONEX/R2/Stonex R2 iMAGES.jpg",
+            "images/product_images/total station/STONEX/R2/Stonex R2 img.jpg"
+        ],
+        "alt": "STONEX R2 Precision with Reliability Total Station"
     }
 ];
 

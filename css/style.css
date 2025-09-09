@@ -8203,6 +8203,247 @@ body.menu-open {
     }
 }
 
+/* Lucky Draw Section Styles */
+.lucky-draw-section {
+    padding: 40px 0 !important;
+    background: #f5f5f0 !important;
+}
+
+.lucky-draw-banner {
+    background: #fefefe !important;
+    border: 1px solid #000 !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+    box-shadow: none !important;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.lucky-draw-content {
+    display: flex !important;
+    min-height: 180px !important;
+}
+
+.lucky-draw-image {
+    flex: 0 0 45% !important;
+    position: relative;
+    background: #f8f8f8 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 15px !important;
+    border-right: 1px solid #000 !important;
+    min-height: 160px !important;
+    overflow: visible !important;
+}
+
+.lucky-draw-image .product-image {
+    max-width: 100% !important;
+    max-height: 140px !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.website-url {
+    position: absolute !important;
+    left: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) rotate(-90deg) !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    color: #000 !important;
+    letter-spacing: 0.5px !important;
+    white-space: nowrap !important;
+    font-family: Arial, sans-serif !important;
+}
+
+.lucky-draw-text {
+    flex: 0 0 55% !important;
+    background: #fefefe !important;
+    padding: 25px 30px !important;
+    position: relative;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+.lucky-draw-title {
+    font-size: 2.4rem !important;
+    font-weight: 400 !important;
+    color: #2c1810 !important;
+    margin-bottom: 15px !important;
+    font-family: 'Times New Roman', serif !important;
+    font-style: italic !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.lucky-draw-offer {
+    margin-bottom: 20px !important;
+}
+
+.offer-text {
+    font-size: 1.2rem !important;
+    color: #2c1810 !important;
+    margin: 0 !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
+    font-family: 'Times New Roman', serif !important;
+}
+
+.lucky-draw-btn {
+    background: #000 !important;
+    color: #fff !important;
+    padding: 10px 25px !important;
+    text-decoration: none !important;
+    border-radius: 2px !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
+    align-self: flex-start !important;
+    font-family: Arial, sans-serif !important;
+}
+
+.lucky-draw-btn:hover {
+    background: linear-gradient(135deg, #333 0%, #555 100%) !important;
+    color: #fff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid #000 !important;
+}
+
+.decorative-stars {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+.star {
+    color: #8b4513 !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+}
+
+.star:hover {
+    transform: scale(1.2) rotate(15deg) !important;
+    color: #a0522d !important;
+}
+
+.lucky-draw-image .product-image {
+    transition: all 0.3s ease !important;
+}
+
+.lucky-draw-image .product-image:hover {
+    transform: scale(1.05) !important;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15)) !important;
+}
+
+.lucky-draw-banner {
+    transition: all 0.3s ease !important;
+}
+
+.lucky-draw-banner:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Responsive Design for Lucky Draw Section */
+@media (max-width: 768px) {
+    .lucky-draw-content {
+        flex-direction: column;
+    }
+    
+    .lucky-draw-image {
+        flex: none;
+        border-right: none;
+        border-bottom: 1px solid #000;
+        min-height: 120px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .lucky-draw-image .product-image {
+        max-height: 100px !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .lucky-draw-text {
+        flex: none;
+        padding: 20px;
+    }
+    
+    .lucky-draw-title {
+        font-size: 2rem;
+    }
+    
+    .website-url {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-top: 8px;
+        font-size: 10px;
+    }
+    
+    .decorative-stars {
+        position: static;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lucky-draw-section {
+        padding: 20px 0;
+    }
+    
+    .lucky-draw-banner {
+        margin: 0 10px;
+    }
+    
+    .lucky-draw-image {
+        min-height: 100px !important;
+        padding: 10px !important;
+    }
+    
+    .lucky-draw-image .product-image {
+        max-height: 80px !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .lucky-draw-text {
+        padding: 15px;
+    }
+    
+    .lucky-draw-title {
+        font-size: 1.6rem;
+    }
+    
+    .offer-text {
+        font-size: 1rem;
+    }
+    
+    .lucky-draw-btn {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+}
+
 /* Animation for carousel items */
 .hero-section .carousel-item.active .hero-content {
     animation: fadeInUp 0.8s ease-out;
