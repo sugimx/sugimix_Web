@@ -62,23 +62,14 @@
                             <div class="results-categories-container">
                                 <span class="results-count">Show 24 Results</span>
                                 <div class="categories-horizontal">
-                                    <a href="#" class="category-link-horizontal active hover-glow">
+                                    <a href="#" class="category-link-horizontal active hover-glow" data-category="all">
                                         All Categories <span class="category-count">(24)</span>
                                     </a>
-                                    <a href="#" class="category-link-horizontal hover-glow">
-                                        GPS RTK Systems <span class="category-count">(8)</span>
+                                    <a href="#" class="category-link-horizontal hover-glow" data-category="RTK Receiver">
+                                        RTK Receiver <span class="category-count">(0)</span>
                                     </a>
-                                    <a href="#" class="category-link-horizontal hover-glow">
-                                        Total Stations <span class="category-count">(6)</span>
-                                    </a>
-                                    <a href="#" class="category-link-horizontal hover-glow">
-                                        Accessories <span class="category-count">(5)</span>
-                                    </a>
-                                    <a href="#" class="category-link-horizontal hover-glow">
-                                        Software <span class="category-count">(3)</span>
-                                    </a>
-                                    <a href="#" class="category-link-horizontal hover-glow">
-                                        Training Materials <span class="category-count">(2)</span>
+                                    <a href="#" class="category-link-horizontal hover-glow" data-category="Total Station">
+                                        Total Station <span class="category-count">(0)</span>
                                     </a>
                                 </div>
                             </div>
@@ -130,12 +121,32 @@
             // Update category links with counts
             const categoryLinks = document.querySelectorAll('.category-link-horizontal');
             categoryLinks.forEach(link => {
-                const categoryText = link.textContent.split(' (')[0];
-                if (categoryText === 'All Categories') {
+                const category = link.getAttribute('data-category');
+                if (category === 'all') {
                     link.innerHTML = `All Categories <span class="category-count">(${productData.length})</span>`;
-                } else if (categoryCounts[categoryText]) {
-                    link.innerHTML = `${categoryText} <span class="category-count">(${categoryCounts[categoryText]})</span>`;
+                } else if (categoryCounts[category]) {
+                    link.innerHTML = `${category} <span class="category-count">(${categoryCounts[category]})</span>`;
                 }
+            });
+        }
+
+        // Function to initialize category filtering
+        function initializeCategoryFiltering() {
+            const categoryLinks = document.querySelectorAll('.category-link-horizontal');
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    categoryLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    link.classList.add('active');
+                    
+                    // Filter products by category
+                    const category = link.getAttribute('data-category');
+                    filterProductsByCategory(category);
+                });
             });
         }
 
@@ -155,21 +166,37 @@
             alert(`Quote requested for: ${productName}\n\nOur team will contact you shortly with pricing details.`);
         }
 
-        // Pagination variables
+        // Pagination and filtering variables
         let currentPage = 1;
         const productsPerPage = 6; // Show 6 products per page
         let totalPages = 1;
+        let currentFilter = 'all'; // Current active filter
+        let filteredProducts = productData; // Currently displayed products
+
+        // Function to filter products by category
+        function filterProductsByCategory(category) {
+            if (category === 'all') {
+                filteredProducts = productData;
+            } else {
+                filteredProducts = productData.filter(product => product.category === category);
+            }
+            currentFilter = category;
+            currentPage = 1; // Reset to first page when filtering
+            calculateTotalPages();
+            updatePaginationUI();
+            populateProductCards();
+        }
 
         // Function to calculate total pages
         function calculateTotalPages() {
-            totalPages = Math.ceil(productData.length / productsPerPage);
+            totalPages = Math.ceil(filteredProducts.length / productsPerPage);
         }
 
         // Function to get products for current page
         function getProductsForCurrentPage() {
             const startIndex = (currentPage - 1) * productsPerPage;
             const endIndex = startIndex + productsPerPage;
-            return productData.slice(startIndex, endIndex);
+            return filteredProducts.slice(startIndex, endIndex);
         }
 
         // Function to update pagination UI
@@ -344,8 +371,8 @@
             const resultsCount = document.querySelector('.results-count');
             if (resultsCount) {
                 const startIndex = (currentPage - 1) * productsPerPage + 1;
-                const endIndex = Math.min(currentPage * productsPerPage, productData.length);
-                resultsCount.textContent = `Showing ${startIndex}-${endIndex} of ${productData.length} Results`;
+                const endIndex = Math.min(currentPage * productsPerPage, filteredProducts.length);
+                resultsCount.textContent = `Showing ${startIndex}-${endIndex} of ${filteredProducts.length} Results`;
             }
 
             // Update category counts
@@ -449,6 +476,7 @@
             updatePaginationUI();
             initializePagination();
             initializeImageSliders();
+            initializeCategoryFiltering();
         });
     </script>
 </body>
