@@ -125,7 +125,7 @@ const productData = [
                 "Storage Temperature": "-55℃~+85℃"
             }
         },
-        "price": "₹ 2,45,000",
+        "price": "₹ 4,51,230 + GST",
         "images": [
             "images/product_images/GNSS/Hi TARGET/V300 GNSS RTK/Hi Target V 300.jpg",
             "images/product_images/GNSS/Hi TARGET/V300 GNSS RTK/hi target v 300 big.jpg"
@@ -231,7 +231,7 @@ const productData = [
                 "Storage Temperature": "-40℃~+80℃"
             }
         },
-        "price": "₹ 2,10,000",
+        "price": "₹ 3,46,504 + GST",
         "images": [
             "images/product_images/GNSS/Hi TARGET/V300 GNSS RTK/hi target v 300 big.jpg",
             "images/product_images/GNSS/Hi TARGET/V300 GNSS RTK/Hi Target V 300.jpg"
@@ -318,13 +318,13 @@ const productData = [
             "External power input": "6-28 V DC"
           }
         },
-        "price": "₹ 1,85,000",
+        "price": "₹ 2,96,697 + GST",
         "images": [
             "images/product_images/GNSS/Hi TARGET/H32 GNSS RTK/HI TARGET H32.png",
             "images/product_images/GNSS/Hi TARGET/H32 GNSS RTK/HI TARGET H32 FRONT.png"
         ],
         "alt": "HI TARGET H32 GNSS RTK Receiver"
-      }
+    }
 ,      
     {
         "brand": "HI TARGET",
@@ -412,8 +412,8 @@ const productData = [
                 "External power input": "6-28 V DC"
             }
         },
-        "price": "₹ 2,45,000",
-        "lastSale": "₹ 2,40,000",
+        "price": "₹ 2,96,697 + GST",
+        "lastSale": "₹ 2,96,697",
         "images": [
             "images/product_images/GNSS/Hi TARGET/A10 GNSS RTK/HI TARGET A10.jpg",
             "images/product_images/GNSS/Hi TARGET/A10 GNSS RTK/HI TARGET A10 ONE.jpg",
@@ -565,7 +565,7 @@ const productData = [
             "Secondary Development": "Provides secondary development package, and opens the OpenSIC observation data format and interaction interface definition",
             "Cloud Service": "The powerful cloud platform provides online services like remote management, firmware updates, online registers, etc."
         },
-        "price": "₹ 2,85,000",
+        "price": "₹ 4,28,145 + GST",
         "images": [
             "images/product_images/GNSS/SOUTH/ALPS1 GNSS RTK/south Alps1.jpg",
             "images/product_images/GNSS/SOUTH/ALPS1 GNSS RTK/south alps1 all.jpg",
@@ -667,7 +667,7 @@ const productData = [
                 "Professional Use": "Versatile tool for professional surveying"
             }
         },
-        "price": "₹ 2,25,000",
+        "price": "₹ 2,50,897 + GST",
         "images": [
             "images/product_images/GNSS/SOUTH/INN04 GNSS RTK/South inn04.jpg",
             "images/product_images/GNSS/SOUTH/INN04 GNSS RTK/south inn04 all.jpg",
@@ -773,7 +773,7 @@ const productData = [
                 "Software Compatibility": "Seamless compatibility with South's SurvStar software"
             }
         },
-        "price": "₹ 2,65,000",
+        "price": "₹ 6,33,245 + GST",
         "images": [
             "images/product_images/GNSS/SOUTH/INN05 GNSS RTK/south inn05.jpg",
             "images/product_images/GNSS/SOUTH/INN05 GNSS RTK/south inno5 all.jpg",
@@ -867,7 +867,7 @@ const productData = [
                 "Construction": "Construction management and monitoring"
             }
         },
-        "price": "₹ 2,95,000",
+        "price": "₹ 3,10,662 + GST",
         "images": [
             "images/product_images/GNSS/SOUTH/V3S GNSS RTK/south v3s.jpg",
             "images/product_images/GNSS/SOUTH/V3S GNSS RTK/south v3s more.jpg",
@@ -953,7 +953,7 @@ const productData = [
                 "Field Work": "Reliable and efficient operation in various conditions"
             }
         },
-        "price": "₹ 2,15,000",
+        "price": "₹ 2,38,977 + GST",
         "images": [
             "images/product_images/GNSS/SOUTH/G 7Q GNSS RTK/south g7q.jpg",
             "images/product_images/GNSS/SOUTH/G 7Q GNSS RTK/south g7q more.jpg",
@@ -1054,7 +1054,7 @@ const productData = [
                 "Communication": "Wi-Fi / USB OTG / 3.5G"
             }
         },
-        "price": "₹ 2,35,000",
+        "price": "₹ 5,53,595 + GST",
         "images": [
             "images/product_images/GNSS/STONEX/S900AS9IIS900+ GNSS/S900A.jpg",
             "images/product_images/GNSS/STONEX/S900AS9IIS900+ GNSS/stonex s900 img.jpg"
@@ -1136,7 +1136,7 @@ const productData = [
                 "Charge Time": "Typically 4 hours"
             }
         },
-        "price": "₹ 2,55,000",
+        "price": "₹ 6,15,323 + GST",
         "images": [
             "images/product_images/GNSS/STONEX/S6II S980A S980+ GNSS/stonex s611.jpg",
             "images/product_images/GNSS/STONEX/S6II S980A S980+ GNSS/s611 img.jpg",
@@ -1221,7 +1221,7 @@ const productData = [
                 "Field Performance": "Smooth field performance with comprehensive connectivity"
             }
         },
-        "price": "₹ 2,75,000",
+        "price": "₹ 6,15,323 + GST",
         "images": [
             "images/product_images/GNSS/STONEX/S5II S990AS990+ GNSS/stonex s511.jpg",
             "images/product_images/GNSS/STONEX/S5II S990AS990+ GNSS/stonex s511 img.jpg",
@@ -1336,7 +1336,7 @@ const productData = [
                 "Storage Temperature": "-40℃~+80℃"
             }
         },
-        "price": "₹ 1,95,000",
+        "price": "₹ 4,89,875 + GST",
         "images": [
             "images/product_images/GNSS/STONEX/S3II SE GNSS RTK/stonex s311 se single.jpg",
             "images/product_images/GNSS/STONEX/S3II SE GNSS RTK/s311 se.jpg",
@@ -1426,7 +1426,7 @@ const productData = [
                 "Professional Benefits": "Reliability, accuracy, and efficiency for professionals"
             }
         },
-        "price": "₹ 2,15,000",
+        "price": "₹ 2,56,898 + GST",
         "images": [
             "images/product_images/GNSS/STONEX/S3AR GNSS RTK/stonex s3ar image.jpg",
             "images/product_images/GNSS/STONEX/S3AR GNSS RTK/s3ar img.jpg",
@@ -1535,7 +1535,7 @@ const productData = [
             "System": "Intelligent system for easy operation",
             "Efficiency": "Built-in star chain to continue improving efficiency"
         },
-        "price": "₹ 8,21,622 + GST",
+        "price": "₹ 8,12,456 + GST",
         "images": [
             "images/product_images/GNSS/STONEX/S3+ GNSS RTK/stonex s3+ image.jpg",
             "images/product_images/GNSS/STONEX/S3+ GNSS RTK/stonex s3+ img.jpg",
@@ -1590,7 +1590,7 @@ const productData = [
                 "KML"
             ]
         },
-        "price": "₹ 5,70,672 + GST",
+        "price": "₹ 5,61,558 + GST",
         "images": [
             "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700.jpg",
             "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700 images.jpg",
@@ -1646,7 +1646,7 @@ const productData = [
                 "Software": "Compatible with professional software like SurPAD 4.0"
             }
         },
-        "price": "₹ 2,15,000",
+        "price": "₹ 5,53,595",
         "images": [
             "images/product_images/GNSS/STONEX/S1T1 GNSS RTK/stonex s1t1.jpg",
             "images/product_images/GNSS/STONEX/S1T1 GNSS RTK/stonex s1t1img.jpg"
@@ -1747,7 +1747,7 @@ const productData = [
                 "Humidity": "100% anti-condensation"
             }
         },
-        "price": "₹ 2,55,000",
+        "price": "₹ 5,43,638 + GST",
         "images": [
             "images/product_images/GNSS/FOIF/A90 GNSS RTK/FOIF A90.jpg",
             "images/product_images/GNSS/FOIF/A90 GNSS RTK/FOIF A90 ALL.jpg",
@@ -1905,7 +1905,7 @@ const productData = [
                 "Controller": "F58"
             }
         },
-        "price": "₹ 2,35,000",
+        "price": "₹ 7,04,929 + GST",
         "images": [
             "images/product_images/GNSS/FOIF/F90 GNSS RTK/FOIF F90.jpg",
             "images/product_images/GNSS/FOIF/F90 GNSS RTK/FOIF F90 MAIN.jpg",
@@ -2047,7 +2047,7 @@ const productData = [
                 "Humidity": "Anti-condensation 100%"
             }
         },
-        "price": "₹ 7,67,847 + GST",
+        "price": "₹ 7,58,693 + GST",
         "images": [
             "images/product_images/GNSS/FOIF/A60 PRO GNSS RTK/FOIF A60 PRO.jpg"
         ],
@@ -2145,6 +2145,7 @@ const productData = [
                 "Performance": "Enhanced precision for field operations"
             }
         },
+        "price": "2,63,872 + GST",
         "images": [
             "images/product_images/GNSS/FOIF/A70 AR GNSS RTK/FOIF A70 AR.jpg",
             "images/product_images/GNSS/FOIF/A70 AR GNSS RTK/FOIF A70 AR IMAGE.jpg",
@@ -2202,7 +2203,7 @@ const productData = [
             },
             "Applications": "Surveying, construction, GIS, road design"
         },
-        "price": "₹ 5,70,315 + GST",
+        "price": "₹ 5,61,560 + GST",
         "images": [
             "images/product_images/GNSS/FOIF/N90 GNSS RTK/FOIF N90.jpg",
             "images/product_images/GNSS/FOIF/N90 GNSS RTK/FOIF N90 SIDE.jpg",
@@ -2299,6 +2300,7 @@ const productData = [
                 "Working Time": "16h"
             }
         },
+        "price": "2,84,775 + GST",
         "images": [
             "images/product_images/total station/Ruide/RCS/RUIDE RCS FRONT.jpg",
             "images/product_images/total station/Ruide/RCS/RUIDE RCS IMAGE.jpg",
@@ -2407,7 +2409,7 @@ const productData = [
                 "Charging Time": "Approx. 4 hours"
             }
         },
-        "price": "₹ 2,77,000 + GST",
+        "price": "₹ 2,31,012 + GST",
         "images": [
             "images/product_images/total station/FOIF/RTS 102 R10/FOIF RTS 102R10.jpg",
             "images/product_images/total station/FOIF/RTS 102 R10/FOIF RTS 102R10 IMG.jpg",
@@ -2617,6 +2619,7 @@ const productData = [
                 "Data Collector": "F58, fully rugged PDA (Optional)"
             }
         },
+        "price": "2,21,055 + GST",
         "images": [
             "images/product_images/total station/FOIF/RTS 352/FOIF RTS 352.png",
             "images/product_images/total station/FOIF/RTS 352/FOIF RTS 352 IMAGES.png",
@@ -2751,6 +2754,7 @@ const productData = [
                 "Data Collector": "F58, fully rugged PDA (Optional)"
             }
         },
+        "price": "3,46,505 + GST",
         "images": [
             "images/product_images/total station/FOIF/RTS 342/FOIF RTS 342.png",
             "images/product_images/total station/FOIF/RTS 342/FOIF RTS 342 IMAGES.jpg",
@@ -2870,6 +2874,7 @@ const productData = [
                 "Water and Dust Protection": "IP54 (IEC60529)"
             }
         },
+        "price": "5,43,637 + GST",
         "images": [
             "images/product_images/total station/FOIF/RTS 362 R10/FOIF RTS 362.jpg",
             "images/product_images/total station/FOIF/RTS 362 R10/FOIF RTS 362 IMAGE.png",
@@ -3072,7 +3077,7 @@ const productData = [
                 "Waterproof and Dustproof": "IP54"
             }
         },
-        "price": "₹ 2,44,767 + GST",
+        "price": "₹ 2,31,012 + GST",
         "images": [
             "images/product_images/total station/STONEX/R3/stonex r3.jpg",
             "images/product_images/total station/STONEX/R3/Stonex r3 image.jpg",
@@ -3133,7 +3138,7 @@ const productData = [
                 "Data Formats": "Shapefiles, DXF, CSV, KML support"
             }
         },
-        "price": "₹ 5,70,672 + GST",
+        "price": "₹ 5,61,558 + GST",
         "images": [
             "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700.jpg",
             "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700 images.jpg",
@@ -3197,7 +3202,7 @@ const productData = [
                 "Application": "Modern surveying and construction needs"
             }
         },
-        "price": "₹ 3,21,843 + GST",
+        "price": "₹ 3,24,600 + GST",
         "images": [
             "images/product_images/total station/Ruide/RQS/RUIDE RQS IMAGE.jpg",
             "images/product_images/total station/Ruide/RQS/RUIDE RQS FRONT.jpg",
@@ -3256,7 +3261,7 @@ const productData = [
                 "Ball Shaft Rotation": "Stable and consistent"
             }
         },
-        "price": "₹ 4,27,270 + GST",
+        "price": "₹ 4,18,189 + GST",
         "images": [
             "images/product_images/total station/Ruide/RCS/RUIDE RCS FRONT.jpg",
             "images/product_images/total station/Ruide/RCS/RUIDE RCS IMAGE.jpg",
@@ -3333,7 +3338,7 @@ const productData = [
                 "Design": "Rugged for field conditions"
             }
         },
-        "price": "₹ 5,35,000 + GST",
+        "price": "₹ 5,07,795 + GST",
         "images": [
             "images/product_images/total station/Ruide/RIS/RUIDE RIS IMAGE.jpg",
             "images/product_images/total station/Ruide/RIS/RUIDE RIS FRONT.jpg",
@@ -3399,7 +3404,7 @@ const productData = [
                 "Construction projects"
             ]
         },
-        "price": "₹ 2,81,513 + GST",
+        "price": "₹ 2,38,977 + GST",
         "images": [
             "images/product_images/total station/HI TARGET/ZTS 420R/HI TARGET ZTS 420R.jpg",
             "images/product_images/total station/HI TARGET/ZTS 420R/HI TARGET ZTS 420R IMAGE.jpg",
@@ -3495,7 +3500,7 @@ const productData = [
                 "Land surveying"
             ]
         },
-        "price": "₹ 3,17,362 + GST",
+        "price": "₹ 2,66,853 + GST",
         "images": [
             "images/product_images/total station/STONEX/R2/Stonex R2.jpg",
             "images/product_images/total station/STONEX/R2/Stonex R2 Image.jpg",
