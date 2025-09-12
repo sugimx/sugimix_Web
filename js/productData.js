@@ -328,6 +328,85 @@ const productData = [
 ,      
     {
         "brand": "HI TARGET",
+        "model": "HI TARGET HTS 220R",
+        "product_name": "Hi Target HTS 220R - Precision Made Simple",
+        "category": "Total Station",
+        "description": "The Hi-Target HTS-220R is a high-accuracy total station designed for land surveying and construction, delivering 3.75 angular accuracy and a 600m reflectorless range for versatile measurement tasks. It features a dual-axis compensator for reliable precision, an absolute encoding system to secure data integrity, and a dual-sided backlit display with alphanumeric keyboard for user-friendly operation. With Bluetooth, RS232, and USB connectivity, data transfer is seamless and efficient. Its rugged design ensures durability in tough field environments, while the long-lasting Li-ion battery supports extended operations. Ideal for land surveying, construction layout, road design, and specialized tasks like REM and offset, the HTS-220R is a powerful tool for professional surveyors.",
+       "features": [
+            "30X magnification telescope with illuminated optics for clear viewing",
+            "1°30′ field angle for wide surveying visibility",
+            "Close-range sighting enabled with 1.5m minimum focus distance",
+            "Absolute encode angle measurement method for precision tracking",
+            "2″ angle measurement precision ensures high accuracy",
+            "Selectable minimum reading options: 1'/5'/10' for flexibility",
+            "±(2mm + 2ppm·D) distance measurement precision over various ranges",
+            "Reflectorless measurement up to 800m for efficient field work",
+            "Single-prism distance range up to 3000m",
+            "Three-prism distance range extends up to 6000m",
+            "Fast measuring time options: 0.5s, 1s, and 1.5s",
+            "Dual-axis compensator system (optional) enhances measurement stability",
+            "±3′ compensator working range ensures reliable performance",
+            "1″ compensator setting accuracy for fine-level adjustments",
+            "Large internal memory stores approx. 20,000 points",
+            "Data export in ASCII format for easy integration",
+            "Multiple communication interfaces: RS232, SD card, USB, mini-USB",
+            "High-resolution 280 x 160 pixel LCD with backlight and contrast adjustment",
+            "Dual-side alphanumeric backlit crystal keyboard for ease of use",
+            "Real-time operating system provides stable and responsive control",
+            "Compact and rugged design suitable for various field environments",
+            "Optimized for land surveying, construction, and geospatial applications"
+        ],
+        "specifications": {
+            "Model": "Hi-target HTS-220R",
+            "Telescope": {
+                "Imaging": "Illuminated",
+                "Magnification": "30X",
+                "Resolution": "3''",
+                "Field Angle": "1°30′",
+                "Shortest Sight Distance": "1.5m"
+            },
+            "Angle Measurement": {
+                "Angle Measure Method": "Absolute Encode",
+                "Angle Measure Precision": "2″",
+                "Minimum Reading": "1'/5'/10' (0.3mgon/1.5mgon/3mgon) optional"
+            },
+            "Distance Measurement": {
+                "Precision": "±(2mm+2×10⁻⁶·D)",
+                "Distance Measurement": {
+                    "Three-prism": "6000m",
+                    "Reflector": "800m",
+                    "Single-prism": "3000m",
+                    "Accuracy": "2 mm +2ppm",
+                    "Measuring Time": "1.5s/1s/ 0.5s"
+                }
+            },
+            "Compensator": {
+                "System": "Dual-axis (optional)",
+                "Working Range": "±3′",
+                "Setting Accuracy": "1″"
+            },
+            "Bluetooth": {
+                "Interface": "Standard RS232, SD card4, USB pen drive, mini-US",
+                "Internal Data Memory": "Approx. 20,000 Points",
+                "Data Format": "ASCII"
+            },
+            "Operation": {
+                "Operation system": "Real-time Operating System",
+                "Display": "High resolution backlight black and white display, contrast adjustment/ Graphics: 280 x 160 pixels",
+                "Keyboard": "2 sides Alphanumeric backlit crystal keyboard"
+            }
+        },
+        "price": "1,71,265 + GST", 
+        "images": [
+            "images/product_images/total station/Hi TARGET/HTS 220R/HI TARGET HTS 220R FRONT.jpg",
+            "images/product_images/total station/Hi TARGET/HTS 220R/HI TARGET HTS 220R ALL.jpg",
+            "images/product_images/total station/Hi TARGET/HTS 220R/HI TARGET HTS 220R SIDE.jpg",
+            "images/product_images/total station/Hi TARGET/HTS 220R/HI TARGET HTS 220R.jpg"
+        ],
+        "alt": "FOIF RTS-372 R10 Precision & Performance Total Station"
+    },
+    {
+        "brand": "HI TARGET",
         "model": "A10",
         "product_name": "HI TARGET A10",
         "category": "RTK Receiver",
@@ -2486,6 +2565,7 @@ const productData = [
                 "Waterproof, Dustproof": "IP66"
             }
         },
+        "price": "1,47,370 + GST",
         "images": [
             "images/product_images/total station/FOIF/RTS 112 R10+/foif rts 112 r10+.jpg",
             "images/product_images/total station/FOIF/RTS 112 R10+/foif rts 112 r10+ img.jpg",
@@ -2882,88 +2962,6 @@ const productData = [
             "images/product_images/total station/FOIF/RTS 362 R10/FOIF RTS 362 IMGS.jpg"
         ],
         "alt": "FOIF RTS-362 R10 Power with Precision Total Station"
-    },
-    {
-        "brand": "FOIF",
-        "model": "RTS-372 R10",
-        "product_name": "FOIF RTS-372 R10 - Precision & Performance",
-        "category": "Total Station",
-        "description": "The FOIF RTS 372 R10 is a high-precision total station with a 1000m reflectorless range, excellent prism accuracy, and a redesigned, user-friendly panel. It features dual-axis compensation, an ultra-narrow laser beam, nitrided shaft durability, and a large high-resolution LCD with a laser guide light. Equipped with one-key measurement, electronic bubble display, laser plummet, and a long-lasting lithium battery, it is ideal for railway construction, monitoring, 3D measurement, and land surveying. Its rugged build ensures reliability in tough environments, while advanced functions make it a versatile tool for professionals. Designed for precision and efficiency, it delivers dependable performance in every project.",
-        "features": [
-            "High-precision total station with 1000m reflectorless range",
-            "Excellent prism accuracy for reliable measurements",
-            "Redesigned, user-friendly panel for easy operation",
-            "Dual-axis compensation for enhanced accuracy",
-            "Ultra-narrow laser beam for precise targeting",
-            "Nitrided shaft durability for long-lasting performance",
-            "Large high-resolution LCD with laser guide light",
-            "One-key measurement for quick operations",
-            "Electronic bubble display for accurate leveling",
-            "Laser plummet for precise centering",
-            "Long-lasting lithium battery for extended field work",
-            "Ideal for railway construction, monitoring, 3D measurement, and land surveying",
-            "Rugged build ensures reliability in tough environments",
-            "Advanced functions make it a versatile tool for professionals",
-            "Designed for precision and efficiency",
-            "Dependable performance in every project",
-            "30X magnification telescope with erect imaging",
-            "1°30' field angle for comprehensive coverage",
-            "Absolute encode angle measurement method",
-            "2\" angle measure precision",
-            "Multiple distance measurement capabilities",
-            "High-precision time of 0.3 seconds",
-            "Bi-axis compensation with ±3' working range",
-            "More than 12 hours continuous working time",
-            "Multiple communication options for data transfer"
-        ],
-        "specifications": {
-            "Model": "RTS-372 R10",
-            "Telescope": {
-                "Imaging": "Erect",
-                "Magnification": "30X",
-                "Objective Lens Effective Aperture": "50mm",
-                "Resolution": "3''",
-                "Field Angle": "1°30′",
-                "Shortest Sight Distance": "1m"
-            },
-            "Angle Measurement": {
-                "Angle Measure Method": "Absolute Encode",
-                "Angle Measure Precision": "2″",
-                "Minimum Reading": "0.1″, 1″, 5″"
-            },
-            "Distance Measurement": {
-                "Precision": "±(2mm+2×10⁻⁶·D)",
-                "Distance Measurement": {
-                    "Non-prism": "1000m",
-                    "Reflector": "1000m",
-                    "Single-prism": "5000m"
-                },
-                "High-Precision Time": "0.3s",
-                "Minimum Reading": "0.1mm"
-            },
-            "Compensation": {
-                "Method": "Bi-axis compensation",
-                "Working Range": "±3′"
-            },
-            "Battery": {
-                "Power Source": "Rechargeable NiMH Battery",
-                "Voltage": "DC 7.4V",
-                "Continuous Working Time": "More than 12 hours"
-            },
-            "Others": {
-                "Display": "2 sides/8 lines",
-                "Communication": "RS-232C/USB/SD card/Bluetooth (Optional)",
-                "Water-proof & Dust-proof": "IP55"
-            }
-        },
-        "images": [
-            "images/product_images/total station/FOIF/RTS 372 R10/FOIF RTS 372 R10.jpg",
-            "images/product_images/total station/FOIF/RTS 372 R10/FOIF RTS 372 R10 FRONT.jpg",
-            "images/product_images/total station/FOIF/RTS 372 R10/FOIF RTS 372 R10 FRONTVIEW.jpg",
-            "images/product_images/total station/FOIF/RTS 372 R10/FOIF RTS 372 R10 IMAGE.jpg",
-            "images/product_images/total station/FOIF/RTS 372 R10/FOIF RTS 372 R10 IMG.jpg"
-        ],
-        "alt": "FOIF RTS-372 R10 Precision & Performance Total Station"
     },
     {
         "brand": "STONEX",

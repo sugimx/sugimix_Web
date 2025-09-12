@@ -67,9 +67,9 @@ class ComponentLoader {
             <div class="footer-section">
                 <h4>Contact Information</h4>
                 <address class="contact-info" itemscope itemtype="https://schema.org/PostalAddress">
-                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="streetAddress">123 Business Street</span>, <span itemprop="addressLocality">Mumbai</span>, <span itemprop="addressRegion">Maharashtra</span> <span itemprop="postalCode">400001</span></p>
-                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+15551234567" itemprop="telephone">+1 (555) 123-4567</a></p>
-                    <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:Sug.info@gmail.com" itemprop="email">Sug.info@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="streetAddress">86, Parakkai Road</span>, <span itemprop="addressLocality">Keezhavannanvilai</span>, <span itemprop="addressRegion">Nagercoil-2</span> <span itemprop="postalCode">629501</span></p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+918903301652" itemprop="telephone" style="color: white;">+91 8903301652</a></p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:sugix.info@gmail.com" itemprop="email" style="color: white;">sugix.info@gmail.com</a></p>
                     <p><i class="fas fa-clock" aria-hidden="true"></i> Mon-Fri: 9:00 AM - 6:00 PM IST</p>
                 </address>
             </div>
@@ -77,7 +77,7 @@ class ComponentLoader {
         
         <div class="footer-bottom">
             <div class="footer-bottom-content">
-                <p>&copy; 2024 Sug. All rights reserved. | <span itemprop="name">Sug Surveying Instruments</span></p>
+                <p>&copy; 2025 Sug. All rights reserved. | <span itemprop="name">Sug Surveying Instruments</span></p>
                 <nav class="footer-bottom-links" aria-label="Legal links">
                     <a href="privacy-policy.html">Privacy Policy</a>
                     <a href="terms-of-service.html">Terms of Service</a>
