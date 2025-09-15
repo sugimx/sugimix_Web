@@ -1,4 +1,9 @@
 // Product data for Sug Surveying Equipment & Instruments
+
+//Need to check 
+
+//Ruide RNS
+
 const productData = [
     {
         "brand": "HI TARGET",
@@ -575,10 +580,10 @@ const productData = [
     },
     {
         "brand": "SOUTH",
-        "model": "INNO4",
-        "product_name": "SOUTH INNO4",
+        "model": "INN04",
+        "product_name": "SOUTH INN04",
         "category": "RTK Receiver",
-        "description": "The South INNO4 is a compact, lightweight GNSS RTK receiver built for modern surveyors, combining portability, durability, and advanced positioning technology. Weighing under 540g, it is easy to carry by hand or with a foldable telescopic pole, while its dual-camera AR stakeout function provides live-view guidance for fast and accurate stakeout. Powered by a 1698-channel GNSS board, it delivers superior accuracy and performance even in challenging environments, with support for PPK, Fast Static, and Prism Plus solutions. Featuring an IP68-rated design, enhanced IMU stability, and flexible base setup with external radio options, the INNO4 ensures reliable results in the field. With built-in Wi-Fi, Bluetooth, 4G, and 5G connectivity, it offers seamless data transmission, making it a versatile tool for professional surveying.",
+        "description": "The South INN04 is a compact, lightweight GNSS RTK receiver built for modern surveyors, combining portability, durability, and advanced positioning technology. Weighing under 540g, it is easy to carry by hand or with a foldable telescopic pole, while its dual-camera AR stakeout function provides live-view guidance for fast and accurate stakeout. Powered by a 1698-channel GNSS board, it delivers superior accuracy and performance even in challenging environments, with support for PPK, Fast Static, and Prism Plus solutions. Featuring an IP68-rated design, enhanced IMU stability, and flexible base setup with external radio options, the INN04 ensures reliable results in the field. With built-in Wi-Fi, Bluetooth, 4G, and 5G connectivity, it offers seamless data transmission, making it a versatile tool for professional surveying.",
         "features": [
             "Compact and lightweight design under 540g",
             "1698-channel GNSS board for superior accuracy",
@@ -673,14 +678,14 @@ const productData = [
             "images/product_images/GNSS/SOUTH/INN04 GNSS RTK/south inn04 all.jpg",
             "images/product_images/GNSS/SOUTH/INN04 GNSS RTK/south inn04 more.jpg"
         ],
-        "alt": "SOUTH INNO4 Compact GNSS RTK Receiver with Dual-Camera AR Stakeout"
+        "alt": "SOUTH INN04 Compact GNSS RTK Receiver with Dual-Camera AR Stakeout"
     },
     {
         "brand": "SOUTH",
-        "model": "INNO5",
-        "product_name": "SOUTH INNO5",
+        "model": "INN05",
+        "product_name": "SOUTH INN05",
         "category": "RTK Receiver",
-        "description": "The South INNO5 is a rugged, high-performance GNSS RTK receiver module designed for surveying and precision positioning. Supporting multi-constellation (GPS, GLONASS, GALILEO, and more) and multi-frequency tracking, it delivers reliable accuracy even in challenging conditions. Built with a durable magnesium-aluminum alloy shell, IP68 protection, and a wide operating temperature range (-45°C to +75°C), it ensures environmental resilience. With integrated Wi-Fi and Bluetooth connectivity and seamless compatibility with South's SurvStar software, the INNO5 enhances field efficiency with advanced CAD, mapping, and data collection tools.",
+        "description": "The South INN05 is a rugged, high-performance GNSS RTK receiver module designed for surveying and precision positioning. Supporting multi-constellation (GPS, GLONASS, GALILEO, and more) and multi-frequency tracking, it delivers reliable accuracy even in challenging conditions. Built with a durable magnesium-aluminum alloy shell, IP68 protection, and a wide operating temperature range (-45°C to +75°C), it ensures environmental resilience. With integrated Wi-Fi and Bluetooth connectivity and seamless compatibility with South's SurvStar software, the INN05 enhances field efficiency with advanced CAD, mapping, and data collection tools.",
         "features": [
             "Rugged, high-performance GNSS RTK receiver module",
             "1698 channels for comprehensive satellite tracking",

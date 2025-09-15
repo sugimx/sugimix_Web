@@ -1,3 +1,37 @@
+/* Our Core Services - horizontal scroll container */
+.services-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+    /* Hide scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.services-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.services-scroll .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+.services-scroll .feature-card {
+    scroll-snap-align: start;
+    min-width: 0; /* Allow cards to shrink */
+}
+
+@media (max-width: 991px) {
+    .services-scroll .features-grid {
+        grid-template-columns: repeat(4, minmax(250px, 1fr));
+        width: max-content;
+    }
+}
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -2558,6 +2592,19 @@ body.menu-open {
     max-width: 100%;
     height: auto;
     border-radius: 12px;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.offering-img:hover {
+    transform: scale(1.05);
+}
+
+/* Ensure images are visible even if lazy loading fails */
+.offering-illustration img {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 /* Product Features */

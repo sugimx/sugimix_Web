@@ -59,6 +59,80 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Lucky Draw Animations */
+        .lucky-draw-section .lucky-draw-banner { 
+            background-size: 200% 200%;
+            animation: gradientDrift 12s ease-in-out infinite;
+        }
+        .lucky-draw-section .lucky-draw-image img {
+            animation: floatY 6s ease-in-out infinite;
+        }
+        .lucky-draw-section .lucky-draw-text {
+            animation: fadeSlideUp 0.8s ease both;
+        }
+        .lucky-draw-section .lucky-draw-title {
+            background-size: 200% auto !important;
+            animation: shimmerText 3s linear infinite;
+        }
+        .lucky-draw-section .decorative-stars .star {
+            animation: starTwinkle 2.4s ease-in-out infinite alternate;
+        }
+        .lucky-draw-section .lucky-draw-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .lucky-draw-section .lucky-draw-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255,255,255,0), rgba(255,255,255,0.35), rgba(255,255,255,0));
+            transform: skewX(-20deg);
+            animation: buttonSheen 3.5s ease-in-out infinite;
+        }
+
+        @keyframes gradientDrift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes floatY {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes shimmerText {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+        @keyframes starTwinkle {
+            0% { filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15)); opacity: 0.7; transform: scale(1); }
+            100% { filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25)); opacity: 1; transform: scale(1.08); }
+        }
+        @keyframes buttonSheen {
+            0% { left: -150%; }
+            60% { left: 120%; }
+            100% { left: 120%; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .lucky-draw-section .lucky-draw-banner,
+            .lucky-draw-section .lucky-draw-image img,
+            .lucky-draw-section .lucky-draw-text,
+            .lucky-draw-section .lucky-draw-title,
+            .lucky-draw-section .decorative-stars .star,
+            .lucky-draw-section .lucky-draw-btn::after { 
+                animation: none !important; 
+            }
+        }
+    </style>
     
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
@@ -274,25 +348,25 @@
         </section>
 
         <!-- Lucky Draw Promotional Section -->
-        <section class="lucky-draw-section" style="padding: 50px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+        <section class="lucky-draw-section" style="padding: 50px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 35%, #dee2e6 100%);">
             <div class="container">
-                <div class="lucky-draw-banner" style="background: #fefefe; border: 2px solid #000; border-radius: 0; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); max-width: 1100px; margin: 0 auto; position: relative;">
+                <div class="lucky-draw-banner" style="background: linear-gradient(135deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.12) 100%), radial-gradient(1000px 500px at -10% -20%, rgba(255, 215, 0, 0.12) 0%, rgba(255, 215, 0, 0) 70%), radial-gradient(800px 400px at 120% 120%, rgba(0, 123, 255, 0.12) 0%, rgba(0, 123, 255, 0) 70%); border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1) inset; max-width: 1100px; margin: 0 auto; position: relative; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);">
                     <div class="lucky-draw-content" style="display: flex; min-height: 200px;">
-                        <div class="lucky-draw-image" style="flex: 0 0 42%; position: relative; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); display: flex; align-items: center; justify-content: center; padding: 20px; border-right: 2px solid #000; min-height: 160px;">
+                        <div class="lucky-draw-image" style="flex: 0 0 42%; position: relative; background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%); display: flex; align-items: center; justify-content: center; padding: 20px; border-right: 1px solid rgba(255, 255, 255, 0.25); min-height: 160px; backdrop-filter: inherit; -webkit-backdrop-filter: inherit;">
                             <div style="position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
                                 <img src="images/hero.jpg" alt="Surveying equipment promotional image"  style="max-width: 100%; max-height: 1000px; object-fit: contain; border-radius: 0; filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1)); display: block;">
                             </div>
                         </div>
-                        <div class="lucky-draw-text" style="flex: 0 0 58%; background: #fefefe; padding: 35px 40px; position: relative; display: flex; flex-direction: column; justify-content: center;">
-                            <h2 class="lucky-draw-title" style="font-size: 2.8rem; font-weight: 300; color: #1a1a1a; margin-bottom: 20px; font-family: 'Georgia', serif; font-style: italic; line-height: 1.0; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">Join our lucky draw</h2>
+                        <div class="lucky-draw-text" style="flex: 0 0 58%; background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.03) 100%); padding: 35px 40px; position: relative; display: flex; flex-direction: column; justify-content: center; backdrop-filter: inherit; -webkit-backdrop-filter: inherit;">
+                            <h2 class="lucky-draw-title" style="font-size: 2.8rem; font-weight: 700; margin-bottom: 20px; font-family: 'Georgia', serif; font-style: italic; line-height: 1.0; letter-spacing: 1px; background: linear-gradient(90deg, #111 0%, #333 40%, #000 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">Join our lucky draw</h2>
                             <div class="lucky-draw-offer" style="margin-bottom: 25px;">
-                                <p class="offer-text" style="font-size: 1.4rem; color: #2c2c2c; margin: 0; font-weight: 400; line-height: 1.3; font-family: 'Georgia', serif; letter-spacing: 0.5px;">every 25 buyers,</p>
-                                <p class="offer-text" style="font-size: 1.4rem; color: #2c2c2c; margin: 0; font-weight: 400; line-height: 1.3; font-family: 'Georgia', serif; letter-spacing: 0.5px;">1 wins 50% off!</p>
+                                <p class="offer-text" style="font-size: 1.4rem; color: #1f1f1f; margin: 0; font-weight: 500; line-height: 1.3; font-family: 'Georgia', serif; letter-spacing: 0.5px; text-shadow: 0 1px 3px rgba(255, 255, 255, 0.15);">every 25 buyers,</p>
+                                <p class="offer-text" style="font-size: 1.4rem; color: #1f1f1f; margin: 0; font-weight: 500; line-height: 1.3; font-family: 'Georgia', serif; letter-spacing: 0.5px; text-shadow: 0 1px 3px rgba(255, 255, 255, 0.15);">1 wins 50% off!</p>
                             </div>
-                            <a href="contact.html" class="lucky-draw-btn" style="background: linear-gradient(135deg, #000 0%, #333 100%); color: #fff; padding: 14px 32px; text-decoration: none; border-radius: 3px; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1.5px; display: inline-block; transition: all 0.3s ease; align-self: flex-start; font-family: 'Arial', sans-serif; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); border: 1px solid #000;">GET A QUOTE</a>
+                            <a href="contact.html" class="lucky-draw-btn" style="background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(33,37,41,0.85) 50%, rgba(0,0,0,0.85) 100%); color: #fff; padding: 14px 32px; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1.5px; display: inline-block; transition: all 0.3s ease; align-self: flex-start; font-family: 'Arial', sans-serif; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);">GET A QUOTE</a>
                             <div class="decorative-stars" style="position: absolute; top: 15px; right: 15px; bottom: 15px; display: flex; flex-direction: column; justify-content: space-between;">
-                                <span class="star" style="color: #8b4513; font-size: 1.4rem; font-weight: bold; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);">✦</span>
-                                <span class="star" style="color: #8b4513; font-size: 1.4rem; font-weight: bold; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);">✦</span>
+                                <span class="star" style="background: linear-gradient(180deg, #c08a2e 0%, #8b4513 100%); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 1.4rem; font-weight: bold; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);">✦</span>
+                                <span class="star" style="background: linear-gradient(180deg, #c08a2e 0%, #8b4513 100%); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 1.4rem; font-weight: bold; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);">✦</span>
                             </div>
                         </div>
                     </div>
@@ -307,6 +381,7 @@
                 <h2 id="services-title" class="section-title animate fade-in-up" data-scroll-animation="fade-in-up" data-scroll-threshold="0.3" itemprop="name">Our Core Services</h2>
                 <p class="section-description animate fade-in-up delay-1s" data-scroll-animation="fade-in-up" data-scroll-threshold="0.4" itemprop="description">Comprehensive surveying solutions for professionals across India</p>
                 
+                <div class="services-scroll" tabindex="0" aria-label="Scroll to see more services">
                 <div class="features-grid grid grid-4 stagger-container" role="list" data-delay="0.2">
                     <article class="feature-card fade-in stagger-item hover-lift" role="listitem" itemscope itemtype="https://schema.org/Service" data-scroll-animation="scale-in" data-scroll-threshold="0.3">
                         <div class="feature-icon hover-rotate" style="background-color: #000;">
@@ -340,6 +415,7 @@
                         <p class="feature-description" itemprop="description">Regular maintenance schedules and prompt repair services to maximize equipment lifespan.</p>
                     </article>
                 </div>
+                </div>
                 
                 
             </div>
@@ -372,7 +448,7 @@
                         </div>
                         
                         <div class="offering-illustration">
-                            <img src="images/gps_system.jpg" alt="Professional surveyor using GPS RTK equipment for precise positioning" class="offering-img hover-scale" loading="lazy" itemprop="image">
+                            <img src="images/gps_system.jpg" alt="Professional surveyor using GPS RTK equipment for precise positioning" class="offering-img hover-scale" loading="eager" itemprop="image">
                         </div>
                     </article>
                     
@@ -397,7 +473,7 @@
                             <a href="products.html" class="btn hover-lift hover-glow" aria-label="Learn more about Total Station equipment">Explore</a>
                         </div>
                         <div class="offering-illustration">
-                            <img src="images/total_station.jpg" alt="Advanced Total Station equipment for precision surveying and measurement" class="offering-img hover-scale" loading="lazy" itemprop="image">
+                            <img src="images/total_station.jpg" alt="Advanced Total Station equipment for precision surveying and measurement" class="offering-img hover-scale" loading="eager" itemprop="image">
                         </div>
                     </article>
                 </div>

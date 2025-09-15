@@ -601,7 +601,7 @@ function initializeMainFunctionality() {
         });
     });
 
-    // Add loading animation for images
+    // Add loading animation for images (only for lazy loaded images)
     const images = document.querySelectorAll('img[loading="lazy"]');
     images.forEach(img => {
         img.addEventListener('load', function() {
@@ -609,6 +609,28 @@ function initializeMainFunctionality() {
         });
         img.style.opacity = '0';
         img.style.transition = 'opacity 0.3s ease';
+    });
+
+    // Ensure eager loaded images are visible immediately
+    const eagerImages = document.querySelectorAll('img[loading="eager"]');
+    eagerImages.forEach(img => {
+        img.style.opacity = '1';
+        img.style.transition = 'opacity 0.3s ease';
+        
+        // Add error handling for images
+        img.addEventListener('error', function() {
+            console.warn('Image failed to load:', this.src);
+            // You could set a fallback image here if needed
+            // this.src = 'images/placeholder.jpg';
+        });
+    });
+
+    // Add error handling for all images
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', function() {
+            console.warn('Image failed to load:', this.src);
+            this.style.opacity = '1'; // Ensure visibility even on error
+        });
     });
 
     // EmailJS Configuration and Contact Form Handling
@@ -1369,13 +1391,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Search Functionality
-    const searchInput = document.querySelector('.search-input');
-    if (searchInput) {
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            filterProductsBySearch(searchTerm);
-        });
+    // Search Functionality - Only initialize if not on products page
+    if (!window.location.pathname.includes('products.html')) {
+        const searchInput = document.querySelector('.search-input');
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                filterProductsBySearch(searchTerm);
+            });
+        }
     }
     
     // Pagination Functionality
@@ -1780,6 +1804,74 @@ class ProductImageSlider {
 
 // Initialize the product image slider
 const productImageSlider = new ProductImageSlider();
+
+// WhatsApp Integration Functions
+function sendWhatsAppMessage(productData) {
+    const whatsappNumber = "2TCD6ER7CMUKD1"; // Your WhatsApp contact ID
+    const baseUrl = "https://wa.me/message/";
+    
+    // Format product information for WhatsApp message
+    let message = `🏢 *SUG Import Export* - Product Inquiry\n\n`;
+    message += `📦 *Product Details:*\n`;
+    message += `• Product: ${productData.product_name}\n`;
+    message += `• Brand: ${productData.brand}\n`;
+    message += `• Model: ${productData.model}\n`;
+    message += `• Category: ${productData.category}\n`;
+    message += `• Price: ${productData.price}\n\n`;
+    
+    if (productData.description) {
+        message += `📝 *Description:*\n${productData.description.substring(0, 200)}${productData.description.length > 200 ? '...' : ''}\n\n`;
+    }
+    
+    if (productData.features && productData.features.length > 0) {
+        message += `✨ *Key Features:*\n`;
+        productData.features.slice(0, 3).forEach(feature => {
+            message += `• ${feature}\n`;
+        });
+        if (productData.features.length > 3) {
+            message += `• And ${productData.features.length - 3} more features...\n`;
+        }
+        message += `\n`;
+    }
+    
+    message += `🔗 *Product Link:* ${window.location.origin}/product-detail.html?product=${encodeURIComponent(productData.product_name)}\n\n`;
+    message += `📞 *Contact Information:*\n`;
+    message += `• Company: SUG Import Export\n`;
+    message += `• Website: ${window.location.origin}\n\n`;
+    message += `Please provide:\n`;
+    message += `• Your contact details\n`;
+    message += `• Quantity required\n`;
+    message += `• Delivery location\n`;
+    message += `• Any specific requirements\n\n`;
+    message += `Thank you for your interest! We'll get back to you within 24 hours.`;
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `${baseUrl}${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+}
+
+// Global function to get quote - now uses WhatsApp
+function getQuote(productName) {
+    // Check if productData is available
+    if (typeof productData !== 'undefined' && productData.length > 0) {
+        // Find the product data
+        const product = productData.find(p => p.product_name === productName);
+        
+        if (product) {
+            sendWhatsAppMessage(product);
+            return;
+        }
+    }
+    
+    // Fallback message if product not found or productData not available
+    const fallbackMessage = `🏢 *SUG Import Export* - Product Inquiry\n\n📦 *Product:* ${productName}\n\nPlease provide:\n• Your contact details\n• Quantity required\n• Delivery location\n• Any specific requirements\n\nThank you for your interest!`;
+    const encodedMessage = encodeURIComponent(fallbackMessage);
+    const whatsappUrl = `https://wa.me/message/2TCD6ER7CMUKD1?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+}
 
 // Add CSS styles for the image slider
 const sliderStyles = `
