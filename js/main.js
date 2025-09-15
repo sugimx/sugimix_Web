@@ -71,7 +71,7 @@ class ComponentLoader {
             <div class="footer-section">
                 <h4>Contact Information</h4>
                 <address class="contact-info" itemscope itemtype="https://schema.org/PostalAddress">
-                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="streetAddress">86, Parakkai Road</span>,<span itemprop="addressLocality">Keezhavannanvilai</span>, <span itemprop="addressRegion">Nagercoil-2</span> <span itemprop="postalCode">629501</span></p>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="streetAddress">86, Parakkai Road</span>, <span itemprop="addressLocality">Keezhavannanvilai</span>, <span itemprop="addressRegion">Nagercoil-2</span> <span itemprop="postalCode">629501</span></p>
                     <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+918903301652" itemprop="telephone" style="color: white;">+91 8903301652</a></p>
                     <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:sugix.info@gmail.com" itemprop="email" style="color: white;">sugix.info@gmail.com</a></p>
                     <p><i class="fas fa-clock" aria-hidden="true"></i> Mon-Fri: 9:00 AM - 6:00 PM IST</p>
