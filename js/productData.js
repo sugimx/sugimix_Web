@@ -1629,8 +1629,8 @@ const productData = [
     },
     {
         "brand": "STONEX",
-        "model": "S3II/S700",
-        "product_name": "STONEX S3II/S700 - Advanced GNSS RTK Receiver",
+        "model": "S3II S700",
+        "product_name": "STONEX S3II S700 - Advanced GNSS RTK Receiver",
         "category": "RTK Receiver",
         "description": "The Stonex S3II and S700A are compact, high-performance GNSS receivers designed for professional surveying and mapping. Equipped with 700-channel multi-constellation boards supporting GPS, GLONASS, Galileo, BeiDou, QZSS, and IRNSS, they deliver centimeter-level accuracy via RTK technology. An internal antenna integrates GNSS, Bluetooth, and Wi-Fi for stable signal reception, while a Linux OS with WEB UI ensures user-friendly operation. With IP67-rated rugged design, a high-capacity battery, 4G modem, and Type-C connectivity, these receivers offer durable, all-day field performance. Compatible with Cube A and other surveying software, they support multiple data formats including shapefiles, DXF, CSV, and KML for seamless workflow integration.",
         "features": [
@@ -2298,7 +2298,7 @@ const productData = [
     },
     {
         "brand": "Ruide",
-        "model": "RTS-822R4",
+        "model": "RTS-822 R4",
         "product_name": "Ruide RTS-822R4 - Reliable Accuracy Total Station",
         "category": "Total Station",
         "description": "Ruide RTS total stations are advanced surveying instruments designed for land surveys, topographic mapping, and construction projects, offering precision angle measurement and long-range reflectorless EDM. The RTS-822R4 features non-prism ranges up to 400m, angle accuracy of 2″, and rugged protection for harsh environments. With options like color touch screens, Windows or Android operating systems, robotic capabilities for single-operator work, and internal memory for up to 20,000 points, Ruide RTS instruments combine accuracy, durability, and ease of use for professional surveyors.",
@@ -3089,66 +3089,66 @@ const productData = [
         ],
         "alt": "Stonex R3 Total Station Precision Meets Performance"
     },
-    {
-        "brand": "STONEX",
-        "model": "S3II S700",
-        "product_name": "STONEX S3II S700 - Advanced GNSS RTK Receiver",
-        "category": "RTK Receiver",
-        "description": "The Stonex S3II and S700A are compact, high-performance GNSS receivers designed for professional surveying and mapping. Equipped with 700-channel multi-constellation boards supporting GPS, GLONASS, Galileo, BeiDou, QZSS, and IRNSS, they deliver centimeter-level accuracy via RTK technology. An internal antenna integrates GNSS, Bluetooth, and Wi-Fi for stable signal reception, while a Linux OS with WEB UI ensures user-friendly operation. With IP67-rated rugged design, a high-capacity battery, 4G modem, and Type-C connectivity, these receivers offer durable, all-day field performance. Compatible with Cube A and other surveying software, they support multiple data formats including shapefiles, DXF, CSV, and KML for seamless workflow integration.",
-        "features": [
-            "Compact, high-performance GNSS receivers for professional surveying",
-            "700-channel multi-constellation boards for comprehensive satellite tracking",
-            "Multi-constellation support (GPS, GLONASS, Galileo, BeiDou, QZSS, IRNSS)",
-            "Centimeter-level accuracy via RTK technology",
-            "Internal antenna integrating GNSS, Bluetooth, and Wi-Fi",
-            "Stable signal reception in challenging environments",
-            "Linux OS with WEB UI for user-friendly operation",
-            "IP67-rated rugged design for field durability",
-            "High-capacity battery for all-day field performance",
-            "4G modem for connectivity",
-            "Type-C connectivity for data transfer",
-            "Compatible with Cube A and other surveying software",
-            "Support for multiple data formats (shapefiles, DXF, CSV, KML)",
-            "Seamless workflow integration",
-            "Professional surveying and mapping applications",
-            "Accurate, portable, and reliable performance"
-        ],
-        "specifications": {
-            "Model": "S3II S700",
-            "GNSS Features": {
-                "Channels": "700",
-                "Satellite Systems": {
-                    "GPS": "L1, L2, L5",
-                    "GLONASS": "L1, L2",
-                    "Galileo": "E1, E5a, E5b",
-                    "BeiDou": "B1, B2, B3",
-                    "QZSS": "L1, L2, L5",
-                    "IRNSS": "L5"
-                }
-            },
-            "Connectivity": {
-                "Internal Antenna": "GNSS, Bluetooth, and Wi-Fi integration",
-                "Operating System": "Linux OS with WEB UI",
-                "4G Modem": "Built-in 4G connectivity",
-                "Type-C": "Data transfer and charging"
-            },
-            "Environmental": {
-                "Protection": "IP67-rated rugged design",
-                "Battery": "High-capacity battery for all-day performance"
-            },
-            "Software Compatibility": {
-                "Surveying Software": "Cube A and other surveying software",
-                "Data Formats": "Shapefiles, DXF, CSV, KML support"
-            }
-        },
-        "price": "₹ 5,61,558 + GST",
-        "images": [
-            "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700.jpg",
-            "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700 images.jpg",
-            "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700 img.png"
-        ],
-        "alt": "STONEX S3II S700 Advanced GNSS RTK Receiver"
-    },
+    // {
+    //     "brand": "STONEX",
+    //     "model": "S3II S700",
+    //     "product_name": "STONEX S3II S700 - Advanced GNSS RTK Receiver",
+    //     "category": "RTK Receiver",
+    //     "description": "The Stonex S3II and S700A are compact, high-performance GNSS receivers designed for professional surveying and mapping. Equipped with 700-channel multi-constellation boards supporting GPS, GLONASS, Galileo, BeiDou, QZSS, and IRNSS, they deliver centimeter-level accuracy via RTK technology. An internal antenna integrates GNSS, Bluetooth, and Wi-Fi for stable signal reception, while a Linux OS with WEB UI ensures user-friendly operation. With IP67-rated rugged design, a high-capacity battery, 4G modem, and Type-C connectivity, these receivers offer durable, all-day field performance. Compatible with Cube A and other surveying software, they support multiple data formats including shapefiles, DXF, CSV, and KML for seamless workflow integration.",
+    //     "features": [
+    //         "Compact, high-performance GNSS receivers for professional surveying",
+    //         "700-channel multi-constellation boards for comprehensive satellite tracking",
+    //         "Multi-constellation support (GPS, GLONASS, Galileo, BeiDou, QZSS, IRNSS)",
+    //         "Centimeter-level accuracy via RTK technology",
+    //         "Internal antenna integrating GNSS, Bluetooth, and Wi-Fi",
+    //         "Stable signal reception in challenging environments",
+    //         "Linux OS with WEB UI for user-friendly operation",
+    //         "IP67-rated rugged design for field durability",
+    //         "High-capacity battery for all-day field performance",
+    //         "4G modem for connectivity",
+    //         "Type-C connectivity for data transfer",
+    //         "Compatible with Cube A and other surveying software",
+    //         "Support for multiple data formats (shapefiles, DXF, CSV, KML)",
+    //         "Seamless workflow integration",
+    //         "Professional surveying and mapping applications",
+    //         "Accurate, portable, and reliable performance"
+    //     ],
+    //     "specifications": {
+    //         "Model": "S3II S700",
+    //         "GNSS Features": {
+    //             "Channels": "700",
+    //             "Satellite Systems": {
+    //                 "GPS": "L1, L2, L5",
+    //                 "GLONASS": "L1, L2",
+    //                 "Galileo": "E1, E5a, E5b",
+    //                 "BeiDou": "B1, B2, B3",
+    //                 "QZSS": "L1, L2, L5",
+    //                 "IRNSS": "L5"
+    //             }
+    //         },
+    //         "Connectivity": {
+    //             "Internal Antenna": "GNSS, Bluetooth, and Wi-Fi integration",
+    //             "Operating System": "Linux OS with WEB UI",
+    //             "4G Modem": "Built-in 4G connectivity",
+    //             "Type-C": "Data transfer and charging"
+    //         },
+    //         "Environmental": {
+    //             "Protection": "IP67-rated rugged design",
+    //             "Battery": "High-capacity battery for all-day performance"
+    //         },
+    //         "Software Compatibility": {
+    //             "Surveying Software": "Cube A and other surveying software",
+    //             "Data Formats": "Shapefiles, DXF, CSV, KML support"
+    //         }
+    //     },
+    //     "price": "₹ 5,61,558 + GST",
+    //     "images": [
+    //         "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700.jpg",
+    //         "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700 images.jpg",
+    //         "images/product_images/GNSS/STONEX/S3II S700 GNSS RTK/stonex s311 s700 img.png"
+    //     ],
+    //     "alt": "STONEX S3II S700 Advanced GNSS RTK Receiver"
+    // },
     {
         "brand": "Ruide",
         "model": "RQS",
