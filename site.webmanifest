@@ -1,0 +1,22 @@
+{
+    "name": "Sugimix - Surveying Instruments India",
+    "short_name": "Sugimix",
+    "description": "India's leading supplier of GPS RTK systems, Total Station equipment & precision surveying instruments",
+    "icons": [
+        {
+            "src": "images/SUG.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/SUG.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "orientation": "portrait"
+}

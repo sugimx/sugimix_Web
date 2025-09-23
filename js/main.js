@@ -47,11 +47,14 @@ class ComponentLoader {
                 <h3 itemprop="name">Sug</h3>
                 <p itemprop="description">Empowering businesses with innovative surveying solutions and cutting-edge technology. Your trusted partner for precision measurement equipment in India.</p>
                 <div class="social-links" aria-label="Social media links">
-                    <a href="mailto:sugix.info@gmail.com" itemprop="email" style="color: white;" class="social-link" aria-label="Follow us on Twitter" itemprop="sameAs">
-                        <i class="fab fa-google" aria-hidden="true"></i>
+                    <a href="https://x.com/Sugimxinfo" rel="noopener noreferrer" target="_blank" class="social-link" aria-label="Follow us on X (Twitter)" itemprop="sameAs">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
                     </a>
                     <a href="https://www.instagram.com/sugimx.official/" rel="noopener noreferrer" target="_blank" class="social-link" aria-label="Follow us on Instagram" itemprop="sameAs">
                         <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://youtube.com/@sugimx?si=LVE6UfJck5bpAg2W" rel="noopener noreferrer" target="_blank" class="social-link" aria-label="Follow us on YouTube" itemprop="sameAs">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
